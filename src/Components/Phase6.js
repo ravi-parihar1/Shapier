@@ -4,7 +4,7 @@ import Plywood from "../../src/assets/HomePageAssets/11060836_47677.jpg";
 import Cement from "../assets/HomePageAssets/flat-lay-clay-smudge.jpg";
 
 export default function Phase6() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 769);
+  const [isMobile, setIsMobile] = useState(window.innerWidth > 769);
 
   useEffect(() => {
     const handleResize = () => {

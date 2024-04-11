@@ -1,0 +1,89 @@
+#for_partners {
+  margin-top: 27vh;
+  margin-left: -25%;
+}
+#resgister_yourself {
+  margin-left: -25%;
+}
+#contact {
+  margin-top: 30vh;
+}
+#For_customers {
+  margin-top: 7vh;
+  margin-left: 5%;
+}
+.footer_customers {
+  margin-left: 5%;
+}
+
+@media (max-width: 1025px) {
+  #contact {
+    margin-top: -39vh;
+    margin-left: 75%;
+  }
+  #resgister_yourself {
+    margin-left: -25%;
+  }
+  #for_partners {
+    margin-top: 27vh;
+    margin-left: -120%;
+  }
+  #resgister_yourself {
+    margin-left: -120%;
+  }
+  #For_customers {
+    margin-top: 5vh;
+    margin-left: -30%;
+  }
+  .footer_customers {
+    margin-left: -30%;
+  }
+}
+@media (max-width: 769px) {
+  #contact {
+    margin-top: -50vh;
+    margin-left: 68%;
+  }
+  #resgister_yourself {
+    margin-left: -20%;
+  }
+  #for_partners {
+    margin-top: 27vh;
+    margin-left: -100%;
+  }
+  #resgister_yourself {
+    margin-left: -100%;
+  }
+  #For_customers {
+    margin-top: 1vh;
+    margin-left: -10%;
+  }
+  .footer_customers {
+    margin-left: -10%;
+  }
+}
+
+@media (max-width: 426px) {
+  #logo_and_company{
+    margin-top:5%;
+  }
+  #contact {
+    margin-top: 0vh;
+    margin-left: 0%;
+  }
+  #for_partners {
+    margin-top: 5vh;
+    margin-left: 35%;
+  }
+  #resgister_yourself {
+    margin-left: 25%;
+  }
+  #For_customers {
+    margin-top: 10vh;
+    margin-left: 33%;
+  }
+  .footer_customers {
+    text-align: center;
+    margin-left: 5%;
+  }
+}

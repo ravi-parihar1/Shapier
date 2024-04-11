@@ -1,0 +1,53 @@
+#see_more_button {
+  margin-top: 0.5%;
+  margin-left: 60%;
+}
+.product-image {
+  height: 25vh;
+  width: 140%;
+  margin-bottom: 13%;
+  margin-left: -20%;
+  margin-top: -9%;
+  border-radius: 5%;
+}
+.card {
+  margin-top: 5%;
+  margin-left: 6%;
+  width: 16%;
+  margin-bottom: 5%;
+  border-radius: 5%;
+  transition: all 0.5s;
+}
+.card:hover {
+  box-shadow: 0px 10px 21px -9px rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 769px) {
+  .product-image {
+    height: 25vh;
+    width: 161%;
+    margin-bottom: 13%;
+    margin-left: -31%;
+    margin-top: -14%;
+    border-radius: 5%;
+  }
+  .card {
+    margin-top: 5%;
+    margin-left: 6%;
+    width: 20%;
+    margin-bottom: 5%;
+    border-radius: 5%;
+    transition: all 0.5s;
+  }
+}
+
+@media (max-width: 426px){
+    .card {
+        margin-top: 5%;
+        margin-left: 8%;
+        width: 38%;
+        margin-bottom: 5%;
+        border-radius: 5%;
+        transition: all 0.5s;
+    }
+}

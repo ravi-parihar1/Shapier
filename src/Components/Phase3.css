@@ -1,0 +1,78 @@
+.brand-container {
+    background-color: #F0ECEC;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 50px;
+    display: flex;
+
+}
+
+.ph3-container {
+    width: 350px;
+    margin-right: 70px;
+
+}
+
+.brand-small-text {
+    font-size: 18px;
+    color: #848484;
+    padding: 0px;
+
+}
+
+.explore-button {
+    height: 50px;
+    width: 170px;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.explore-button:hover {
+    transform: scale(1.05);
+    /* Increase size by 5% */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Add shadow effect */
+}
+
+.ph3-image-row {
+    
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 200px;
+    /* border-radius: 50%; */
+    /* background-color: black; */
+}
+
+.Brand-item img {
+    border-radius: 50%;
+}
+
+.Brand-item {
+    
+    margin: 10px; /* Adjust the spacing between items */
+  }
+
+.container-brand-img{
+    margin-right: 6px;
+    border-radius: 50%;
+    /* background-color: black; */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container-brand-img:hover{
+    transform: scale(1.05);
+    /* Increase size by 5% */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h2{
+    font-weight: 700;
+}  

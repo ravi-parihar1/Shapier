@@ -1,0 +1,60 @@
+.img-container-p4 {
+    width: 40%; /* Adjust the width as needed */
+}
+
+.requestdemo {
+    width: 100%;
+    border-radius: 120px 0px 0px 0px;
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-left: 82px;
+    display: flex;
+    background-color: #F0ECEC; /* Adjust the width as needed */
+}
+
+h1{
+    font-weight: 600;
+}
+
+p{
+   font-size: 17px;
+   margin-top: 30px;
+   color: #868686;
+
+}
+
+.whatsapp-button,.call-button{
+    margin-right: 30px;
+    height: 50px;
+    width: 170px;
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s
+}
+
+.whatsapp-button{
+    color: rgb(0, 0, 0);
+    background-color: #F0ECEC;
+}
+
+.call-button{
+    color: white;
+    background-color: black;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.05);
+    /* Increase size by 5% */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Add shadow effect */
+}
+
+
+
+.call-button:hover {
+    transform: scale(1.05);
+    /* Increase size by 5% */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Add shadow effect */
+}
+
+

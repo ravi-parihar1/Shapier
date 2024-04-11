@@ -1,74 +1,89 @@
-#inner {
-  height: 175px;
-  padding-top: 34px;
-  height: 264px;
-  background: #f0ecec;
-  margin-top: 3%;
-  margin-bottom: 8%;
+.Tradning_product_page{
+  margin-bottom: 10%;
+}
+.Tanding_product_see_more{
+  margin-top: 0.5%;
+  margin-left: 69%;
+}
+.Trending_product_container {
+  background-color: #f0ecec;
   scroll-behavior: smooth;
-  scroll-snap-align: start;
-  scrollbar-color: black;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  transition: all 0.5s;
-  .card {
+  .tranding_page_Card {
     display: inline-block;
   }
 }
-.imageofproduct {
-  margin-top: -28%;
-  padding-top: 1%;
-  background: transparent;
-  height: 106%;
-  width: 100%;
-  padding-bottom: -31%;
-  border-radius: 5% 5% 0 0;
+.tranding_page_Card {
+  background-color: transparent;
+  border-radius: 5%;
+  text-align: start;
+  margin: 5% -4% 5% 5%;
+  width: 170px;
 }
-#product1 {
-  text-align: center;
-  width: 14.6%;
-  height: 55%;
+.trending_product_img {
+  border-radius: 5%;
+  height: 170px;
+  width: 150px;
+  margin-top: 5%;
 }
-.heading_name {
-  margin-left: 5%;
+.tranding_page_product_name {
+  margin-top: 3%;
+  font-size: 18px;
+  color: black;
+}
+.tranding_page_product_price {
+  margin-top: -18%;
+  color: black;
+}
+.tranding_product_text_box {
+  background: #ffffff;
+  width: 90%;
+  /* border-color: black; */
+  padding-left: 15%;
+  padding-bottom: 5;
+  border-radius: 14px;
+  margin-top: 3%;
 }
 
-#inner::-webkit-scrollbar-track {
+.Trending_product_container::-webkit-scrollbar-track {
   background-color: #f1f1f1;
   border-radius: 10px;
 }
 
-#inner::-webkit-scrollbar-thumb {
+.Trending_product_container::-webkit-scrollbar-thumb {
   background-color: #888;
   border-radius: 10px;
 }
 
 /* Change the color when the thumb is being hovered */
-#inner::-webkit-scrollbar-thumb:hover {
+.Trending_product_container::-webkit-scrollbar-thumb:hover {
   background-color: #555;
   border-radius: 10px;
 }
 
 /* Optional: Customize scrollbar width and height */
-#inner::-webkit-scrollbar {
+.Trending_product_container::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 
-/* Optional: Add some padding to the scrollbar area */
-#inner {
-  padding-right: 15px; /* Adjust as needed based on scrollbar width */
+@media (max-width:769px){
+    .Tradning_product_page {
+      margin-top: 12%;
+  }
 }
-
-@media (max-width: 426px) {
-  #inner {
-    height: 242px;
-  }
-  #product1 {
-    text-align: center;
-    width: 33.6%;
-    height: 55%;
-    margin-top: 12%;
-  }
+@media (max-width: 426px){
+  .Tradning_product_page {
+    margin-top: 20%;
+}
+  .Tanding_product_see_more {
+    margin-left: 64%;
+}
+}
+@media (max-width: 376px){
+  .Tanding_product_see_more {
+    margin-left: 60%;
+}
 }

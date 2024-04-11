@@ -1,114 +1,33 @@
 import React from "react";
 import "../css/Phase7.css";
-import Topproduct from "../TopRatedProduct.json";
-export default function Phase7() {
+// import Topproduct from "../TopRatedProduct.json";
+export default function Phase7({filepath,heading}) {
+  const data = filepath;
   return (
     <>
-      <div className="">
-        <h3 className="heading_name">Trending Products</h3>
-        <div className="" id="inner">
-          {Topproduct.map((product) => (
-            <div key={product.id} className="card card_product" id="product1">
+      <div className="Tradning_product_page" >
+        <div className="d-flex">
+        <h3 className="heading_name">{heading}</h3>
+        <p className="Tanding_product_see_more">See More...</p>
+        </div>
+        <div className="container Trending_product_container" style={{borderRadius: "15px 15px 0 0"}} id="">
+          {data.map((product) => (
+            <div key={product.id} className="tranding_page_Card" id="">
               <img
-                className="imageofproduct"
+                className="trending_product_img"
                 src={product.image}
                 alt={product.name}
               />
-              <p>{product.name.length>10 ? `${product.name.slice(0,5)}...`:product.name}</p>
+              <div className="tranding_product_text_box">
+                <p className="tranding_page_product_name">
+                  {product.name.length > 10
+                    ? `${product.name.slice(0, 5)}...`
+                    : product.name}
+                </p>
+                <p className="tranding_page_product_price">$32</p>
+              </div>
             </div>
           ))}
-
-          <div className="card" id="product1">
-            <img
-              className="imageofproduct"
-              src="https://images.unsplash.com/photo-1527356900876-cae61d8d8462?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RWxlY3RyaWNhbCUyMHdpcmVzfGVufDB8fDB8fHww"
-            />
-            <p>wires</p>
-          </div>
-          <div className="card" id="product1">
-            <img
-              className="imageofproduct"
-              src="https://images.unsplash.com/photo-1527356900876-cae61d8d8462?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RWxlY3RyaWNhbCUyMHdpcmVzfGVufDB8fDB8fHww"
-            />
-            <p>wires</p>
-          </div>
-          <div className="card" id="product1">
-            <img
-              className="imageofproduct"
-              src="https://images.unsplash.com/photo-1527356900876-cae61d8d8462?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RWxlY3RyaWNhbCUyMHdpcmVzfGVufDB8fDB8fHww"
-            />
-            <p>wires</p>
-          </div>
-          <div className="card" id="product1">
-            <img
-              className="imageofproduct"
-              src="https://images.unsplash.com/photo-1527356900876-cae61d8d8462?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RWxlY3RyaWNhbCUyMHdpcmVzfGVufDB8fDB8fHww"
-            />
-            <p>wires</p>
-          </div>
-          <div className="card" id="product1">
-            <img
-              className="imageofproduct"
-              src="https://images.unsplash.com/photo-1527356900876-cae61d8d8462?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RWxlY3RyaWNhbCUyMHdpcmVzfGVufDB8fDB8fHww"
-            />
-            <p>wires</p>
-          </div>
-          <div className="card" id="product1">
-            <img
-              className="imageofproduct"
-              src="https://images.unsplash.com/photo-1527356900876-cae61d8d8462?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RWxlY3RyaWNhbCUyMHdpcmVzfGVufDB8fDB8fHww"
-            />
-            <p>wires</p>
-          </div>
-          <div className="card" id="product1">
-            <img
-              className="imageofproduct"
-              src="https://images.unsplash.com/photo-1527356900876-cae61d8d8462?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RWxlY3RyaWNhbCUyMHdpcmVzfGVufDB8fDB8fHww"
-            />
-            <p>wires</p>
-          </div>
-          <div className="card" id="product1">
-            <img
-              className="imageofproduct"
-              src="https://images.unsplash.com/photo-1527356900876-cae61d8d8462?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RWxlY3RyaWNhbCUyMHdpcmVzfGVufDB8fDB8fHww"
-            />
-            <p>wires</p>
-          </div>
-          <div className="card" id="product1">
-            <img
-              className="imageofproduct"
-              src="https://images.unsplash.com/photo-1527356900876-cae61d8d8462?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RWxlY3RyaWNhbCUyMHdpcmVzfGVufDB8fDB8fHww"
-            />
-            <p>wires</p>
-          </div>
-          <div className="card" id="product1">
-            <img
-              className="imageofproduct"
-              src="https://images.unsplash.com/photo-1527356900876-cae61d8d8462?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RWxlY3RyaWNhbCUyMHdpcmVzfGVufDB8fDB8fHww"
-            />
-            <p>wires</p>
-          </div>
-          <div className="card" id="product1">
-            <img
-              className="imageofproduct"
-              src="https://images.unsplash.com/photo-1527356900876-cae61d8d8462?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RWxlY3RyaWNhbCUyMHdpcmVzfGVufDB8fDB8fHww"
-            />
-            <p>wires</p>
-          </div>
-          <div className="card" id="product1">
-            <img
-              className="imageofproduct"
-              src="https://images.unsplash.com/photo-1527356900876-cae61d8d8462?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RWxlY3RyaWNhbCUyMHdpcmVzfGVufDB8fDB8fHww"
-            />
-            <p>wires</p>
-          </div>
-          <div className="card" id="product1">
-            <img
-              className="imageofproduct"
-              src="https://images.unsplash.com/photo-1527356900876-cae61d8d8462?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RWxlY3RyaWNhbCUyMHdpcmVzfGVufDB8fDB8fHww"
-            />
-            <p>wires</p>
-          </div>
         </div>
       </div>
     </>

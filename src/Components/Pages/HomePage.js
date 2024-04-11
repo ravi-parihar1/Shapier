@@ -90,11 +90,12 @@ export default function HomePage() {
                 <Phase2/>
                 <Phase3/>
                 <Phase4/>
+                <Phase6/>
+                <Phase7/>
+                <Phase8/>
 
             </div>
-            <Phase6/>
-            <Phase7/>
-            <Phase8/>
+            
             <Footer />
         </div>
     )

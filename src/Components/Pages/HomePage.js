@@ -14,19 +14,16 @@ import carpainterImage from '../../assets/HomePageAssets/carpainter.jpg';
 import ElectricianImage from '../../assets/HomePageAssets/electrician.jpg';
 import cov from '../../assets/HomePageAssets/Animationc (1).json'
 import ServiceCard from '../ServiceCard';
-<<<<<<< HEAD
 import Phase2 from '../Phase2';
 import Phase3 from '../Phase3';
 import Phase4 from '../Phase4';
 import TopRatedProduct from "../../TopRatedProduct.json";
 import Expo from "../../Exeperimental.json";
-=======
 import Phase2 from '../Phase2'
 import Phase3 from '../Phase3'
 import Phase4 from '../Phase4'
 import Lottie from 'react-lottie';
 
->>>>>>> 6c353375a58f47da5656b21328e69f896e33bb1d
 export default function HomePage() {
 
     const coverOptions = {
@@ -108,8 +105,6 @@ export default function HomePage() {
                     </div>
 
                 </div>
-
-<<<<<<< HEAD
                 <Phase2/>
                 <Phase3/>   
                 <Phase4/>
@@ -117,17 +112,13 @@ export default function HomePage() {
                 <Phase7 filepath={TopRatedProduct} heading={"Top Product"}/>
                 <Phase7 filepath={Expo} heading={"Top Rated Product"}/>
                 {/* <Phase8/> */}
-=======
                 <Phase2 />
                 <Phase3 />
                 <Phase4 />
                 <Phase6 />
                 <Phase7 />
                 <Phase8 />
->>>>>>> 6c353375a58f47da5656b21328e69f896e33bb1d
-
             </div>
-
             <Footer />
         </div>
     )

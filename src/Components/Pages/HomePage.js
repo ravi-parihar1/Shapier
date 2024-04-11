@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../Header'
 import Footer from '../Footer'
 import Phase8 from '../Phase8'
-import Phase7 from  '../Phase7'
+import Phase7 from '../Phase7'
 import './HomePage.css'
 import coverPhoto from '../../assets/cover.png';
 import Phase6 from '../Phase6'
@@ -12,13 +12,32 @@ import LandImage from '../../assets/HomePageAssets/landscrapers.jpg';
 import HavcImage from '../../assets/HomePageAssets/HVAC.jpg';
 import carpainterImage from '../../assets/HomePageAssets/carpainter.jpg';
 import ElectricianImage from '../../assets/HomePageAssets/electrician.jpg';
+import cov from '../../assets/HomePageAssets/Animationc (1).json'
 import ServiceCard from '../ServiceCard';
+<<<<<<< HEAD
 import Phase2 from '../Phase2';
 import Phase3 from '../Phase3';
 import Phase4 from '../Phase4';
 import TopRatedProduct from "../../TopRatedProduct.json";
 import Expo from "../../Exeperimental.json";
+=======
+import Phase2 from '../Phase2'
+import Phase3 from '../Phase3'
+import Phase4 from '../Phase4'
+import Lottie from 'react-lottie';
+
+>>>>>>> 6c353375a58f47da5656b21328e69f896e33bb1d
 export default function HomePage() {
+
+    const coverOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: cov,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        }
+    };
+
 
     // Define an array with titles and image sources
     const serviceItems = [
@@ -53,16 +72,16 @@ export default function HomePage() {
 
                             {/* from this the services categories code begin */}
                             <div className="row">
-                                
-                                    {serviceItems.map((item, index) => (
-                                        <ServiceCard
-                                            key={index} // Don't forget to provide a unique key
-                                            imageSrc={item.imageSrc}
-                                            title={item.title}
-                                            className="service-item"
-                                        />
-                                    ))}
-                                
+
+                                {serviceItems.map((item, index) => (
+                                    <ServiceCard
+                                        key={index} // Don't forget to provide a unique key
+                                        imageSrc={item.imageSrc}
+                                        title={item.title}
+                                        className="service-item"
+                                    />
+                                ))}
+
                             </div>
 
                             {/* button code start from here  */}
@@ -80,13 +99,17 @@ export default function HomePage() {
 
                         {/* from this , code for the first page image that three images */}
                         <div className=' image-container'> {/* Add a separate container for image */}
-                            <img src={coverPhoto} alt='[Image description]' />
+                            <Lottie
+                                options={coverOptions}
+                                
+                            />
                         </div>
 
                     </div>
 
                 </div>
 
+<<<<<<< HEAD
                 <Phase2/>
                 <Phase3/>   
                 <Phase4/>
@@ -94,9 +117,17 @@ export default function HomePage() {
                 <Phase7 filepath={TopRatedProduct} heading={"Top Product"}/>
                 <Phase7 filepath={Expo} heading={"Top Rated Product"}/>
                 {/* <Phase8/> */}
+=======
+                <Phase2 />
+                <Phase3 />
+                <Phase4 />
+                <Phase6 />
+                <Phase7 />
+                <Phase8 />
+>>>>>>> 6c353375a58f47da5656b21328e69f896e33bb1d
 
             </div>
-            
+
             <Footer />
         </div>
     )

@@ -53,12 +53,14 @@ h6{
     display: flex;
     flex-wrap: wrap; /* Allow flex items to wrap to the next line */
     justify-content: center; /* Center flex items horizontally */
+    cursor: pointer;
   }
   
   .service-item {
     flex: 0 0 calc(33.33% - 20px); /* Set flex-basis to 33.33% with margin */
     padding: 30px;/* Adjust margins as needed (optional) */
     text-align: center;  /* Center the content inside the card */
+    cursor: pointer;
   }
 
   .buttons-container {
@@ -105,6 +107,7 @@ h6{
     /* padding-left: 20px; */
     height: 100px;
     width: 150px;
+    cursor: pointer;
 }
 
 .container-card img{
@@ -164,8 +167,8 @@ h6{
         margin-left: 10px; /* Add some margin to separate it from the inner container */
       }
       .image-container img {
-        width: 90%;
-        height: 90%;
+        width: 100%;
+        height: 100%;
         margin-top: -140px;
         /* object-fit: cover; Make sure the image covers the container */
       }
@@ -190,8 +193,8 @@ h6{
         margin-left: 10px; /* Add some margin to separate it from the inner container */
       }
       .image-container img {
-        width: 96%;
-        height: 96%;
+        width: 120%;
+        height: 120%;
         margin-top: -60px;
         /* object-fit: cover; Make sure the image covers the container */
       }

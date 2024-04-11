@@ -1,178 +1,259 @@
 .image-text-container {
-    display: flex;
-    position: relative;
-  }
-  
-  .text-container {
-    max-width: 400px;
-     /* Adjust margin as needed */
-    padding-left: 30px;
-    justify-content: center;
-    position: relative;
-  }
+  display: flex;
+  position: relative;
+}
 
-  .phase2-image {
-    width: 650px; /* Adjust this value as needed */
-    height: 300px; /* Maintain aspect ratio */
+.text-container {
+  max-width: 100%;
+  /* Adjust margin as needed */
+  padding-left: 30px;
+  justify-content: center;
+  position: relative;
+}
+
+.phase2-image {
+  width: 650px;
+  /* Adjust this value as needed */
+  height: 300px;
+  /* Maintain aspect ratio */
+  border-radius: 20px;
+  transition: transform 1s, box-shadow 0.3s;
+}
+
+.phase2-image:hover {
+  transform: scale(1.02);
+  /* Increase size by 5% */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Add shadow effect */
+}
+
+.button-container {
+  position: absolute;
+  bottom: 10px;
+  /* Adjust this value to change the distance from the bottom */
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+  /* Adjust the height as needed */
+
+}
+
+.see-button {
+  margin-top: 12%;
+  height: 50px;
+    width: 170px;
     border-radius: 20px;
-    transition: transform 1s, box-shadow 0.3s;
-  }
-
-  .phase2-image:hover{
-    transform: scale(1.02); /* Increase size by 5% */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow effect */
-  }
-  
-  .button-container{
-    position: absolute;
-    bottom: 10px; /* Adjust this value to change the distance from the bottom */
-    white-space: nowrap; /* Prevent text from wrapping *//* Adjust the height as needed */
-    
-  }
-
-  .see-more-button {
-    position: absolute;
-    bottom: 10px; /* Adjust this value to change the distance from the bottom */
- /* Align to the left */
-    background-color: black;
     color: white;
-    border: 2px solid black;
-    border-radius: 20px;
-    padding: 10px 60px;
-    cursor: pointer;
+    background-color: black;
     transition: transform 0.3s, box-shadow 0.3s;
-    
-  }
-  
-  .see-more-button:hover {
-    transform: scale(1.05); /* Increase size by 5% */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+
+}
+
+.see-button:hover {
+  transform: scale(1.05);
+  /* Increase size by 5% */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Add shadow effect */
+}
+
+h4{
+  font-weight: 500;
+}
+
+.image-overlay-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 20px;
+}
+
+.overlay-image {
+  background-size: cover;
+  height: 190px;
+  width: 275px;
+  border-radius: 40px 00px 40px 0px;
+  margin-bottom: 20px;
+  padding: 15px;
+  color: white;
+  margin-top: 60px;
+  margin-right: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+
+  z-index: 0;
+  /* Ensure overlay is behind buttons/titles (optional) */
+
+
+}
+
+.overlay-title {
+  z-index: 1;
+}
+
+.overlay-button {
+  height: 40px;
+  width: 135px;
+  margin-top: 70px;
+  margin-left: 96px;
+  border-radius: 20px;
+  background-color: #0d1b23;
+  border: none;
+  /* border: 2px solid rgb(255, 255, 255); */
+  color: rgb(255, 255, 255);
+  transition: transform 0.3s, box-shadow 0.3s;
+  z-index: 1;
+}
+
+.overlay-button:hover {
+  transform: scale(1.05);
+  /* Increase size by 5% */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Add shadow effect */
+}
+
+
+@media screen and (max-width: 1025px) {
+
+  /* Target Laptop-sized screens */
+  .see-more-button {
+    bottom: 0px;
   }
 
+  .overlay-image {
+
+    margin-right: 20px;
+    height: 160px;
+    width: 209px;
+  }
+
+
+  .overlay-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    
+  }
 
   .image-overlay-container {
     display: flex;
     flex-wrap: wrap;
     padding-right: 20px;
   }
+
+  .overlay-title {
+    padding: 5px;
+  }
+
   
-  .overlay-image {
-    background-size: cover;
-    height: 190px;
-    width: 275px;
-    border-radius: 40px 00px 40px 0px ;
-    margin-bottom: 20px;
-    padding: 15px;
-    color: white;
-    margin-top: 60px;
-    margin-right: 30px;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: relative;
-
-    z-index: 0; /* Ensure overlay is behind buttons/titles (optional) */
-  
-    
-  }
-
-  .overlay-title{
-    z-index: 1;
-  }
-  .overlay-button{
-    height: 40px;
-    width: 135px;
-    margin-top: 70px;
-    margin-left: 96px;
-    border-radius: 20px;
-    background-color: #2896DA;
-    border: none;
-    /* border: 2px solid rgb(255, 255, 255); */
-    color: rgb(255, 255, 255);
-    transition: transform 0.3s, box-shadow 0.3s;
-    z-index: 1;
-  }
-
-  .overlay-button:hover{
-    transform: scale(1.05); /* Increase size by 5% */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow effect */
-  }
-  
-
-@media screen and (max-width: 1025px) {
-
-    /* Target Laptop-sized screens */
-    .see-more-button{
-        bottom: 0px;
-    }
-
-    .overlay-image{
-      
-      margin-right: 20px;
-      height: 160px;
-      width: 209px;
-    }
-    
-    .image-overlay-container {
-      display: flex;
-      flex-wrap: wrap;
-      padding-right: 20px;
-    }
-    
-    .overlay-title{
-      padding: 5px;
-    }
-    
 }
 
 @media screen and (max-width: 769px) {
 
-    /* Target Tablet-sized screens */
-    .phase2-image{
-        width:580px;
-        height:250px;
-    }
-
-    .see-more-button{
-        bottom: -10px;
-    }
-
-    .overlay-image {
-      margin-right: 13px;
-      height: 146px;
-      width: 156px;
-      margin-top: 30px;
+  /* Target Tablet-sized screens */
+  .phase2-image {
+    width: 580px;
+    height: 250px;
   }
 
-    .overlay-title{
-      padding: 10px;
-      font-size: 18px;
-    }
-   
+  .see-button {
+    bottom: -10px;
+  }
+
+  .overlay-image {
+    margin-right: 13px;
+    height: 146px;
+    width: 156px;
+    margin-top: 30px;
+  }
+
+  .overlay-button{
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .phase2-text {
+    font-size: 14px;
+    margin-top: 5%;
+}
+  .overlay-button {
+    margin-top: 10px;
+    margin-left: -6px;
+  }
+
+  .overlay-title {
+    padding: 10px;
+    font-size: 18px;
+  }
+
 }
 
 @media screen and (max-width: 426px) {
-    /* Target mobile-L portrait screens */
-    .image-text-container {
-        display: block;
-        position: relative;
-    
-      }
-    
-      .phase2-image{
-        width: 370;
-        height: 200;
-      }
+
+  /* Target mobile-L portrait screens */
+  .image-text-container {
+    display: block;
+    position: relative;
+
+  }
+
+  .phase2-image {
+    width: 100%;
+    height: 50%;
+
+  }
+
+  .see-button{
+    margin-top: 5%;
+  }
+
+  h4{
+    margin-top: 5%;
+  }
+
+  .text-container{
+    padding-left: 10px;
+    height:auto ;
+  }
+
+  .overlay-image{
+    margin-left: 15%;
+    margin-right: 30px;
+    height: 150px;
+    width: 160px;
+  }
 }
 
 
 
 @media screen and (max-width: 376px) {
 
-    /* Target mobile-m portrait screens */
-    
+  /* Target mobile-m portrait screens */
+  .overlay-button{
+    height: 30%;
+    width: 60%;
+    margin-top: 10px;
+    margin-left: -6px;
+  }
+
+
+  .overlay-image{
+    margin-left: 5%;
+    height: 71%;
+    margin-right: 15px;
+  }
+
+  .image-overlay-container{
+    padding-right: 0px;
+  }
+
+  .text-container{
+    padding-left: 10px;
+    height:auto ;
+  }
+
 }
 
 @media screen and (max-width: 321px) {
 
-    /* Target small mobile -sized screens */
-    
+  /* Target small mobile -sized screens */
+
 }

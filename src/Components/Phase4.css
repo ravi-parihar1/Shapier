@@ -28,12 +28,13 @@ p{
     height: 50px;
     width: 170px;
     border-radius: 20px;
+    justify-content: start;
     transition: transform 0.3s, box-shadow 0.3s
 }
 
 .whatsapp-button{
     color: rgb(0, 0, 0);
-    background-color: #F0ECEC;
+    background-color: #ffffff;
 }
 
 .call-button{
@@ -57,4 +58,8 @@ p{
     /* Add shadow effect */
 }
 
+.icon{
+    margin-right: 10px;
+    justify-content: center;
+}
 

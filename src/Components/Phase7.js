@@ -1,16 +1,17 @@
 import React from "react";
 import "../css/Phase7.css";
-import Topproduct from "../TopRatedProduct.json";
-export default function Phase7() {
+// import Topproduct from "../TopRatedProduct.json";
+export default function Phase7({filepath,heading}) {
+  const data = filepath;
   return (
     <>
       <div className="Tradning_product_page" >
         <div className="d-flex">
-        <h3 className="heading_name">Trending Products</h3>
+        <h3 className="heading_name">{heading}</h3>
         <p className="Tanding_product_see_more">See More...</p>
         </div>
         <div className="container Trending_product_container" style={{borderRadius: "15px 15px 0 0"}} id="">
-          {Topproduct.map((product) => (
+          {data.map((product) => (
             <div key={product.id} className="tranding_page_Card" id="">
               <img
                 className="trending_product_img"

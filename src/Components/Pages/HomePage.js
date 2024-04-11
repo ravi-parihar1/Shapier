@@ -13,11 +13,11 @@ import HavcImage from '../../assets/HomePageAssets/HVAC.jpg';
 import carpainterImage from '../../assets/HomePageAssets/carpainter.jpg';
 import ElectricianImage from '../../assets/HomePageAssets/electrician.jpg';
 import ServiceCard from '../ServiceCard';
-import Phase2 from '../Phase2'
-import Phase3 from '../Phase3'
-import Phase4 from '../Phase4'
-
-
+import Phase2 from '../Phase2';
+import Phase3 from '../Phase3';
+import Phase4 from '../Phase4';
+import TopRatedProduct from "../../TopRatedProduct.json";
+import Expo from "../../Exeperimental.json";
 export default function HomePage() {
 
     // Define an array with titles and image sources
@@ -88,11 +88,12 @@ export default function HomePage() {
                 </div>
 
                 <Phase2/>
-                <Phase3/>
+                <Phase3/>   
                 <Phase4/>
                 <Phase6/>
-                <Phase7/>
-                <Phase8/>
+                <Phase7 filepath={TopRatedProduct} heading={"Top Product"}/>
+                <Phase7 filepath={Expo} heading={"Top Rated Product"}/>
+                {/* <Phase8/> */}
 
             </div>
             

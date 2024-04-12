@@ -92,7 +92,7 @@ h4{
   height: 40px;
   width: 135px;
   margin-top: 70px;
-  margin-left: 96px;
+  margin-left: 40%;
   border-radius: 20px;
   background-color: #0d1b23;
   border: none;
@@ -110,9 +110,67 @@ h4{
 }
 
 
+@media screen and (max-width: 1400px) {
+
+
+  /* Target Laptop-sized screens */
+  .container-card{
+    margin-left: 15px;
+  }
+
+  
+
+  .overlay-image{
+    height: 178px;
+    width: 259px;
+    margin-right: 15px;
+  }
+
+  
+
+  
+}
+
+@media screen and (max-width: 1200px) {
+
+
+  /* Target Laptop-sized screens */
+  .container-card{
+    margin-right: -30px;
+  }
+
+  .overlay-image{
+    height: 140px;
+    width: 217px;
+    margin-right: 12px;
+  }
+
+  .overlay-title{
+    font-size: 24px;
+  }
+
+  .overlay-button{
+    margin-top: 40px;
+    margin-left: 30%;
+  }
+
+  
+}
+
+
+
 @media screen and (max-width: 1025px) {
 
   /* Target Laptop-sized screens */
+  .container-card{
+    margin-right: 26px;
+  }
+  .container-card img{
+    height: 70px;
+    width: 112px;
+  }
+
+
   .see-more-button {
     bottom: 0px;
   }
@@ -144,6 +202,44 @@ h4{
 
   
 }
+
+
+
+@media screen and (max-width: 992px) {
+
+  /* Target desktop-sized screens */
+  .container-card {
+    margin-right: -18px;
+  }
+      
+  .container-card img{
+    height: 60px;
+    width: 85px;
+  }
+
+  .service-title{
+    font-size: 12px;
+  }
+  
+  .phase2-text{
+    font-size: 12px;
+    margin-top: 30%;
+    color: #868686;
+}
+
+.overlay-image {
+  margin-right: 13px;
+  height: 146px;
+  width: 156px;
+  margin-top: 30px;
+}
+
+
+    
+ 
+}
+
+
 
 @media screen and (max-width: 769px) {
 
@@ -183,6 +279,79 @@ h4{
     padding: 10px;
     font-size: 18px;
   }
+
+  .container-card img {
+    height: 58px;
+    width: 92px;
+}
+
+.container-card {
+  margin-left: 16px;
+  margin-bottom: 50px;
+}
+
+}
+
+@media screen and (max-width: 767px) {
+
+
+  .image-container{
+    display: none;
+  }
+
+  
+
+  .container-card img {
+    height: 100%;
+    width: 120%;
+}
+
+.container-card {
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+
+  .phase2-image {
+    width: 50%;
+   
+  }
+
+  .see-button {
+    bottom: -10px;
+  }
+
+  .overlay-image {
+    margin-right: 13px;
+    height: 146px;
+    width: 156px;
+    margin-top: 30px;
+  }
+
+  .overlay-button{
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .phase2-text {
+    font-size: 12px;
+    margin-top: 5%;
+}
+  .overlay-button {
+    margin-top: 10px;
+    margin-left: -6px;
+  }
+
+  .overlay-title {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  
+
+ .book-now-button,.explore-now-button{
+  height: 10%;
+ }
 
 }
 

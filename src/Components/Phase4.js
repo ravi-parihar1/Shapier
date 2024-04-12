@@ -43,7 +43,7 @@ export default function Phase4() {
             <div className="requestdemo">
                 <div className="in-container">
                     <h1 className='RequestTitle'>Request a Quote</h1>
-                    <p>order in bulk Easily with our special <br />chat and call options</p>
+                    <p className='passage'>order in bulk Easily with our special <br />chat and call options</p>
                     <div className="but">
                         <button className="whatsapp-button"><PiWhatsappLogoLight className="icon"/>WhatsApp</button>
                         <button className="call-button"><LuPhoneCall className="icon"/>Call</button>
@@ -52,7 +52,6 @@ export default function Phase4() {
                 <div className="ani-container">
                 <Lottie
                     options={secondOptions}
-                    
                 />
                 </div>
             </div>

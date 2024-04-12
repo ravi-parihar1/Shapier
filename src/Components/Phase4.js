@@ -45,15 +45,14 @@ export default function Phase4() {
                     <h1 className='RequestTitle'>Request a Quote</h1>
                     <p>order in bulk Easily with our special <br />chat and call options</p>
                     <div className="but">
-                        <button className="whatsapp-button mt-4 "><PiWhatsappLogoLight className="icon"/>WhatsApp</button>
-                        <button className="call-button mt-4"><LuPhoneCall className="icon"/>Call</button>
+                        <button className="whatsapp-button"><PiWhatsappLogoLight className="icon"/>WhatsApp</button>
+                        <button className="call-button"><LuPhoneCall className="icon"/>Call</button>
                     </div>
                 </div>
                 <div className="ani-container">
                 <Lottie
                     options={secondOptions}
-                    height={200} // Adjust the height as needed
-                    width={250} // Adjust the width as needed
+                    
                 />
                 </div>
             </div>

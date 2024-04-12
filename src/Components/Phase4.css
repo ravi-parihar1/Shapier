@@ -1,18 +1,25 @@
 .img-container-p4 {
-    width: 40%; /* Adjust the width as needed */
+    height: 40%; 
+    width:40%; 
+}
+
+.ani-container{
+    height: 200px;
+    width: 250px;
+    margin-left: 1%;
 }
 
 .requestdemo {
     width: 100%;
     border-radius: 120px 0px 0px 0px;
     padding-top: 40px;
-    padding-right: 20px;
+    padding-right: 0px;
     padding-left: 82px;
     display: flex;
     background-color: #F0ECEC; /* Adjust the width as needed */
 }
 
-h1{
+.request-title{
     font-weight: 600;
 }
 
@@ -24,7 +31,8 @@ p{
 }
 
 .whatsapp-button,.call-button{
-    margin-right: 30px;
+    margin-right: 20px;
+    margin-top: 20%;
     height: 50px;
     width: 170px;
     border-radius: 20px;
@@ -63,3 +71,20 @@ p{
     justify-content: center;
 }
 
+
+@media screen and (max-width: 1025px){
+
+    .ani-container {
+        width: 208px;
+        height: 174px;
+        margin-left: 12%;
+    }
+
+    .whatsapp-button, .call-button{
+        margin-right: 7px;
+        margin-top: 2%;
+        height: 45px;
+        width: 150px;
+
+}
+}

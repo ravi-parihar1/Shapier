@@ -29,13 +29,12 @@ export default function Phase4() {
     };
 
     return (
-        <div className='Phase4-container mb-4' style={{ display: 'flex' }}>
+        <div className='Phase4-container' style={{ display: 'flex' }}>
 
             <div className="img-container-p4">
                 <Lottie
                     options={defaultOptions}
-                    height={300} // Adjust the height as needed
-                    width={300} // Adjust the width as needed
+                     // Adjust the width as needed
                 />
             </div>
 
@@ -43,18 +42,17 @@ export default function Phase4() {
 
             <div className="requestdemo">
                 <div className="in-container">
-                    <h1>Request a Quote</h1>
+                    <h1 className='RequestTitle'>Request a Quote</h1>
                     <p>order in bulk Easily with our special <br />chat and call options</p>
                     <div className="but">
-                        <button className="whatsapp-button mt-4 "><PiWhatsappLogoLight className="icon"/>WhatsApp</button>
-                        <button className="call-button mt-4"><LuPhoneCall className="icon"/>Call</button>
+                        <button className="whatsapp-button"><PiWhatsappLogoLight className="icon"/>WhatsApp</button>
+                        <button className="call-button"><LuPhoneCall className="icon"/>Call</button>
                     </div>
                 </div>
                 <div className="ani-container">
                 <Lottie
                     options={secondOptions}
-                    height={200} // Adjust the height as needed
-                    width={250} // Adjust the width as needed
+                    
                 />
                 </div>
             </div>

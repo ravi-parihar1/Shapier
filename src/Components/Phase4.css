@@ -23,7 +23,7 @@
     font-weight: 600;
 }
 
-p{
+.passage{
    font-size: 17px;
    margin-top: 30px;
    color: #868686;
@@ -87,4 +87,97 @@ p{
         width: 150px;
 
 }
+}
+
+
+@media screen and (max-width: 769px){
+
+    .ani-container {
+       display: none;
+    }
+
+    .whatsapp-button, .call-button{
+        margin-right: 7px;
+        margin-top: 2%;
+        height: 45px;
+        width: 150px;
+
+}
+
+.passage{
+    font-size: 17px;
+    margin-top: 10px;
+    color: #868686;
+ 
+ }
+
+ .request-title{
+    font-size: medium;
+    font-weight: 600;
+}
+
+.but{
+    margin-bottom: 20px;
+}
+
+.whatsapp-button{
+    width: 250px;
+}
+
+.call-button{
+    width: 250px;
+    margin-top: 20px;
+}
+
+.img-container-p4{
+    height: fit-content;
+    width: fit-content;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 426px){
+
+    
+    .requestdemo{
+        padding-left: 50px;
+        border-radius: 26px 0px 0px 0px;
+
+    }
+
+    .whatsapp-button, .call-button{
+        margin-right: 7px;
+        margin-top: 3%;
+        height: 45px;
+        width: 150px;
+}
+
+.request-title{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.passage{
+    font-size: 14px;
+    margin-top: 10px;
+    color: #868686;
+ 
+ }
+
+ .call-button{
+    margin-top: 10px;
+ }
+
+
+ .img-container-p4{
+    margin-bottom: 0px;
+    height: 320px;
+    width: fit-content;
+}
+
+
+
 }

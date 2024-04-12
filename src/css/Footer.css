@@ -16,10 +16,41 @@
   margin-left: 5%;
 }
 
+@media (max-width: 1241px) {
+  #for_partners {
+    margin-top: 94%;
+  }
+  #contact {
+    margin-top: 15%;
+  }
+}
+
+@media (max-width: 1200px) {
+  #contact {
+    margin-top: -30%;
+    margin-left: 82%;
+  }
+  #for_partners {
+    margin-left: -122%;
+    margin-top: 105%;
+    /* margin-right: 54%; */
+  }
+  #For_customers {
+    margin-top: 5vh;
+    margin-left: 5%;
+  }
+  #resgister_yourself {
+    margin-left: -122%;
+  }
+}
+@media (max-width: 1087px) {
+  #contact {
+    margin-left: 78%;
+  }
+}
 @media (max-width: 1025px) {
   #contact {
-    margin-top: -39vh;
-    margin-left: 75%;
+    margin-top: -47vh;
   }
   #resgister_yourself {
     margin-left: -25%;
@@ -39,20 +70,40 @@
     margin-left: -30%;
   }
 }
+@media (max-width: 992px) {
+  #For_customers {
+    margin-top: 0vh;
+    margin-left: -30%;
+  }
+  .footer_customers {
+    margin-left: -30%;
+}
+#for_partners {
+  margin-top: 29vh;
+  margin-left: -96%;
+}
+#resgister_yourself {
+  margin-left: -96%;
+}
+#contact {
+  margin-top: -55vh;
+}
+}
 @media (max-width: 769px) {
   #contact {
-    margin-top: -50vh;
-    margin-left: 68%;
+    margin-top: -55vh;
+    margin-left: 63%;
   }
   #resgister_yourself {
     margin-left: -20%;
   }
   #for_partners {
-    margin-top: 27vh;
-    margin-left: -100%;
+    margin-top: 29vh;
+    margin-left: -108%;
   }
   #resgister_yourself {
-    margin-left: -100%;
+    margin-left: -108%;
+    margin-right: 74%;
   }
   #For_customers {
     margin-top: 1vh;
@@ -62,10 +113,30 @@
     margin-left: -10%;
   }
 }
-
+@media (max-width: 767px) {
+  #For_customers {
+    margin-top: 12vh;
+    margin-left: 35%;
+  }
+  .footer_customers {
+    margin-left: 34%;
+  }
+  #contact {
+    margin-top: 3vh;
+    margin-left: -2%;
+  }
+  #for_partners {
+    margin-top: -3vh;
+    margin-left: 37%;
+  }
+  #resgister_yourself {
+    margin-left: 32%;
+    margin-right: 33%;
+  }
+}
 @media (max-width: 426px) {
-  #logo_and_company{
-    margin-top:5%;
+  #logo_and_company {
+    margin-top: 5%;
   }
   #contact {
     margin-top: 0vh;

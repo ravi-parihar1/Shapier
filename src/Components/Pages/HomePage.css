@@ -400,7 +400,7 @@ h6{
     .content {
         width: 100%;
         /* Set width to 100% for full width on mobile */
-        height: 550px;
+        height: auto;
         padding: 0.5rem;
         /* Adjust padding for mobile layout */
         margin-top: 20px;

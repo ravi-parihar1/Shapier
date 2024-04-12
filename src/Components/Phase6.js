@@ -1,7 +1,6 @@
-import {React,useState, useEffect} from "react";
+import { React, useState, useEffect } from "react";
 import "../css/Phase6.css";
 import Plywood from "../../src/assets/HomePageAssets/11060836_47677.jpg";
-import Cement from "../assets/HomePageAssets/flat-lay-clay-smudge.jpg";
 
 export default function Phase6() {
   const [isMobile, setIsMobile] = useState(window.innerWidth > 769);
@@ -36,10 +35,12 @@ export default function Phase6() {
               <img className="categories_image" src={Plywood} alt="plywood" />
               <p className="categories_name">Paint</p>
             </div>
-            {isMobile? <div className="image-containers">
-              <img className="categories_image" src={Plywood} alt="plywood" />
-              <p className="categories_name">Cement</p>
-            </div>: null }
+            {isMobile ? (
+              <div className="image-containers">
+                <img className="categories_image" src={Plywood} alt="plywood" />
+                <p className="categories_name">Cement</p>
+              </div>
+            ) : null}
           </div>
         </div>
       </div>

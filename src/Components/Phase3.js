@@ -1,23 +1,23 @@
 import { React, useEffect, useState } from "react";
 import "./Phase3.css";
-import asianpaints from "../assets/HomePageAssets/asian.png";
+import asianpaints from "../assets/HomePageAssets/asian.jpg";
 import cera from "../assets/HomePageAssets/cera.png";
-import century from "../assets/HomePageAssets/century.png";
-import H from "../assets/HomePageAssets/H.png";
-import Hv from "../assets/HomePageAssets/Hv.png";
-import k from "../assets/HomePageAssets/k.png";
-import dor from "../assets/HomePageAssets/dorset.png";
-import wipro from "../assets/HomePageAssets/wipro.png";
+import century from "../assets/HomePageAssets/century.jpg";
+import H from "../assets/HomePageAssets/green.png";
+import Hv from "../assets/HomePageAssets/fd.png";
+import k from "../assets/HomePageAssets/kj.jpg";
+import dor from "../assets/HomePageAssets/dor.jpg";
+import wipro from "../assets/HomePageAssets/b.png";
 import wonder from "../assets/HomePageAssets/jk.jpg";
-import y from "../assets/HomePageAssets/y.png";
+import y from "../assets/HomePageAssets/narrow.png";
 
 import Phase3BrandImage from "./Phase3BrandImage";
 
 export default function Phase3() {
   // Define an array with titles and image sources
   const BrandItems = [
+    { imgSrc: wonder },
     { imgSrc: asianpaints },
-    { imgSrc: cera },
     { imgSrc: century },
     { imgSrc: H },
     { imgSrc: Hv },
@@ -37,9 +37,13 @@ export default function Phase3() {
 
       if (screenWidth < 992 && screenWidth >= 768) {
         productsToDisplay = BrandItems.slice(0, 6);
-      } else if (screenWidth < 768) {
+      } else if (screenWidth < 768 && screenWidth >= 416) {
         productsToDisplay = BrandItems.slice(0,4);
-      } else {
+      } else if(screenWidth < 416){
+        productsToDisplay = BrandItems.slice(0,3);
+
+      }
+      else {
         productsToDisplay = BrandItems;
       }
 

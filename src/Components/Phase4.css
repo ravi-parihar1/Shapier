@@ -1,5 +1,6 @@
 .img-container-p4 {
-    width: 40%; /* Adjust the width as needed */
+    height: 40%; 
+    width:40%; 
 }
 
 .requestdemo {
@@ -12,7 +13,7 @@
     background-color: #F0ECEC; /* Adjust the width as needed */
 }
 
-h1{
+.request-title{
     font-weight: 600;
 }
 

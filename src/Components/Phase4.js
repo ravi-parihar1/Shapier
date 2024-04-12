@@ -3,7 +3,7 @@ import Lottie from 'react-lottie';
 import { PiWhatsappLogoLight } from "react-icons/pi";
 import { LuPhoneCall } from "react-icons/lu";
 import animatefile from '../assets/HomePageAssets/Animation .json';
-import ani from '../assets/HomePageAssets/Animation2.json'
+import ani from '../assets/HomePageAssets/Animation4.json'
 import './Phase4.css'
 
 

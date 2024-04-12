@@ -1,12 +1,11 @@
 .img-container-p4 {
-    height: 40%; 
-    width:40%; 
+    height: 23rem;
+    width: 33rem;
 }
-
-.ani-container{
-    height: 200px;
-    width: 250px;
-    margin-left: 1%;
+.ani-container {
+    height: 21rem;
+    width: 29rem;
+    margin-left: 0%;
 }
 
 .requestdemo {
@@ -72,19 +71,37 @@
 }
 
 
+@media screen and (max-width: 1400px){
+
+    .whatsapp-button,.call-button{
+       
+        margin-top: 5%;
+        
+    }
+}
+
+
+@media screen and (max-width: 1200px){
+
+    .whatsapp-button,.call-button{
+        margin-top: 5%;
+    }
+
+    .requestdemo {
+        
+        border-radius: 40px 0px 0px 0px;
+         /* Adjust the width as needed */
+    }
+}
+
 @media screen and (max-width: 1025px){
 
-    .ani-container {
-        width: 208px;
-        height: 174px;
-        margin-left: 12%;
-    }
+    
 
     .whatsapp-button, .call-button{
         margin-right: 7px;
-        margin-top: 2%;
-        height: 45px;
-        width: 150px;
+        margin-top: 4%;
+        
 
 }
 }
@@ -135,6 +152,23 @@
 }
 
 
+}
+
+@media screen and (max-width: 768px){
+
+    .requestdemo {
+        padding-right: 2rem;
+        padding-left: 3rem;
+        border-radius: 40px 0px 0px 0px;
+    }
+
+    .img-container-p4 {
+        
+        height: 20rem;
+        
+    }
+
+    
 }
 
 

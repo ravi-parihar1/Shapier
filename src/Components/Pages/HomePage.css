@@ -70,27 +70,23 @@ h6{
 }
 
 .book-now-button {
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-    border-radius: 20px;
-    padding: 10px 50px;
-    margin-right: 30px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
+  height: 50px;
+  width: 170px;
+  border-radius: 20px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-right: 20px;
     
 }
 
 .explore-now-button {
-    background-color: black;
-    color: white;
-    border: 2px solid black;
-    border-radius: 20px;
-    padding: 10px 50px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
+  height: 50px;
+  width: 170px;
+  border-radius: 20px;
+  color: white;
+  background-color: black;
+  transition: transform 0.3s, box-shadow 0.3s;
     
 }
 
@@ -148,10 +144,56 @@ h6{
   }
 
 
+  @media screen and (max-width: 1400px) {
 
-@media screen and (min-width: 1026px) {
+
+    /* Target Laptop-sized screens */
+    .container-card{
+      margin-left: -5px;
+    }
+  
+    .container-card img{
+      height: 90px;
+      width: 130px;
+    }
+    
+  }
+
+
+  @media screen and (max-width: 1200px) {
+
+
+    /* Target Laptop-sized screens */
+    .container-card {
+      margin-left: -6px;
+  }
+
+
+    .container-card img{
+      height: 90px;
+      width: 130px;
+    }
+      
+  }
+
+
+  @media screen and (max-width: 992px) {
+
+  /* Target desktop-sized screens */
+  
+  
+
+  }
+
+
+@media screen and (min-width: 1025px) {
 
     /* Target desktop-sized screens */
+    
+
+
+
+
     .content {
         width: 45%;
         /* Set width to 80% of the viewport */
@@ -172,8 +214,12 @@ h6{
         margin-top: -140px;
         /* object-fit: cover; Make sure the image covers the container */
       }
+
+      
    
 }
+
+
 
 @media screen and (max-width: 1025px) {
 
@@ -220,9 +266,21 @@ h6{
       font-size: 14px;
     }
     
-    .book-now-button, .explore-now-button {
-      padding: 10px 40px;
-    }
+    
+}
+
+
+@media screen and (min-width: 992px) {
+
+  /* Target desktop-sized screens */
+  .container-card {
+    margin-right: 10px;
+}
+ 
+
+
+    
+ 
 }
 
 @media screen and (max-width: 769px) {
@@ -239,9 +297,9 @@ h6{
     .image-container {
         position: relative;
         width: 45%; /* Same width as inner container */
-        padding: 1rem;
-        margin-top: 100px;
-        margin-left: 60px; /* Add some margin to separate it from the inner container */
+        padding: 0rem;
+        margin-top: 135px;
+        margin-left: 0px; /* Add some margin to separate it from the inner container */
 
       }
       .image-container img {
@@ -278,6 +336,9 @@ h6{
     }
    
 }
+
+
+
 
 @media screen and (max-width: 426px) {
     .inner-container{

@@ -292,6 +292,8 @@ h4{
 
 }
 
+
+
 @media screen and (max-width: 767px) {
 
 
@@ -299,7 +301,10 @@ h4{
     display: none;
   }
 
-  
+  .image-overlay-container {
+    
+    padding-right: 0%;
+}
 
   .container-card img {
     height: 100%;
@@ -321,25 +326,25 @@ h4{
   }
 
   .overlay-image {
-    margin-right: 13px;
-    height: 146px;
-    width: 156px;
+    margin-right: 23px;
+    height: 149px;
+    width: 235px;
     margin-top: 30px;
   }
 
-  .overlay-button{
-    position: relative;
-    bottom: 0px;
-    right: 0px;
-  }
+ 
 
   .phase2-text {
     font-size: 12px;
     margin-top: 5%;
 }
   .overlay-button {
-    margin-top: 10px;
-    margin-left: -6px;
+    
+    margin-top: 18%;
+      margin-left: -6px;
+      height: 30%;
+      width: 58%;
+  
   }
 
   .overlay-title {
@@ -351,9 +356,146 @@ h4{
 
  .book-now-button,.explore-now-button{
   height: 10%;
+  margin: 1%;
  }
 
 }
+
+@media screen and (max-width: 540px) {
+
+  .overlay-image {
+    margin-right: 20px;
+    
+  }
+
+.book-now-button,.explore-now-button{
+  height: 10%;
+ }
+
+}
+
+@media screen and (max-width: 534px) {
+
+  .overlay-image {
+    margin-right: 19px;
+    
+  }
+
+.book-now-button,.explore-now-button{
+  height: 10%;
+ }
+
+}
+
+@media screen and (max-width: 532px) {
+
+  .overlay-image {
+    margin-right: 4vh;
+    
+  }
+
+
+
+}
+
+@media screen and (max-width: 525px) {
+
+  .overlay-image {
+    margin-right: 3vh;
+    
+  }
+
+
+
+}
+
+@media screen and (max-width: 517px) {
+
+  .overlay-image {
+    margin-right: 2vh;
+    
+  }
+
+
+
+}
+
+@media screen and (max-width: 509px) {
+
+  .overlay-image {
+    margin-right: 1vh;
+    
+  }
+
+
+
+}
+
+
+@media screen and (max-width: 502px) {
+
+  .overlay-image {
+    margin-left: 5%;
+    height: 71%;
+    margin-right: 20px;
+    width: 206px;
+    
+  }
+
+
+
+}
+
+@media screen and (max-width: 476px) {
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+    padding-left: 7%;
+}
+
+.overlay-button {
+  margin-top: 7%;
+  margin-left: -6px;
+  height: 36%;
+  width: 60%;
+}
+
+.overlay-image {
+  
+  height: 70%;
+  margin-right: 16px;
+  
+}
+
+
+
+}
+
+@media screen and (max-width: 468px) {
+
+  
+
+.overlay-button {
+  margin-top: 7%;
+  margin-left: -6px;
+  height: 36%;
+  width: 60%;
+}
+
+.overlay-image {
+  
+  height: 70%;
+  margin-right: 10px;
+  
+}
+
+
+
+}
+
+
 
 @media screen and (max-width: 426px) {
 
@@ -363,6 +505,15 @@ h4{
     position: relative;
 
   }
+
+  .content{
+    height: auto;
+  }
+
+  .container-card {
+    margin-left: 5%;
+    margin-bottom: 10%;
+}
 
   .phase2-image {
     width: 100%;
@@ -418,6 +569,11 @@ h4{
     padding-left: 10px;
     height:auto ;
   }
+
+  .book-now-button, .explore-now-button {
+    height: 10%;
+    margin: 6%;
+}
 
 }
 

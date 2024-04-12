@@ -1,6 +1,5 @@
 import React from "react";
 import "../css/Phase7.css";
-// import Topproduct from "../TopRatedProduct.json";
 export default function Phase7({filepath,heading}) {
   const data = filepath;
   return (

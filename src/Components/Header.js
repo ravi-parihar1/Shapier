@@ -2,6 +2,9 @@ import React from 'react'
 import shapelogo from '../assets/shapelogo.png';
 import SearchBar from './SearchBar';
 import './Header.css'
+import { AiOutlineHeart } from "react-icons/ai";
+import { LuShoppingBag } from "react-icons/lu";
+
 
 export default function Header() {
     return (
@@ -37,8 +40,12 @@ export default function Header() {
                             </li>
                         </ul>
                     </div>
-                    <div className="d-none d-lg-block px-3"> {/* Visible only on desktop */}
-                        <SearchBar />
+                    <div className="d-none d-lg-flex align-items-center px-3">
+                        <div className="search-icons-container">
+                            <SearchBar />
+                            {/* <AiOutlineHeart />
+                            <LuShoppingBag /> */}
+                        </div>
                     </div>
                 </div>
             </nav>

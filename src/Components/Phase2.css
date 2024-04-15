@@ -55,7 +55,7 @@
   /* Add shadow effect */
 }
 
-h4{
+.img-name{
   font-weight: 500;
 }
 
@@ -465,8 +465,10 @@ h4{
 
 .overlay-image {
   
-  height: 70%;
-  margin-right: 16px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  height: 12rem;
+  width: 23rem;
   
 }
 
@@ -635,6 +637,10 @@ h4{
     position: relative;
 
   }
+  .image-overlay-container {
+    
+    margin-left: 5%;
+}
 
   .content{
     height: auto;
@@ -650,7 +656,11 @@ h4{
     height: 50%;
 
   }
-
+  
+  .overlay-title {
+    padding: 10px;
+    font-size: 25px;
+}
   .phase2-text{
     font-size: 12px;
   }
@@ -663,16 +673,23 @@ h4{
     margin-top: 5%;
   }
 
+  .overlay-button {
+    margin-top: 3rem;
+    margin-left: 7rem;
+    height: 3rem;
+    width: 10rem;
+}
+
   .text-container{
     padding-left: 10px;
     height:auto ;
   }
 
   .overlay-image{
-    margin-left: 15%;
-    margin-right: 30px;
-    height: 150px;
-    width: 160px;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 12rem;
+    width: 20rem;
   }
 
   .buttons-container {
@@ -704,11 +721,7 @@ h4{
     margin-bottom: 16%;
 }
 
-.overlay-image {
-  margin-left: 5%;
-  margin-right: 28px;
-  
-}
+
 
 }
 
@@ -723,11 +736,7 @@ h4{
     margin-bottom: 16%;
 }
 
-.overlay-image {
-  margin-left: 5%;
-  margin-right: 6vh;
-  
-}
+
 
 }
 
@@ -744,29 +753,12 @@ h4{
   height: 100%;
   width: 110%;
 }
-.overlay-image {
-  margin-left: 5%;
-  margin-right: 5vh;
-  
-}
+
 
 }
 
 
-@media screen and (max-width: 383px) {
 
-  /* Target mobile-L portrait screens */
-  
-
-
-
-.overlay-image {
-  margin-left: 5%;
-  margin-right: 4vh;
-  
-}
-
-}
 
 @media screen and (max-width: 377px) {
 
@@ -777,68 +769,19 @@ h4{
 }
   
 
-.overlay-image {
-  margin-left: 5%;
-  margin-right: 4vh;
-  
-}
+
 
 }
 
 
 
-@media screen and (max-width: 376px) {
-
-  /* Target mobile-m portrait screens */
-  
-
-
-  .container-card {
-    margin-left: 7%;
-    margin-bottom: 16%;
-}
-  .overlay-image{
-    margin-left: 5%;
-    height: 71%;
-    margin-right: 15px;
-  }
-
-
-  .overlay-button {
-    margin-top: -4%;
-    margin-left: 6px;
-    
-}
-  
-  .book-now-button, .explore-now-button {
-    height: 10%;
-    margin: 3%;
-}
-
-}
 
 
 
-@media screen and (max-width: 374px) {
-
-  /* Target mobile-m portrait screens */
-  
 
 
-  
-  .overlay-image{
-    margin-left: 5%;
-    height: 71%;
-    margin-right: 13px;
-  }
 
-  
-  .book-now-button, .explore-now-button {
-    height: 10%;
-    margin: 3%;
-}
 
-}
 
 @media screen and (max-width: 321px) {
 

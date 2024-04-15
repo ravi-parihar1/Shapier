@@ -17,9 +17,12 @@ import ServiceCard from '../ServiceCard';
 import Phase2 from '../Phase2';
 import Phase3 from '../Phase3';
 import Phase4 from '../Phase4';
+
 import TopRatedProduct from "../../TopRatedProduct.json";
 import Expo from "../../Exeperimental.json";
 import Lottie from 'react-lottie';
+
+import Slider1 from '../Slider1'
 
 export default function HomePage() {
 
@@ -52,12 +55,17 @@ export default function HomePage() {
 
     return (
         <div>
+
+            
             <Header />
             <div className='container mt-3'>
-
+                
                 {/* this is Phase-I Container */}
                 <div className='container'>
-                    <h2>Streamline construction<br />projects</h2>
+                <Slider1/>
+                <Phase6/>
+                    
+                    <h2 className='first-heading'>Streamline construction<br />projects</h2>
                     {/* from this point the first container code begin of choose service */}
                     <div className='inner-container'>
                         <div className='content'>
@@ -102,13 +110,15 @@ export default function HomePage() {
                     </div>
 
                 </div>
+                
                 <Phase2/>
+                
                 <Phase3/>   
                 <Phase4/>
-                <Phase6/>
+                {/* <Phase6/> */}
                 <Phase7 filepath={TopRatedProduct} heading={"Top Product"}/>
                 <Phase7 filepath={Expo} heading={"Top Rated Product"}/>
-                {/* <Phase8/> */}
+               
 
             </div>
             <Footer />

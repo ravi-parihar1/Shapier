@@ -4,9 +4,20 @@
     flex-wrap: wrap; /* Allow flex items to wrap to the next line */
     justify-content: space-between; /* Align items to the start of the container */
     align-items: flex-start; /* Align items to the start of the container */
-    padding-top: 30px; /* Add padding from the top */
+     /* Add padding from the top */
 
 }
+
+.first-heading{
+  margin-top: 3%;
+}
+
+.w-100 {
+  width: 100% !important;
+  height: 30rem;
+  border-radius: 30px 0px 30px 0px;
+}
+
 .content {
     flex: 1;
     border-radius: 10px;
@@ -359,6 +370,12 @@ h6{
     h5{
         font-size: 16px;
     }
+
+    .w-100 {
+      width: 100% !important;
+      height: 15rem;
+      border-radius: 30px 0px 30px 0px;
+  }
 
     .service-item {
         margin: 10px;  /* Adjust margins as needed (optional) */

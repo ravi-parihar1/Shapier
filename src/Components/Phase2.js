@@ -74,7 +74,7 @@ export default function Phase2() {
 
           {/* Text conatiner code start from her  */}
           <div className="text-container">
-            <h4>{imageData[currentImageIndex].title}</h4>
+            <h4 className='img-name'>{imageData[currentImageIndex].title}</h4>
             <p className="phase2-text">{imageData[currentImageIndex].text}</p>
             
               <button className="see-button">See More</button>

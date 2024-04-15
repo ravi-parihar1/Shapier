@@ -5,8 +5,23 @@
   margin-top: 0.5%;
   margin-left: 69%;
 }
+
+#content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hiding scrollbar for IE, Edge and Firefox */
+#content {
+scrollbar-width: none;  /* Firefox */
+-ms-overflow-style: none;  /* IE and Edge */
+}
+
+
+.headsection{
+  display: flex;
+}
 .Trending_product_container {
-  background-color: #f0ecec;
+  
   scroll-behavior: smooth;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -16,35 +31,91 @@
   }
 }
 .tranding_page_Card {
-  background-color: transparent;
-  border-radius: 5%;
-  text-align: start;
-  margin: 5% -4% 5% 5%;
-  width: 170px;
+  background-color: #F0ECEC;
+    border-radius: 5%;
+    /* text-align: start; */
+    margin: 5% -4% 5% 5%;
+    width: 15rem;
+    height: auto;
 }
 .trending_product_img {
   border-radius: 5%;
   height: 170px;
   width: 150px;
-  margin-top: 5%;
+  margin-bottom: 1rem;
+  margin-left: 3rem;
 }
-.tranding_page_product_name {
-  margin-top: 3%;
-  font-size: 18px;
+
+.tranding_product_buy_button{
+  border-radius: 0px 10px 10px 0px;
+  background-color: white;
+  height: auto;
+  width: 9rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.buy-now{
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
   color: black;
 }
+
+
+.tranding_page_product_name {
+  margin-top: 3%;
+  font-size: 22px;
+  color: black;
+  font-weight: 400;
+}
 .tranding_page_product_price {
-  margin-top: -18%;
+  margin-top: 10%;
+  margin-bottom: 10%;
   color: black;
 }
 .tranding_product_text_box {
   background: #ffffff;
-  width: 90%;
+  width: 14rem;
+  height: 2.3rem;
   /* border-color: black; */
-  padding-left: 15%;
+  padding-left: 4%;
   padding-bottom: 5;
-  border-radius: 14px;
+  border-radius: 4px;
   margin-top: 3%;
+  
+}
+
+.tranding_product_text_box_2 {
+  background: #ffffff;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: 2%;
+  margin-right: 15%; 
+  font-weight: 500; 
+  text-align: center;
+  width: 5rem;
+  border-radius: 20px;
+}
+
+.tranding_product_text_box_3{
+  background: #ffffff;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: 10%; 
+  font-weight: 500; 
+  text-align: center;
+  width: 5rem;
+  border-radius: 20px;
+}
+
+
+
+
+
+.price_section{
+  display: flex;
+  margin-right: 5%;
 }
 
 .Trending_product_container::-webkit-scrollbar-track {

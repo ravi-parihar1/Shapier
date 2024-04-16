@@ -69,7 +69,7 @@
   background-size: cover;
   height: 12rem;
   width: 18rem;
-  border-radius: 40px;
+  border-radius: 12px;
   margin-bottom: 20px;
   padding: 15px;
   color: white;
@@ -77,15 +77,23 @@
   margin-right: 30px;
   background-color: rgba(0, 0, 0, 0.5);
   position: relative;
-
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   z-index: 0;
-  /* Ensure overlay is behind buttons/titles (optional) */
+  
+}
 
 
+.overlay-image:hover{
+  transform: scale(1.05);
+ 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .overlay-title {
   z-index: 1;
+  text-align: center;
+  margin-top: 3rem;
 }
 
 .overlay-button {
@@ -96,7 +104,7 @@
   border-radius: 20px;
   background-color: #0d1b23;
   border: none;
-  /* border: 2px solid rgb(255, 255, 255); */
+  
   color: rgb(255, 255, 255);
   transition: transform 0.3s, box-shadow 0.3s;
   z-index: 1;
@@ -104,9 +112,9 @@
 
 .overlay-button:hover {
   transform: scale(1.05);
-  /* Increase size by 5% */
+ 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  /* Add shadow effect */
+  
 }
 
 

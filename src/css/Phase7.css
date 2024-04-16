@@ -1,4 +1,5 @@
 .Tradning_product_page{
+  margin-top: 40px;
   margin-bottom: 10%;
 }
 .Tanding_product_see_more{
@@ -11,10 +12,7 @@
 }
 
 /* Hiding scrollbar for IE, Edge and Firefox */
-#content {
-scrollbar-width: none;  /* Firefox */
--ms-overflow-style: none;  /* IE and Edge */
-}
+
 
 
 .headsection{

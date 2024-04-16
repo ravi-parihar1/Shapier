@@ -23,6 +23,7 @@ import Expo from "../../Exeperimental.json";
 import Lottie from 'react-lottie';
 
 import Slider1 from '../Slider1'
+// import Comprehensive from '../Comprehensive'
 
 export default function HomePage() {
 
@@ -111,8 +112,9 @@ export default function HomePage() {
 
                 </div>
                 
-                <Phase2/>
                 
+                <Phase2/>
+                {/* <Comprehensive/> */}
                 <Phase3/>   
                 <Phase4/>
                 {/* <Phase6/> */}

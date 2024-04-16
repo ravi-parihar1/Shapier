@@ -1,80 +1,64 @@
 import React from "react";
 import shapierlogo from "../assets/shapelogo.png";
 import '../css/Footer.css';
+import { BsTwitterX } from "react-icons/bs";
+import { ImFacebook2 } from "react-icons/im";
+import { IoLogoInstagram } from "react-icons/io5";
 export default function Footer() {
   return (
     <div>
-      <footer class="text-center text-lg-start bg-dark text-white ">
-        <section class="">
-          <div class="container text-center text-md-start mt-5">
-            <div class="row mt-3">
-              <div class="col-md-3 col-lg-4 col-xl-3 mt-xl-3 text-md-end mx-xl-auto mb-4" id="logo_and_company">
-                <img src={shapierlogo} height={150} width={150} />
-                <h4 class="mb-4 mt-3 font-weight-bold ">Company</h4>
-                <p>About Us</p>
-                <p>Privacy Policy</p>
-                <p>Terms & Conditions</p>
-              </div>
-              <div class="col-md-2 col-lg-2  col-xl-2 mt-5 mb-4 text-end" id="social_link_and_customer  " style={{marginRight: "20vh"}}>
-                <div class="social_link_container text-center">
-                  <h4 className="mb-2 mt-3 font-weight-bold">Social Link</h4>
-                  <div className="d-flex mx-4   ">
-                    <h3 className="mx-2">ins</h3>
-                    <h3>fac</h3>
-                  </div>
-                </div>
-
-                <h4 class="mb-4  font-weight-bold" id="For_customers" >For Customers</h4>
-                <p className="footer_customers">
-                  <a href="#!" class="text-reset" style={{textDecoration:"none"}}>
-                    Categories Near You
-                  </a>
-                </p>
-                <p className="footer_customers">
-                  <a href="#!" class="text-reset" style={{textDecoration:"none"}}>
-                    Blog
-                  </a>
-                </p>
-                <p className="footer_customers">
-                  <a href="#!" class="text-reset" style={{textDecoration:"none"}}>
-                    Contact Us
-                  </a>
-                </p>
-              </div>
-              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-4 mb-4 text-end">
-                <h4 class="text-capitalize mb-2 font-weight-bold" id="for_partners" >For partners</h4>
-                <p id="resgister_yourself">
-                  <a href="#!" class="text-reset" style={{textDecoration:"none"}}>
-                    Resgister yourself as partner
-                  </a>
-                </p>
-              </div>
-              <div class="col-md-4 col-lg-3 col-xl-3 mx-xl-auto mb-md-0 mb-4" id="contact" >
-                <h4 class="text-capitalize mb-2 font-weight-bold">Contact</h4>
-                <p>
-                  <i class="fas fa-home me-3"></i> New York, NY 10012, US
-                </p>
-                <p>
-                  <i class="fas fa-envelope me-3"></i>
-                  info@example.com
-                </p>
-                <p>
-                  <i class="fas fa-phone me-3"></i> + 01 234 567 88
-                </p>
-                <p>
-                  <i class="fas fa-print me-3"></i> + 01 234 567 89
-                </p>
-              </div>
-            </div>
+       <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Shapier.in<i>IS WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
           </div>
-        </section>
-        <div
-          class="text-center p-4"
-          style={{ backgroundColor: "rgba(0,0,0,0)" }}
-        >
-          © Copyright 2024 Shapier Company. All rights reserved.
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+              <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+              <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/about/">About Us</a></li>
+              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+            </ul>
+          </div>
         </div>
-      </footer>
+        <hr/>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+         <a href="#">Shapier.in</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><ImFacebook2 /></a></li>
+              <li><a class="twitter" href="#"><BsTwitterX /></a></li>
+              <li><a class="dribbble" href="#"><IoLogoInstagram /></a></li>
+              {/* <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>    */}
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
     </div>
   );
 }

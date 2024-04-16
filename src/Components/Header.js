@@ -1,7 +1,7 @@
 import React from 'react'
 import shapelogo from '../assets/shapelogo.png';
 import SearchBar from './SearchBar';
-import './Header.css'
+import '../css/Header.css'
 import { AiOutlineHeart } from "react-icons/ai";
 import { LuShoppingBag } from "react-icons/lu";
 

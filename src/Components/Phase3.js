@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from "react";
-import "./Phase3.css";
+import "../css/Phase3.css";
 import asianpaints from "../assets/HomePageAssets/asian.jpg";
 import cera from "../assets/HomePageAssets/cera.png";
 import century from "../assets/HomePageAssets/century.jpg";

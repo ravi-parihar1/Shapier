@@ -35,19 +35,20 @@
 .footer-links
 {
   padding-left:0;
-  list-style:none
+  list-style:none;
 }
 .footer-links li
 {
-  display:block
+  display:block;
 }
 .footer-links a
 {
-  color:#737373
+  color:#737373;
+  text-decoration: none;
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
-  color:#3366cc;
+  color:white;
   text-decoration:none;
 }
 .footer-links.inline li

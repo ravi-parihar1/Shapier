@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './Phase2.css'
+import '../css/Phase2.css'
 import arcimg from '../assets/HomePageAssets/2148233793.jpg'
 import civil from '../assets/HomePageAssets/14323.jpg'
 import vastu from '../assets/HomePageAssets/2150171520.jpg'

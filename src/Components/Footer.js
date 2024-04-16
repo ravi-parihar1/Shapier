@@ -12,18 +12,18 @@ export default function Footer() {
         <div class="row">
           <div class="col-sm-12 col-md-6">
             <h6>About</h6>
-            <p class="text-justify">Shapier.in<i>IS WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+            <p class="text-justify">Shapier.in IS WANTS TO BE SIMPLE ipsum dolor, sit amet consectetur adipisicing elit. Earum accusantium expedita in ipsa sapiente dignissimos, totam dolore voluptas! Commodi pariatur harum unde atque. Dicta voluptatibus illum rerum magnam, dolores nesciunt?</p>
           </div>
 
           <div class="col-xs-6 col-md-3">
             <h6>Categories</h6>
-            <ul class="footer-links">
-              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-              <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-              <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+            <ul class="footer-links ">
+              <li><a href="http://scanfcode.com/category/c-language/">General Contractors</a></li>
+              <li><a href="http://scanfcode.com/category/front-end-development/">Specialized Plumber</a></li>
+              <li><a href="http://scanfcode.com/category/back-end-development/">Certified Electricians</a></li>
+              <li><a href="http://scanfcode.com/category/java-programming-language/">Experienced Landscrapers</a></li>
+              <li><a href="http://scanfcode.com/category/android/">HVAC Technician</a></li>
+              <li><a href="http://scanfcode.com/category/templates/">Skilled Carpainters</a></li>
             </ul>
           </div>
 

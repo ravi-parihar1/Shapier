@@ -112,7 +112,6 @@ export default function HomePage() {
 
                 </div>
                 
-                
                 <Phase2/>
                 {/* <Comprehensive/> */}
                 <Phase3/>   

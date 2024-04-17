@@ -50,7 +50,6 @@ export default function Phase6() {
             <div className='tags_element' key={shop.id}>
               <img src={shop.image} alt="" />
               <p className='name'>{shop.name}</p>
-              
             </div>
           )}
         </div> : null}

@@ -34,7 +34,7 @@ export default function Phase6() {
               <p className='name'>{service.name}</p>
             </div>
           )}
-        </div> : null}
+        </div> : <div></div>}
       {displayedProducts === "shape" ?
         <div className='cat-item'>
           {Shap.map(shap =>
@@ -43,7 +43,7 @@ export default function Phase6() {
               <p className='name'>{shap.name}</p>
             </div>
           )}
-        </div> : null}
+        </div> : <div></div>}
       {displayedProducts === "shop" ?
         <div className='cat-item'>
           {Shop.map(shop =>
@@ -52,7 +52,7 @@ export default function Phase6() {
               <p className='name'>{shop.name}</p>
             </div>
           )}
-        </div> : null}
+        </div> : <div></div>}
     </>
   )
 }

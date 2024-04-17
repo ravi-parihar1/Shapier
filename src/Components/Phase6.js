@@ -1,12 +1,12 @@
 import { React, useState, useEffect } from 'react';
 import Services from '../Services.json';
 import Shop from '../TopRatedProduct.json';
-import Shap from '../Shap.json'
+import Shap from '../Shape.json'
 import TopProduct from '../TopRatedProduct.json';
 import '../css/Phase6.css';
 
 export default function Phase6() {
-  const tags = ["services", "shap", "shop"];
+  const tags = ["services", "shape", "shop"];
   const [displayedProducts, setDisplayedProducts] = useState("services")
 
   const handleClick = async (tag) => {
@@ -30,17 +30,17 @@ export default function Phase6() {
         <div className='cat-item'>
           {Services.map(service =>
             <div className='tags_element' key={service.id}>
-              <img src={service.img} alt={service.name} />
-              {/* <p>{service.name}</p> */}
+              <img src={service.img} alt="no image to display" />
+              <p className='name'>{service.name}</p>
             </div>
           )}
         </div> : null}
-      {displayedProducts === "shap" ?
+      {displayedProducts === "shape" ?
         <div className='cat-item'>
           {Shap.map(shap =>
             <div className='tags_element' key={shap.id}>
-
-              {shap.name}
+              <img src={shap.imgsrc} alt="" />
+              <p className='name'>{shap.name}</p>
             </div>
           )}
         </div> : null}
@@ -48,7 +48,9 @@ export default function Phase6() {
         <div className='cat-item'>
           {Shop.map(shop =>
             <div className='tags_element' key={shop.id}>
-              {shop.name}
+              <img src={shop.image} alt="" />
+              <p className='name'>{shop.name}</p>
+              
             </div>
           )}
         </div> : null}

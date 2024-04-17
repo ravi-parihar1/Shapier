@@ -1,35 +1,34 @@
 [
     {
         "id": 1,
-        "name": "services",
-        "img" : "https://www.freepik.com/free-photo/plumber-making-ok-sign_1143109.htm#fromView=search&page=1&position=0&uuid=414e0270-dfd9-45f3-ae04-591f6b6814f6"
+        "name": "Civil Engineer",
+        "img" : "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         "id": 2,
-        "name": "services",
-        "img" : "https://www.freepik.com/free-photo/female-construction-site-engineer-with-helmet-high-quality-photo_14857771.htm#fromView=search&page=1&position=8&uuid=e5d1d4ec-8749-484f-83e6-9f672e8598e1"
-
+        "name": "Painter",
+        "img" : "https://images.unsplash.com/photo-1605201470550-f107ba6fdad3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         "id": 3,
-        "name": "services",
-        "img" : "https://www.freepik.com/free-photo/vintage-desk-travel-concept_2068232.htm#fromView=search&page=1&position=21&uuid=7e1e370b-277a-4a8d-aa16-64151b333618"
+        "name": "Designer",
+        "img" : "https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         "id": 4,
-        "name": "services",
-        "img" : "https://www.freepik.com/free-photo/portrait-smiling-male-carpenter-holding-handsaw-looking-camera_3579535.htm#fromView=search&page=1&position=3&uuid=32984020-5e19-4caf-91e6-71e2dd5d67eb"
+        "name": "Architect",
+        "img" : "https://images.unsplash.com/photo-1618221381711-42ca8ab6e908?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     
     {
         "id": 5,
         "name": "services",
-        "img" : "https://www.freepik.com/free-photo/focused-man-measuring-wooden-planks_11230058.htm#fromView=search&page=1&position=27&uuid=32984020-5e19-4caf-91e6-71e2dd5d67eb"
+        "img" : "https://images.unsplash.com/photo-1608303588026-884930af2559?q=80&w=1903&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     
     {
         "id": 6,
         "name": "services",
-        "img" : "https://www.freepik.com/free-photo/man-electrical-technician-working-switchboard-with-fuses_32646468.htm#fromView=search&page=1&position=0&uuid=69b42bd8-d631-400a-a76c-2c98d95a7df6"
+        "img" : "https://images.unsplash.com/photo-1581092446327-9b52bd1570c2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
 ]

@@ -28,6 +28,16 @@ export default function Phase4() {
         }
     };
 
+    const handleWhatsAppButtonClick = () => {
+        // Replace '1234567890' with your actual WhatsApp number
+        window.location.href = 'https://wa.me/6377692127';
+    };
+
+    const handleCallButtonClick = () => {
+        // Replace '1234567890' with your actual phone number
+        window.location.href = 'tel:6377692127';
+    };
+
     return (
         <div className='Phase4-container' style={{ display: 'flex' }}>
 
@@ -45,8 +55,8 @@ export default function Phase4() {
                     <h1 className='RequestTitle'>Request a Quote</h1>
                     <p className='passage'>order in bulk Easily with our special <br />chat and call options</p>
                     <div className="but">
-                        <button className="whatsapp-button"><PiWhatsappLogoLight className="icon"/>WhatsApp</button>
-                        <button className="call-button"><LuPhoneCall className="icon"/>Call</button>
+                        <button className="whatsapp-button" onClick={handleWhatsAppButtonClick}><PiWhatsappLogoLight className="icon"/>WhatsApp</button>
+                        <button className="call-button"  onClick={handleCallButtonClick}><LuPhoneCall className="icon"/>Call</button>
                     </div>
                 </div>
                 <div className="ani-container">

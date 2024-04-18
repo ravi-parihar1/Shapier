@@ -26,7 +26,7 @@ export default function Phase6() {
           </div>
         )}
       </div>
-      {displayedProducts === "services" ?
+      {displayedProducts == "services" ?
         <div className='cat-item'>
           {Services.map(service =>
             <div className='tags_element' key={service.id}>
@@ -35,7 +35,7 @@ export default function Phase6() {
             </div>
           )}
         </div> : <div></div>}
-      {displayedProducts === "shape" ?
+      {displayedProducts == "shape" ?
         <div className='cat-item'>
           {Shap.map(shap =>
             <div className='tags_element' key={shap.id}>
@@ -44,7 +44,7 @@ export default function Phase6() {
             </div>
           )}
         </div> : <div></div>}
-      {displayedProducts === "shop" ?
+      {displayedProducts == "shop" ?
         <div className='cat-item'>
           {Shop.map(shop =>
             <div className='tags_element' key={shop.id}>

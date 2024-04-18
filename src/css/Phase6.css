@@ -11,15 +11,13 @@
     overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+  &::-webkit-scrollbar {
+    display: none;
+  }
     
    
 }
 
-.cat-item {
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
 
 
 .tags_container {
@@ -45,13 +43,13 @@
 
 
 .name{
-    /* align-items: center; */
+    align-items: center;
     font-family: "Jersey 20", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 24px;
-    margin-left: 30%;
-    justify-self: center    ;
+    text-align: center;
+    
 }
 
 
@@ -148,3 +146,26 @@
     color: #eee;
 }
 
+@media (max-width: 426px){
+    .tags_inner_container {
+        margin-right: 2rem;
+    }
+    
+    .tags_element img{
+        
+        height: 9rem;
+        width: 9rem;
+        margin-right: 1rem;
+        
+        
+    }
+  }
+
+  @media (max-width: 321px){
+    .tags_inner_container {
+        margin-right: 1rem;
+    }
+
+    
+    
+  } 

@@ -1,14 +1,15 @@
+import { Outlet, Link} from 'react-router-dom';
 import React from 'react'
 import shapelogo from '../assets/shapelogo.png';
 import SearchBar from './SearchBar';
 import '../css/Header.css'
 import { AiOutlineHeart } from "react-icons/ai";
 import { LuShoppingBag } from "react-icons/lu";
-
+import ContactPage from './Pages/ContactPage';
 
 export default function Header() {
     return (
-        <div>
+        <>
 <nav className="navbar navbar-expand-lg bg-light">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#" style={{ padding: '0' }}> {/* Removed padding */}
@@ -22,12 +23,12 @@ export default function Header() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav mb-2 mb-lg-0" style={{ marginLeft: '-10px' }}> {/* Adjusted margin */}
+                        <ul className="navbar-nav mb-2 mb-lg-0" > {/* Adjusted margin */}
                             <li className="nav-item">
-                                <a className="nav-link" href="#1">Home</a>
+                                <Link className='nav-link' activeStyle to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#2">Service</a>
+                                <Link className="nav-link" to="/services">Service</Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#3">Shape</a>
@@ -36,7 +37,7 @@ export default function Header() {
                                 <a className="nav-link" href="#4">Store</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#5">Contact</a>
+                                <Link className='nav-link' to='/contact'>Contact</Link>
                             </li>
                         </ul>
                     </div>
@@ -49,6 +50,7 @@ export default function Header() {
                     </div>
                 </div>
             </nav>
-        </div>
+            <Outlet/>
+        </>
     )
 }

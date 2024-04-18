@@ -1,6 +1,7 @@
 import React,{ useEffect } from 'react';
 import Header from '../Header';
 import './ContactPage.css'
+import shapelogo from '../../assets/shapelogo.png';
 
 export default function ContactPage() {
 
@@ -78,7 +79,7 @@ export default function ContactPage() {
          <Header/>
          <div className="contact-container">
             <div className="left-col">
-                <img className="contact-logo" src="https://www.indonesia.travel/content/dam/indtravelrevamp/en/logo.png" alt="Indonesia Travel Logo" />
+                {/* <img className="contact-logo" src={shapelogo} alt="Shapier Logo" /> */}
             </div>
             <div className="right-col">
                 

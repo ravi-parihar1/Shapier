@@ -31,10 +31,10 @@ export default function Header() {
                                 <Link className="nav-link" to="/services">Service</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#3">Shape</a>
+                                <Link className="nav-link" to="/shape">Shape</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#4">Store</a>
+                                <Link className="nav-link" to="/store">Store</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className='nav-link' to='/contact'>Contact</Link>

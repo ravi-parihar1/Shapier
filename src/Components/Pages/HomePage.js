@@ -3,7 +3,7 @@ import Header from '../Header'
 import Footer from '../Footer'
 import Phase8 from '../Phase8'
 import Phase7 from '../Phase7'
-import './HomePage.css'
+import '../../css/HomePage.css'
 import coverPhoto from '../../assets/cover.png';
 import Phase6 from '../Phase6'
 import contractorImage from '../../assets/HomePageAssets/contractor.jpg';
@@ -62,7 +62,7 @@ export default function HomePage() {
             <div className='container mt-3'>
                 
                 {/* this is Phase-I Container */}
-                <div className='container'>
+                <div className='container-fluid'>
                 <Slider1/>
                 <Phase6/>
                     

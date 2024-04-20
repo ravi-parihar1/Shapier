@@ -24,19 +24,11 @@
         "image": "https://imgmedia.lbb.in/media/2021/03/60464283e8d4c56a3266276c_1615217283092.jpg",
         "name": "InteriorLights"
     },
-    {
-        "id": 5,
-        "image": "https://images.unsplash.com/photo-1642252429939-3f9232959eb9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGFpbnQlMjBhY2MlMjBhbmQlMjB0b29sc3xlbnwwfHwwfHx8MA%3D%3D",
-        "name": "InteriorLights"
-    },
+    
     {
         "id": 6,
-        "image": "https://images.unsplash.com/photo-1596180744691-d19a1b90b53c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2FzaCUyMGJhc2lufGVufDB8fDB8fHww",
-        "name": "showers"
-    },
-    {
-        "id": 6,
-        "image": "https://images.unsplash.com/photo-1596180744691-d19a1b90b53c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2FzaCUyMGJhc2lufGVufDB8fDB8fHww",
+        "image": "https://static.vecteezy.com/system/resources/previews/006/716/397/non_2x/modern-bathroom-interior-shower-mirror-and-cabinet-monochrome-colors-free-vector.jpg",
         "name": "showers"
     }
+    
 ]

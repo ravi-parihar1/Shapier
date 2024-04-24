@@ -59,12 +59,15 @@ export default function HomePage() {
 
             
             <Header />
-            <div className='container mt-3'>
-                
+            <Slider1/>
+            
+
+            <div className='container mt-4'>
+            
                 {/* this is Phase-I Container */}
                 <div className='container-fluid'>
-                <Slider1/>
-                <Phase6/>
+                
+                {/* <Phase6/> */}
                     
                     <h2 className='first-heading'>Streamline construction<br />projects</h2>
                     {/* from this point the first container code begin of choose service */}

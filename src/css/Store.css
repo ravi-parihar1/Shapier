@@ -1,39 +1,78 @@
-
-
-.store-container{
-    background-image: url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    height: 20rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    
-    
-}
-
-
-
-
-.store-heading{
-    padding-top: 8rem;
-    color: white;
-    font-weight: 600;
-}
-
-
-.product-store{
+/* Store Container */
+.store-container {
+    margin-top: 20px;
+  }
+  
+  /* Store Row */
+  .store-row {
     display: flex;
-    width: 100vw;
-    height: 100vh;
-    background: var(--bg-color);
-}
-
-.filter-side{
-    margin: 20px;
-}
-
-
-.filter-categories{
-    font-weight: 600;
-    font-size: 16px;
-}
-
+    flex-wrap: wrap;
+  }
+  
+  /* Store Sidebar */
+  .store-sidebar {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  /* Section Title */
+  .section-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  /* Filter Options */
+  .filter-options {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+  
+  /* Custom Checkbox */
+  .custom-checkbox-input {
+    margin-right: 10px;
+  }
+  
+  /* Badge */
+  .filter-badge {
+    background-color: #ffc107;
+    color: #212529;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Shop Products */
+  .shop-products {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Product Item */
+  .product-item {
+    margin-bottom: 20px;
+  }
+  
+  /* Pagination */
+  .pagination-container {
+    margin-top: 20px;
+  }
+  
+  .pagination-list {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination-item {
+    margin-right: 5px;
+  }
+  
+  .pagination-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+  }
+  
+  .pagination-item.disabled .page-link:hover {
+    cursor: not-allowed;
+  }
+  

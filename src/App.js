@@ -11,6 +11,7 @@ import HomePage from './Components/Pages/HomePage';
 import ServicesPage from './Components/Pages/ServicesPage';
 import Shape from './Components/Pages/Shape';
 import Store from './Components/Pages/Store';
+import ProductDetails from './Components/Pages/ProductDetails';
 function App() {
   return (
     <BrowserRouter>
@@ -20,6 +21,7 @@ function App() {
         <Route path='/services' element={<ServicesPage />} />
         <Route path='/shape' element={<Shape />} />
         <Route path='/store' element={<Store />} />
+        <Route path='/product-details' element={<ProductDetails />} />
 
       </Routes>
     </BrowserRouter>

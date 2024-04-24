@@ -12,20 +12,20 @@
 }
 
 .phase2-image {
-  width: 650px;
+  width: 40rem;
   /* Adjust this value as needed */
-  height: 300px;
+  height: 20rem;
   /* Maintain aspect ratio */
-  border-radius: 20px;
+  
   transition: transform 1s, box-shadow 0.3s;
 }
-
+/* 
 .phase2-image:hover {
   transform: scale(1.02);
-  /* Increase size by 5% */
+  
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  /* Add shadow effect */
-}
+  
+} */
 
 .button-container {
   position: absolute;
@@ -63,6 +63,10 @@
   display: flex;
   flex-wrap: wrap;
   padding-right: 20px;
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .overlay-image {
@@ -253,10 +257,10 @@
 @media screen and (max-width: 769px) {
 
   /* Target Tablet-sized screens */
-  .phase2-image {
+  /* .phase2-image {
     width: 580px;
     height: 250px;
-  }
+  } */
 
   .see-button {
     bottom: -10px;
@@ -326,7 +330,7 @@
 }
 
   .phase2-image {
-    width: 50%;
+    width: 40%;
    
   }
 

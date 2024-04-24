@@ -1,6 +1,6 @@
-.brand_images_size{
-    height: 150px;
-    width: 150px;
+.brand_images_size {
+  height: 150px;
+  width: 150px;
 }
 .brand-container {
   background-color: #eceff0;
@@ -58,7 +58,7 @@
   margin: 10px; /* Adjust the spacing between items */
 }
 
-.container-brand-img img{
+.container-brand-img img {
   border-radius: 50%;
   /* background-color: black; */
   height: 100px;
@@ -66,12 +66,12 @@
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.container-brand-img{
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    margin-right: 60px;
-    margin-left: 30px;
+.container-brand-img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-right: 60px;
+  margin-left: 30px;
 }
 
 .container-brand-img:hover {
@@ -84,194 +84,185 @@ h2 {
   font-weight: 700;
 }
 
-
-
-
 @media (max-width: 1401px) {
-    
-    .container-brand-img img{
-       
-        height: 90px;
-        width: 90px;
-        
-      }
-      
-      .container-brand-img{
-        margin-right: 40px;
-          height: 90px;
-          width: 90px;
-          
-      }
+  .container-brand-img img {
+    height: 90px;
+    width: 90px;
   }
 
-  @media (max-width: 1400px) {
-    
-    .container-brand-img{
-        margin-right: 36px;
-          height: 90px;
-          width: 90px;
-          
-      }
-    
+  .container-brand-img {
+    margin-right: 40px;
+    height: 90px;
+    width: 90px;
   }
-
-@media (max-width: 1201px){
-    .ph3-image-row {
-        margin-right: 46px;
-      }
-    .container-brand-img {
-        margin-right: 30px;
-    }
 }
 
-@media (max-width: 1200px){
-    .ph3-image-row {
-        margin-right: 46px;
-      }
-    .container-brand-img {
-        margin-right: -5PX;
-    }
+@media (max-width: 1400px) {
+  .container-brand-img {
+    margin-right: 36px;
+    height: 90px;
+    width: 90px;
+  }
+}
+
+@media (max-width: 1201px) {
+  .ph3-image-row {
+    margin-right: 46px;
+  }
+  .container-brand-img {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .ph3-image-row {
+    margin-right: 46px;
+  }
+  .container-brand-img {
+    margin-right: -5px;
+  }
 }
 
 @media (max-width: 992px) {
-    .ph3-image-row {
-        margin-right: 23px;
-    }
+  .ph3-image-row {
+    margin-right: 23px;
+  }
 }
 
+@media (max-width: 768px) {
+  h2 {
+    font-weight: 500;
+  }
+  .explore-button {
+    height: 45px;
+    width: 134px;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
 
-
-
-
-@media (max-width: 768px){
-    h2 {
-        font-weight: 500;
-    }
-    .explore-button {
-        height: 45px;
-        width: 134px;
-        border-radius: 20px;
-        color: white;
-        background-color: black;
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-     
-
-
-    .ph3-image-row {
-        margin-right: -5%;
-    }
-    .ph3-container {
-        width: 350px;
-        margin-right: -34px;
-    }
+  .ph3-image-row {
+    margin-right: -5%;
+  }
+  .ph3-container {
+    width: 350px;
+    margin-right: -34px;
+  }
 }
 
-@media (max-width: 538px){
-    .container-brand-img {
-        margin-right: 10%;
-    }
+@media (max-width: 538px) {
+  .container-brand-img {
+    margin-right: 10%;
+  }
 }
 
+@media (max-width: 528px) {
+  .brand_images_size {
+    height: 100px;
+    width: 100px;
+  }
 
-@media (max-width: 528px){
-    .brand_images_size {
-        height: 100px;
-        width: 100px;
-    }
-    
-    .ph3-container {
-        width: 350px;
-        margin-right: -34px;
-    }
+  .ph3-container {
+    width: 350px;
+    margin-right: -34px;
+  }
 }
 
+@media (max-width: 457px) {
+  .container-brand-img img {
+    height: 70px;
+    width: 70px;
+  }
 
-@media (max-width: 457px){
-
-    .container-brand-img img{
-       
-        height: 70px;
-        width: 70px;
-        
-      }
-      
-      .container-brand-img{
-        /* margin-right: 40px; */
-          height: 70px;
-          width: 70px;
-          
-      }
-    
+  .container-brand-img {
+    /* margin-right: 40px; */
+    height: 70px;
+    width: 70px;
+  }
 }
 
+@media (max-width: 416px) {
+  .container-brand-img img {
+    height: 80px;
+    width: 80px;
+  }
 
-
-@media (max-width: 416px){
-
-    .container-brand-img img{
-       
-        height: 80px;
-        width: 80px;
-        
-      }
-      
-      .container-brand-img{
-        /* margin-right: 40px; */
-          height: 80px;
-          width: 80px;
-          margin-right: -14px;
-      }
-    
+  .container-brand-img {
+    /* margin-right: 40px; */
+    height: 80px;
+    width: 80px;
+    margin-right: -14px;
+  }
 }
 
+@media (max-width: 409px) {
+  .container-brand-img {
+    height: 85px;
+    width: 85px;
+    margin-right: -3px;
+    margin-top: 8px;
+  }
+  .container-brand-img img {
+    height: 85px;
+    width: 85px;
+  }
 
-@media (max-width: 409px){
-    .container-brand-img {
-        height: 85px;
-        width: 85px;
-        margin-right: -3px;
-        margin-top: 8px;
-    }
-    .container-brand-img img{
-       
-        height: 85px;
-        width: 85px;
-        
-      }
-    
-    /* .ph3-image-row {
+  /* .ph3-image-row {
         margin-right: 62px;
     } */
-    
 }
 
-
-@media (max-width: 426px){
-    .container-brand-img {
-        margin-right: -5px;
-        margin-top: 0px;
-    }
-
+@media (max-width: 426px) {
+  .container-brand-img {
+    margin-right: -5px;
+    margin-top: 0px;
+  }
+  .ph3-container h2, h5{
+    font-size: 16px;
+  }
+  .explore-button {
+    height: 33px;
+    width: 121px;
+    font-size: 12px;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
 }
 
-
-
-@media (max-width: 376px){
-    .brand_images_size {
-        height: 90px;
-        width: 90px;
-    }
-    .container-brand-img {
-        margin-right: -22px;
-        margin-top: -27px;
-    }
-    .ph3-image-row {
-        margin-right: 10px;
-    }
-    .ph3-container {
-        width: 350px;
-        margin-right: -32px;
-    }
+@media (max-width: 376px) {
+  .brand-container {
+    height: 21rem;
+  }
+  .brand_images_size {
+    height: 90px;
+    width: 90px;
+  }
+  .container-brand-img {
+    margin-right: -22px;
+    margin-top: -27px;
+  }
+  .ph3-image-row {
+    margin-right: 10px;
+  }
+  .ph3-container {
+    width: 350px;
+    margin-right: -32px;
+  }
+  .ph3-container h2,
+  h5 {
+    font-size: 16px;
+  }
+  .explore-button {
+    height: 36px;
+    width: 116px;
+    margin-left: -0.5rem;
+    font-size: 13px;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
 }
-

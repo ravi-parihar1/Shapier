@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import '../css/Phase2.css'
-import arcimg from '../assets/HomePageAssets/2148233793.jpg'
-import civil from '../assets/HomePageAssets/14323.jpg'
-import vastu from '../assets/HomePageAssets/2150171520.jpg'
-import desginer from '../assets/HomePageAssets/images.jpg'
+import arcimg from '../assets/HomePageAssets/24487811_6961929.jpg'
+import civil from '../assets/HomePageAssets/HVAC.jpg'
+import vastu from '../assets/HomePageAssets/vastu.svg'
+import desginer from '../assets/HomePageAssets/electrician.jpg'
 import Phase2OverLayImages from './Phase2OverLayImages'
 export default function Phase2() {
 
@@ -84,7 +84,7 @@ export default function Phase2() {
 
         {/* phase2 lower images code begain with here  */}
 
-        <div className="image-overlay-container">
+        {/* <div className="image-overlay-container">
           {OverLayImg.map((item, index) => (
             <Phase2OverLayImages
               key={index}
@@ -93,7 +93,7 @@ export default function Phase2() {
               title={item.title}
             />
           ))}
-        </div>
+        </div> */}
 
 
 

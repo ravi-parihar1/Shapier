@@ -1,6 +1,6 @@
 import React,{ useEffect } from 'react';
 import Header from '../Header';
-import './ContactPage.css'
+import '../../css/ContactPage.css'
 import shapelogo from '../../assets/shapelogo.png';
 
 export default function ContactPage() {

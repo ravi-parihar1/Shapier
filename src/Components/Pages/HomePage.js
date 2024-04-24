@@ -3,7 +3,7 @@ import Header from '../Header'
 import Footer from '../Footer'
 import Phase8 from '../Phase8'
 import Phase7 from '../Phase7'
-import './HomePage.css'
+import '../../css/HomePage.css'
 import coverPhoto from '../../assets/cover.png';
 import Phase6 from '../Phase6'
 import contractorImage from '../../assets/HomePageAssets/contractor.jpg';
@@ -59,12 +59,15 @@ export default function HomePage() {
 
             
             <Header />
-            <div className='container mt-3'>
-                
+            <Slider1/>
+            
+
+            <div className='container mt-4'>
+            
                 {/* this is Phase-I Container */}
-                <div className='container'>
-                <Slider1/>
-                <Phase6/>
+                <div className='container-fluid'>
+                
+                {/* <Phase6/> */}
                     
                     <h2 className='first-heading'>Streamline construction<br />projects</h2>
                     {/* from this point the first container code begin of choose service */}

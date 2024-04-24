@@ -11,6 +11,13 @@
   display: none;
 }
 
+.product-link,
+.product-link:focus,
+.product-link:focus-visible {
+  color: inherit; /* Inherit text color */
+  text-decoration: none; /* Remove underline */
+  outline: none; /* Remove focus outline */
+}
 /* Hiding scrollbar for IE, Edge and Firefox */
 
 
@@ -32,9 +39,10 @@
   }
 }
 .tranding_page_Card {
-  box-shadow: 1px 1px 1px 1px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 1px 1px 1px 1px; */
   background-color: #ffffff;
-    border-radius: 2px;
+    border-radius: 12px 12px 12px 0px;
     /* text-align: start; */
     margin: 5% 6px 5% 5%;
     width: 15rem;
@@ -49,7 +57,7 @@
 }
 
 .trending_product_img {
-  border-radius: 2px;
+  border-radius: 12px 12px 12px 0px;
   height: 12rem;
   width: 15rem;
   margin-bottom: 1rem;
@@ -66,11 +74,12 @@
     font-weight: 400;
     font-style: normal;
     font-size: 24px;
-    text-align: center;
+    /* text-align: center; */
+    margin-left: 5%;
     margin-bottom: 0rem;
 }
 .tranding_page_product_price {
-  margin-top: 10%;
+  margin-top: 5%;
   margin-bottom: 10%;
   color: black;
 }

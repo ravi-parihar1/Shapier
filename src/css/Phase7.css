@@ -1,8 +1,8 @@
-.Tradning_product_page{
+.Tradning_product_page {
   margin-top: 40px;
   margin-bottom: 10%;
 }
-.Tanding_product_see_more{
+.Tanding_product_see_more {
   margin-top: 0.5%;
   margin-left: 69%;
 }
@@ -20,16 +20,14 @@
 }
 /* Hiding scrollbar for IE, Edge and Firefox */
 
-
-
-.headsection{
+.headsection {
   display: flex;
 }
 .Trending_product_container {
-  
   scroll-behavior: smooth;
   overflow-x: scroll;
   overflow-y: hidden;
+  scroll-snap-align: center;
   white-space: nowrap;
   .tranding_page_Card {
     display: inline-block;
@@ -42,18 +40,18 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   /* box-shadow: 1px 1px 1px 1px; */
   background-color: #ffffff;
-    border-radius: 12px 12px 12px 0px;
-    /* text-align: start; */
-    margin: 5% 6px 5% 5%;
-    width: 15rem;
-    height: auto;
-    transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 12px 12px 12px 0px;
+  /* text-align: start; */
+  margin: 5% 6px 5% 5%;
+  width: 15rem;
+  height: auto;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.tranding_page_Card:hover{
+.tranding_page_Card:hover {
   transform: scale(1.05);
- 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .trending_product_img {
@@ -61,22 +59,16 @@
   height: 12rem;
   width: 15rem;
   margin-bottom: 1rem;
-  
 }
-
-
-
-
-
 
 .tranding_page_product_name {
   font-family: "Jersey 20", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 24px;
-    /* text-align: center; */
-    margin-left: 5%;
-    margin-bottom: 0rem;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  /* text-align: center; */
+  margin-left: 5%;
+  margin-bottom: 0rem;
 }
 .tranding_page_product_price {
   margin-top: 5%;
@@ -92,7 +84,6 @@
   padding-bottom: 5;
   border-radius: 4px;
   margin-top: 3%;
-  
 }
 
 .tranding_product_text_box_2 {
@@ -102,7 +93,7 @@
   margin-bottom: 4%;
   margin-left: 2%;
   padding-left: 10%;
-  margin-right: 15%; 
+  margin-right: 15%;
   font-family: "Jersey 20", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -112,15 +103,9 @@
   border-radius: 20px;
 }
 
-
-
-.tranding_page_product_price{
+.tranding_page_product_price {
   margin-left: 200%;
 }
-
-
-
-
 
 .Trending_product_container::-webkit-scrollbar-track {
   background-color: #f1f1f1;
@@ -144,21 +129,87 @@
   height: 10px;
 }
 
-@media (max-width:769px){
-    .Tradning_product_page {
-      margin-top: 12%;
+@media (max-width: 769px) {
+  .Tradning_product_page {
+    margin-top: 12%;
   }
 }
-@media (max-width: 426px){
+@media (max-width: 426px) {
   .Tradning_product_page {
     margin-top: 20%;
-}
+  }
   .Tanding_product_see_more {
     margin-left: 64%;
-}
-}
-@media (max-width: 376px){
+  }
+  .heading_name {
+    font-size: 16px;
+  }
+  .tranding_page_Card {
+    display: inline-block;
+    width: 9rem;
+    height: 14rem;
+  }
+  .trending_product_img {
+    border-radius: 12px 12px 12px 0px;
+    height: 8rem;
+    width: 9rem;
+    margin-bottom: 1rem;
+  }
+  .tranding_product_text_box_2 {
+    margin-left: -6%;
+  }
+  .tranding_page_product_name {
+    font-size: 16px;
+  }
+  .tranding_page_product_price {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    font-size: 14px;
+    color: black;
+  }
+  .tranding_page_product_price {
+    margin-left: 66%;
+    font-size: 14px;
+  }
   .Tanding_product_see_more {
     margin-left: 60%;
+    font-size: 14px;
+  }
 }
+
+@media (max-width: 376px) {
+  .heading_name {
+    font-size: 16px;
+  }
+  .tranding_page_Card {
+    display: inline-block;
+    width: 9rem;
+    height: 14rem;
+  }
+  .trending_product_img {
+    border-radius: 12px 12px 12px 0px;
+    height: 8rem;
+    width: 9rem;
+    margin-bottom: 1rem;
+  }
+  .tranding_product_text_box_2 {
+    margin-left: -6%;
+  }
+  .tranding_page_product_name {
+    font-size: 16px;
+  }
+  .tranding_page_product_price {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    font-size: 14px;
+    color: black;
+  }
+  .tranding_page_product_price {
+    margin-left: 66%;
+    font-size: 14px;
+  }
+  .Tanding_product_see_more {
+    margin-left: 60%;
+    font-size: 14px;
+  }
 }

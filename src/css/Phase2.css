@@ -1,3 +1,4 @@
+
 .image-text-container {
   display: flex;
   position: relative;
@@ -57,6 +58,7 @@
 
 .img-name{
   font-weight: 500;
+  font-size: 16px;
 }
 
 .image-overlay-container {
@@ -642,7 +644,19 @@
   
 
 @media screen and (max-width: 426px) {
-
+  .comprehensive_hub_title{
+    font-size: 16px;
+  }
+  .see-button {
+    margin-top: 12%;
+    height: 33px;
+    font-size: 12px;
+    width: 121px;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
   /* Target mobile-L portrait screens */
   .image-text-container {
     display: block;
@@ -778,6 +792,12 @@
   .container-card {
     margin-left: 8%;
     margin-bottom: 16%;
+}
+.see-button {
+  margin-top: 5%;
+  font-size: 12px;
+  width: 7rem;
+  height: 2rem;
 }
   
 

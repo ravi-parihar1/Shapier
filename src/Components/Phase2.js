@@ -62,7 +62,7 @@ export default function Phase2() {
     <div>
 
       <div className="container-phase2 mt-4 mb-4">
-        <h2>Comprehensive Hub</h2>
+        <h2 className='comprehensive_hub_title'>Comprehensive Hub</h2>
         <div className="image-text-container mt-5">
           <img
             className="phase2-image"
@@ -82,7 +82,7 @@ export default function Phase2() {
           </div>
         </div>
 
-        {/* phase2 lower images code begain with here  */}
+        {/* { phase2 lower images code begain with here  } */}
 
         {/* <div className="image-overlay-container">
           {OverLayImg.map((item, index) => (

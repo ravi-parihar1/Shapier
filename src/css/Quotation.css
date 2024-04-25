@@ -1,0 +1,258 @@
+.quotation_container {
+    color: white;
+    display: flex;
+    background: #0099ff;
+    width: 80rem;
+    height: 15rem;
+    margin-left: -5rem;
+    padding-left: 9rem;
+    align-items: center;
+}
+.quotation_container h3 {
+  color: white;
+  font-size: 37px;
+  font-family: 'Oswald';
+}
+.quotation_container p {
+  font-size: 20px;
+
+}
+.image_quotation {
+  height: 35rem;
+  margin-left: 0;
+  width: 35rem;
+  margin-top: -5rem;
+}
+
+.waves1 ,.waves2{
+    width: 80rem;
+    margin-left: -5rem;
+}
+
+
+@media (max-width: 1200px){
+    .waves1, .waves2 {
+        width: 83rem;
+        margin-left: -9rem;
+    }
+    .quotation_container {
+        color: white;
+        display: flex;
+        background: #0099ff;
+        width: 83rem;
+        height: 16rem;
+        margin-left: -9rem;
+        padding-left: 9rem;
+        align-items: center;
+    }
+    .quotation_container p {
+        font-size: 20px;
+        width: 36rem;
+    }
+    .image_quotation{
+        height: 25rem;   
+        width: 25rem;   
+    }
+}
+
+@media (max-width: 992px){
+    .waves1, .waves2 {
+        width: 83rem;
+        margin-left: -10rem;
+    }
+    .quotation_container {
+        color: white;
+        display: flex;
+        background: #0099ff;
+        width: 83rem;
+        height: 16rem;
+        margin-left: -10rem;
+        padding-left: 9rem;
+        align-items: center;
+    }
+    .quotation_container h3 {
+        color: white;
+        font-size: 30px;
+        font-family: 'Oswald';
+    }
+    .quotation_container p {
+        font-size: 17px;
+        width: 27rem;
+    }
+    .image_quotation {
+        height: 20rem;
+        width: 20rem;
+    }
+}
+@media (max-width){
+    .waves1, .waves2 {
+        width: 50rem;
+        margin-left: -10rem;
+    }
+    .quotation_container {
+        color: white;
+        display: flex;
+        background: #0099ff;
+        width: 83rem;
+        height: 16rem;
+        margin-left: -12rem;
+        padding-left: 9rem;
+        align-items: center;
+    }
+    .quotation_container h3 {
+        color: white;
+        width: 11rem;
+        font-size: 25px;
+        font-family: 'Oswald';
+    }
+    .quotation_container p {
+        font-size: 14px;
+        width: 19rem;
+    }
+    .quotation_container p {
+        font-size: 14px;
+        width: 19rem;
+    }
+    .image_quotation {
+        height: 20rem;
+        width: 20rem;
+    }
+}
+@media (max-width: 768px){
+    .waves1, .waves2 {
+        width: 50rem;
+        margin-left: -10rem;
+    }
+    .quotation_container {
+        color: white;
+        display: flex;
+        background: #0099ff;
+        width: 83rem;
+        height: 16rem;
+        margin-left: -12rem;
+        padding-left: 9rem;
+        align-items: center;
+    }
+    .quotation_container h3 {
+        color: white;
+        width: 11rem;
+        font-size: 25px;
+        font-family: 'Oswald';
+    }
+    .quotation_container p {
+        font-size: 14px;
+        width: 19rem;
+    }
+    .quotation_container p {
+        font-size: 14px;
+        width: 19rem;
+    }
+    .image_quotation {
+        height: 20rem;
+        width: 20rem;
+    }
+}
+
+@media (max-width: 618px){
+    .waves1, .waves2 {
+        width: 50rem;
+        margin-left: -10rem;
+    }
+    .quotation_container {
+        color: white;
+        display: flex;
+        background: #0099ff;
+        width: 83rem;
+        height: 16rem;
+        margin-left: -8rem;
+        padding-left: 9rem;
+        align-items: center;
+    }
+    .quotation_container h3 {
+        color: white;
+        width: 11rem;
+        font-size: 18px;
+        font-family: 'Oswald';
+    }
+    .quotation_container p {
+        font-size: 13px;
+        width: 15rem;
+    }
+    .image_quotation {
+        height: 15rem;
+        width: 15rem;
+    }
+}
+@media (max-width: 494px){
+    .waves1, .waves2 {
+        width: 40rem;
+        margin-left: -10rem;
+    }
+    .quotation_container {
+        color: white;
+        display: flex;
+        background: #0099ff;
+        width: 83rem;
+        height: 16rem;
+        margin-left: -8rem;
+        padding-left: 9rem;
+        align-items: center;
+    }
+    .quotation_container h3 {
+        color: white;
+        width: 11rem;
+        font-size: 18px;
+        font-family: 'Oswald';
+    }
+    .quotation_container p {
+        font-size: 13px;
+        width: 15rem;
+    }
+    .image_quotation {
+        height: 10rem;
+        width: 10rem;
+    }
+}
+@media (max-width: 426px) {
+    .waves1, .waves2 {
+        width: 36rem;
+        margin-left: -10rem;
+    }
+    .quotation_container {
+        color: white;
+        /* display: inline-block; */
+        background: #0099ff;
+        width: 83rem;
+        height: 15rem;
+        justify-content: center;
+        margin-left: -33rem;
+        /* padding-left: 9rem; */
+        align-items: center;
+    }
+    .quotation_container h3 {
+        color: white;
+        font-size: 20px;
+        font-family: 'Oswald';
+    }
+    .quotation_container p {
+        font-size: 15px;
+        width: 19rem;
+    }
+    .image_quotation {
+        display: none;
+    }
+}
+
+@media (max-width: 376px){
+    .quotation_container {
+        color: white;
+        /* display: inline-block; */
+        background: #0099ff;
+        width: 83rem;
+        height: 15rem;
+        justify-content: center;
+        margin-left: -36rem;
+        /* padding-left: 9rem; */
+        align-items: center;
+    }
+}

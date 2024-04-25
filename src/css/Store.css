@@ -19,8 +19,9 @@
     }
   }
   
-  .carousel-inner {
-    overflow: hidden;
+  .store-carousel-inner {
+    overflow:hidden;
+    margin-bottom: 10%;
   }
   
   .carousel-item {
@@ -73,6 +74,7 @@
   .custom-product-offer {
     position: relative;
     overflow: hidden;
+    margin-bottom: 7%;
   }
   
   .offer-image {
@@ -131,3 +133,5 @@
   .animate__fadeInUp {
     animation-name: fadeInUp;
   }
+
+  

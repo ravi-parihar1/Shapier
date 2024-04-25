@@ -73,9 +73,7 @@ export default function HomePage() {
                     {/* from this point the first container code begin of choose service */}
                     <div className='inner-container'>
                         <div className='content'>
-                            <h5>What are you looking for ?</h5>
-
-
+                            <h5 className='header_of_what_are_you_looking'>What are you looking for ?</h5>
                             {/* from this the services categories code begin */}
                             <div className="row">
 

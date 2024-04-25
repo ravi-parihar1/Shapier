@@ -2,33 +2,37 @@
     {
         "id": 1,
         "image": "https://images.unsplash.com/flagged/photo-1600002368144-444430d3f3ca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "name": "wash basin"
+        "name": "wash basin",
+        "price": "Rs.50"
     },
     {
         "id": 2,
         "image": "https://cdn.zeebiz.com/sites/default/files/styles/zeebiz_850x478/public/2023/05/11/241614-paint-pti.jpg?itok=jn4tAVYz",
-        "name": "paint acc and tools"
+        "name": "paint acc and tools",
+        "price": "Rs.25"
     },
     {
         "id": 3,
         "image": "https://www.whiteteak.com/media/catalog/product/c/f/cf8-10002_1_.jpg",
-        "name": "fan"
+        "name": "fan",
+        "price": "Rs.80"
     },
     {
         "id": 4,
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLXbC___u13XhAwigv3-vjK3gbkYjn_nXhF1qF-2kbHgZuSgnpuFSZFk6YceNlDqb-aJI&usqp=CAU",
-        "name": "Door Hardware"
+        "name": "Door Hardware",
+        "price": "Rs.15"
     },
     {
         "id": 5,
         "image": "https://imgmedia.lbb.in/media/2021/03/60464283e8d4c56a3266276c_1615217283092.jpg",
-        "name": "InteriorLights"
+        "name": "InteriorLights",
+        "price": "Rs.35"
     },
-    
     {
         "id": 6,
         "image": "https://static.vecteezy.com/system/resources/previews/006/716/397/non_2x/modern-bathroom-interior-shower-mirror-and-cabinet-monochrome-colors-free-vector.jpg",
-        "name": "showers"
+        "name": "showers",
+        "price": "Rs.100"
     }
-    
 ]

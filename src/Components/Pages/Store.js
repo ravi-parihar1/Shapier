@@ -1,88 +1,125 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import Header from '../Header';
 import '../../css/Store.css';
+import TopProduct from "../../TopRatedProduct.json";
 
-const Store = () => {
-  return (
-    <>
-      <Header />
-      <div className="store-container">
-        <div className="store-row px-xl-5">
-          {/* Shop Sidebar Start */}
-          <div className="store-sidebar col-lg-3 col-md-4">
-            {/* Price Start */}
-            <h5 className="section-title position-relative text-uppercase mb-3"><span className="bg-secondary pr-3">Filter by price</span></h5>
-            <div className="bg-light p-4 mb-30">
-              <form>
-                <div className="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                  <input type="checkbox" className="custom-control-input" checked id="price-all" />
-                  <label className="custom-control-label" htmlFor="price-all">All Price</label>
-                  <span className="badge border font-weight-normal">1000</span>
-                </div>
-                {/* Other price options go here */}
-              </form>
+
+
+
+
+export default function Store() {
+    const [displayedProducts, setDisplayedProducts] = useState([]);
+    useEffect(() => {
+        const handleResize = () => {
+          const screenWidth = window.innerWidth;
+          let productsToDisplay = [];
+    
+          if (screenWidth <= 768) {
+            // For mobile screens, display only the first four products
+            productsToDisplay = TopProduct.slice(0, 4);
+          } else {
+            // For larger screens, display all products
+            productsToDisplay = TopProduct;
+          }
+    
+          setDisplayedProducts(productsToDisplay);
+        };
+         // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Initial call to handleResize to set initial state
+    handleResize();
+
+    // Remove event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+    return (
+        <>
+            <Header />
+            {/* shop start */}
+            <div className="container-store">
+                <div className="row px-xl-5">
+                    {/* shope sidebar starr */}
+                    <div className="col-lg-3 col-md-4">
+                        {/* price start from here */}
+                        <h5 className="section-title text-uppercase mb-3">Filter By Brand</h5>
+                        <div className="bg-light p-4 mb-30">
+                            <form>
+                                <div className="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" className="custom-control-input" />
+                                    <label className='custom-control-label' htmlFor="price-all">Jaquar</label>
+                                    <span class="badge border font-weight-normal">1000</span>
+                                </div>
+
+                                <div className="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" className="custom-control-input" />
+                                    <label className='custom-control-label' htmlFor="price-1">Kohlar</label>
+                                    <span class="badge border font-weight-normal">1040</span>
+                                </div>
+
+                                <div className="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" className="custom-control-input" />
+                                    <label className='custom-control-label' htmlFor="price-2">Cera</label>
+                                    <span class="badge border font-weight-normal">234</span>
+                                </div>
+
+                                <div className="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" className="custom-control-input" />
+                                    <label className='custom-control-label' htmlFor="price-2">Others</label>
+                                    <span class="badge border font-weight-normal">434</span>
+                                </div>
+
+                            </form>
+                        </div>
+                        {/* price ends here  */}
+
+
+                        {/* filter by categories start from here  */}
+                        <h5 className="section-title text-uppercase mb-3">Filter By Categories</h5>
+                        <div className="bg-light p-4 mb-30">
+                            <form>
+                                <div className="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" className="custom-control-input" />
+                                    <label className='custom-control-label' htmlFor="price-all">Kitchen</label>
+                                    <span class="badge border font-weight-normal">1000</span>
+                                </div>
+
+                                <div className="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" className="custom-control-input" />
+                                    <label className='custom-control-label' htmlFor="price-1">Plumbing & Sanitary</label>
+                                    <span class="badge border font-weight-normal">1040</span>
+                                </div>
+
+                                <div className="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" className="custom-control-input" />
+                                    <label className='custom-control-label' htmlFor="price-2">Wall and Floor Tiles</label>
+                                    <span class="badge border font-weight-normal">234</span>
+                                </div>
+
+                                <div className="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" className="custom-control-input" />
+                                    <label className='custom-control-label' htmlFor="price-2">Electrical</label>
+                                    <span class="badge border font-weight-normal">434</span>
+                                </div>
+
+                                <div className="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" className="custom-control-input" />
+                                    <label className='custom-control-label' htmlFor="price-2">Construction Material</label>
+                                    <span class="badge border font-weight-normal">434</span>
+                                </div>
+
+                            </form>
+                        </div>
+                        {/* shop sidebar ends here  */}
+
+                    </div>
+                    {/* shop product start from here  */}
+                    
             </div>
-            {/* Price End */}
-
-            {/* Color Start */}
-            <h5 className="section-title position-relative text-uppercase mb-3"><span className="bg-secondary pr-3">Filter by color</span></h5>
-            <div className="bg-light p-4 mb-30">
-              <form>
-                <div className="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                  <input type="checkbox" className="custom-control-input" checked id="color-all" />
-                  <label className="custom-control-label" htmlFor="color-all">All Color</label>
-                  <span className="badge border font-weight-normal">1000</span>
-                </div>
-                {/* Other color options go here */}
-              </form>
-            </div>
-            {/* Color End */}
-
-            {/* Size Start */}
-            <h5 className="section-title position-relative text-uppercase mb-3"><span className="bg-secondary pr-3">Filter by size</span></h5>
-            <div className="bg-light p-4 mb-30">
-              <form>
-                <div className="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                  <input type="checkbox" className="custom-control-input" checked id="size-all" />
-                  <label className="custom-control-label" htmlFor="size-all">All Size</label>
-                  <span className="badge border font-weight-normal">1000</span>
-                </div>
-                {/* Other size options go here */}
-              </form>
-            </div>
-            {/* Size End */}
-          </div>
-          {/* Shop Sidebar End */}
-
-          {/* Shop Product Start */}
-          <div className="store-products col-lg-9 col-md-8">
-            <div className="store-product-row pb-3">
-              {/* Product items go here */}
-              <div className="store-product col-lg-4 col-md-6 col-sm-6 pb-1">
-                {/* Product Item */}
-              </div>
-              {/* Repeat the product item div for each product */}
-
-              {/* Pagination */}
-              <div className="store-pagination col-12">
-                <nav>
-                  <ul className="pagination justify-content-center">
-                    <li className="page-item disabled"><a className="page-link" href="#">Previous</a></li>
-                    <li className="page-item active"><a className="page-link" href="#">1</a></li>
-                    <li className="page-item"><a className="page-link" href="#">2</a></li>
-                    <li className="page-item"><a className="page-link" href="#">3</a></li>
-                    <li className="page-item"><a className="page-link" href="#">Next</a></li>
-                  </ul>
-                </nav>
-              </div>
-              {/* Pagination End */}
-            </div>
-          </div>
-          {/* Shop Product End */}
-        </div>
-      </div>
-    </>
-  );
+        </div >
+        </>
+    )
 }
-
-export default Store;

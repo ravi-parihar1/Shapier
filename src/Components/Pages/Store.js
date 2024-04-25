@@ -9,32 +9,14 @@ import TopProduct from "../../TopRatedProduct.json";
 
 export default function Store() {
     const [displayedProducts, setDisplayedProducts] = useState([]);
+
+    // useEffect to set displayedProducts when component mounts
     useEffect(() => {
-        const handleResize = () => {
-          const screenWidth = window.innerWidth;
-          let productsToDisplay = [];
-    
-          if (screenWidth <= 768) {
-            // For mobile screens, display only the first four products
-            productsToDisplay = TopProduct.slice(0, 4);
-          } else {
-            // For larger screens, display all products
-            productsToDisplay = TopProduct;
-          }
-    
-          setDisplayedProducts(productsToDisplay);
-        };
-         // Add event listener for window resize
-    window.addEventListener("resize", handleResize);
+        // Set displayedProducts to the array of products from TopProduct.json
+        setDisplayedProducts(TopProduct);
+    }, []);
 
-    // Initial call to handleResize to set initial state
-    handleResize();
 
-    // Remove event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
     return (
         <>
@@ -114,12 +96,35 @@ export default function Store() {
                             </form>
                         </div>
                         {/* shop sidebar ends here  */}
-
                     </div>
                     {/* shop product start from here  */}
-                    
-            </div>
-        </div >
+                    <div className="col-lg-9 col-md-8">
+                        <div className="row">
+                            {/* Map through displayedProducts and render each product card */}
+                            {displayedProducts.map((product, index) => (
+                                <div key={index} className="store-product-card">
+                                    <div className="store-product-item">
+                                        <img src={product.image} alt={product.name} />
+                                        <p className="tranding_page_product_name">
+                                            {product.name.length > 50
+                                                ? `${product.name.slice(0, 5)}...`
+                                                : product.name}
+                                        </p>
+                                        <div className="price_section">
+                                            <div className="tranding_product_text_box_2">
+                                                <p className="tranding_page_product_price">Price</p>
+                                                <p className="tranding_page_product_price">{product.price}</p>
+                                            </div>
+                                        </div>
+                                        {/* Additional product details can be added here */}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                </div>
+            </div >
         </>
     )
 }

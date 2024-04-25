@@ -214,6 +214,11 @@ h2 {
 }
 
 @media (max-width: 426px) {
+  .brand-container{
+    width: 110%;
+    height: 100%;
+    margin-left: -5%;
+  }
   .container-brand-img {
     margin-right: -5px;
     margin-top: 0px;

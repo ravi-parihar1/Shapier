@@ -23,6 +23,7 @@ import Expo from "../../Exeperimental.json";
 import Lottie from 'react-lottie';
 
 import Slider1 from '../Slider1'
+import Quotation from '../Quotation'
 // import Comprehensive from '../Comprehensive'
 
 export default function HomePage() {
@@ -119,6 +120,7 @@ export default function HomePage() {
                 <Phase4/>
                 {/* <Phase6/> */}
                 <Phase7 filepath={TopRatedProduct} heading={"Top Product"}/>
+                <Quotation/>
                 <Phase7 filepath={Expo} heading={"Top Rated Product"}/>
                
 

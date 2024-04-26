@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from "react";
 import Header from '../Header';
 import '../../css/Store.scss'; // Import your SCSS file
-import '../../css/store.css';
+import '../../css/Store.css';
 
 
 

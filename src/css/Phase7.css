@@ -10,7 +10,9 @@
 #content::-webkit-scrollbar {
   display: none;
 }
-
+.heading_name_tranding_product{
+  font-family:'Times New Roman', Times, serif;
+}
 .product-link,
 .product-link:focus,
 .product-link:focus-visible {
@@ -134,6 +136,7 @@
     margin-top: 12%;
   }
 }
+
 @media (max-width: 426px) {
   .Tradning_product_page {
     margin-top: 0%;
@@ -141,7 +144,7 @@
   .Tanding_product_see_more {
     margin-left: 64%;
   }
-  .heading_name {
+  .heading_name_tranding_product {
     font-size: 16px;
   }
   .tranding_page_Card {
@@ -178,7 +181,7 @@
 }
 
 @media (max-width: 376px) {
-  .heading_name {
+  .heading_name_tranding_product {
     font-size: 16px;
   }
   .tranding_page_Card {

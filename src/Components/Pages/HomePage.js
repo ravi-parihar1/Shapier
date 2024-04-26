@@ -3,6 +3,7 @@ import Header from '../Header'
 import Footer from '../Footer'
 import Phase8 from '../Phase8'
 import Phase7 from '../Phase7'
+import ChooseUs from '../ChooseUs'
 import '../../css/HomePage.css'
 import coverPhoto from '../../assets/cover.png';
 import Phase6 from '../Phase6'
@@ -122,7 +123,7 @@ export default function HomePage() {
                 <Phase7 filepath={TopRatedProduct} heading={"Top Product"}/>
                 <Quotation/>
                 <Phase7 filepath={Expo} heading={"Top Rated Product"}/>
-               
+                <ChooseUs />
 
             </div>
             <Footer />

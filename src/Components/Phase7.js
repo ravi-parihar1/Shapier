@@ -25,9 +25,9 @@ export default function Phase7({ filepath, heading }) {
   return (
     <>
       <div className="Tradning_product_page">
-        <div className="d-flex">
-          <h3 className="heading_name">{heading}</h3>
-          <p className="Tanding_product_see_more">See More...</p>
+        <div className="d-flex" style={{justifyContent: "center"}}>
+          <h3 className="heading_name_tranding_product">{heading}</h3>
+        
         </div>
         <div
           className="container Trending_product_container"

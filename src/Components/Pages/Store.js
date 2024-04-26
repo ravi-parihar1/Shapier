@@ -1,96 +1,126 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Header from '../Header';
 import '../../css/Store.scss'; // Import your SCSS file
 import '../../css/store.css';
 
+const HeroSection = () => (
+    <section className="hero">
+        <h1>Your One-Stop Shop for Every Home making Needs!</h1>
+        <div className="btn-group">
+            <button className="store-banner-button btn-outline-light-cart">
+                {/* <span className="material-symbols-outlined">shopping_cart</span> */}
+                Shop All Products
+            </button>
+            <button className="store-banner-button btn-outline-dark-cart">
+                {/* <span className="material-symbols-outlined">calendar_month</span> */}
+                Book a Service
+            </button>
+        </div>
+    </section>
+);
+
+const PetShopSection = () => (
+    <section>
+        <h2>Shop by Pet</h2>
+        <ul className="shop-pets">
+            <li className="card-large card-light" id="sup-service">
+                <div className="card-image">
+                    <img src="https://ouch-cdn2.icons8.com/5ccPOQq69UKQcbmXfjvOScfFc9NXKG0Xu6DPNQ8b0f8/rs:fit:368:247/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMTEw/LzFlODdiYzcyLTBl/OWEtNDFlNS05N2Ey/LTMzYTA4MDQ5MWU1/OC5wbmc.png" alt="Dog" />
+                </div>
+                <ul>
+                    <li>Dogs</li>
+                    <li><a href="#">Food &amp; Treats</a></li>
+                    <li><a href="#">Toys</a></li>
+                    <li><a href="#">Beds &amp; Furniture</a></li>
+                    <li><a href="#">Outdoor Supplies</a></li>
+                    <li><a href="#">Clothing</a></li>
+                    <button className="store-banner-button btn-outline-light-cart">
+                        Shop All
+                        {/* <span className="material-symbols-outlined">arrow_forward</span> */}
+                    </button>
+                </ul>
+            </li>
+            {/* Similar cards for Cats, Birds, Fish... */}
+
+            <li className="card-large card-light" id="sup-fish">
+                <div className="card-image">
+                    <img src="https://ouch-cdn2.icons8.com/5ccPOQq69UKQcbmXfjvOScfFc9NXKG0Xu6DPNQ8b0f8/rs:fit:368:247/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMTEw/LzFlODdiYzcyLTBl/OWEtNDFlNS05N2Ey/LTMzYTA4MDQ5MWU1/OC5wbmc.png" alt="Dog" />
+                </div>
+                <ul>
+                    <li>Dogs</li>
+                    <li><a href="#">Food &amp; Treats</a></li>
+                    <li><a href="#">Toys</a></li>
+                    <li><a href="#">Beds &amp; Furniture</a></li>
+                    <li><a href="#">Outdoor Supplies</a></li>
+                    <li><a href="#">Clothing</a></li>
+                    <button className="store-banner-button btn-outline-light-cart">
+                        Shop All
+                        {/* <span className="material-symbols-outlined">arrow_forward</span> */}
+                    </button>
+                </ul>
+            </li>
+
+
+            <li className="card-large card-light" id="sup-cat">
+                <div className="card-image">
+                    <img src="https://ouch-cdn2.icons8.com/5ccPOQq69UKQcbmXfjvOScfFc9NXKG0Xu6DPNQ8b0f8/rs:fit:368:247/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMTEw/LzFlODdiYzcyLTBl/OWEtNDFlNS05N2Ey/LTMzYTA4MDQ5MWU1/OC5wbmc.png" alt="Dog" />
+                </div>
+                <ul>
+                    <li>Dogs</li>
+                    <li><a href="#">Food &amp; Treats</a></li>
+                    <li><a href="#">Toys</a></li>
+                    <li><a href="#">Beds &amp; Furniture</a></li>
+                    <li><a href="#">Outdoor Supplies</a></li>
+                    <li><a href="#">Clothing</a></li>
+                    <button className="store-banner-button btn-outline-light-cart">
+                        Shop All
+                        {/* <span className="material-symbols-outlined">arrow_forward</span> */}
+                    </button>
+                </ul>
+            </li>
+        </ul>
+    </section>
+);
+
+const ServicesSection = () => (
+    <section>
+        <h2>Our Services</h2>
+        <ul className="services">
+            <li className="card-large card-dark card-wide" id="serv-groom">
+                <div className="card-image">
+                    <img src="https://ouch-cdn2.icons8.com/T11rfGmMKgcStJyAFKNgtOfE79cadabx0DVMnvzA9Pk/rs:fit:368:313/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNDQx/LzFlYWU4MWY3LWQ1/ZjYtNDM2Ny1hZjM5/LWVmNTFmMGM5Njk4/MS5wbmc.png" alt="Dog Grooming" />
+                </div>
+                <ul>
+                    <li>Dog Grooming <span className="subtitle">Tail-wagging transformations are our specialty.</span></li>
+                    <li><a href="#">Coat Care</a><span>$80</span></li>
+                    <li><a href="#">Nail Care</a><span>$16</span></li>
+                    <li><a href="#">Doggie Deluxe Spa Day</a><span>$160</span></li>
+                    <button className="store-banner-button btn-outline-dark-cart">
+                        {/* <span className="material-symbols-outlined">calendar_month</span> */}
+                        Book Now
+                    </button>
+                </ul>
+            </li>
+            {/* Similar card for Dog Boarding */}
+        </ul>
+    </section>
+);
 
 
 
 export default function Store() {
-    const [activeIndex, setActiveIndex] = useState(0);
 
-    const carouselItems = [
-        {
-            id: 1,
-            image: 'https://images.adsttc.com/media/images/5efe/1f7f/b357/6540/5400/01d7/newsletter/archdaily-houses-104.jpg?1593712501',
-            name: 'Men Fashion',
-            description: 'Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam',
-            price: 'Rs.50'
-        },
-        {
-            id: 2,
-            image: 'https://images.adsttc.com/media/images/6037/0ec7/f91c/8122/3000/03d3/large_jpg/_FI_2_EXTERIOR_2.jpg?1614220985',
-            name: 'Women Fashion',
-            description: 'Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam',
-            price: 'Rs.25'
-        },
-        {
-            id: 3,
-            image: 'https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2016/2/16/2/Orig-Nils-Finne_window-styles-contemporary-exterior.jpg.rend.hgtvcom.616.462.suffix/1455654082188.jpeg',
-            name: 'Kids Fashion',
-            description: 'Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam',
-            price: 'Rs.80'
-        }
-    ];
 
-    
+    // Initialize carousel on component mount (using useEffect)
 
-    const handleSlideChange = (selectedIndex) => {
-        setActiveIndex(selectedIndex);
-      };
-    
-      // Initialize carousel on component mount (using useEffect)
-      
 
     return (
         <>
             <Header />
-            <div className="container-fluid">
-                <div className="row px-xl-5">
-                    <div className="col-lg-8">
-                        
-                            
-                            <div className="store-carousel-inner">
-                                {carouselItems.map((item, index) => (
-                                    <div key={index} className={`carousel-item position-relative ${index === activeIndex ? 'active' : ''}`} style={{ height: '430px' }}>
-                                        <img className="carousel-image" src={item.image} alt={`Slide ${index + 1}`} style={{ objectFit: 'cover' }} />
-                                        <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                            <div className="carousel-content p-3" style={{ maxWidth: '700px' }}>
-                                                <h1 className="store-carousel-title text-white mb-3 animate__animated animate__bounceInDown">{item.name}</h1>
-                                                <p className="store-carousel-description mx-md-5 px-5 animate__animated animate__fadeInUp">{item.description}</p>
-                                                <p className="store-carousel-price text-white mb-0">{item.price}</p>
-                                                <a className="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        
-                    </div>
+            <HeroSection/>
+            <PetShopSection />
+            <ServicesSection />
 
-                    <div className="col-lg-4">
-                        {/* Static Offer Section */}
-                        <div className="custom-product-offer" style={{ height: '200px' }}>
-                            <img className="offer-image img-fluid" src="https://images.unsplash.com/flagged/photo-1600002368144-444430d3f3ca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Offer 1" />
-                            <div className="custom-offer-text">
-                                <h6 className="offer-text-uppercase text-white">Save 20%</h6>
-                                <h3 className="offer-title text-white mb-3">Special Offer</h3>
-                                <a href="#" className="btn btn-outline-warning">Shop Now</a>
-                            </div>
-                        </div>
-
-                        <div className="custom-product-offer " style={{ height: '200px' }}>
-                            <img className="offer-image img-fluid" src="https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2016/2/16/2/Orig-Nils-Finne_window-styles-contemporary-exterior.jpg.rend.hgtvcom.616.462.suffix/1455654082188.jpeg" alt="Offer 1" />
-                            <div className="custom-offer-text">
-                                <h6 className="offer-text-uppercase text-white">Save 20%</h6>
-                                <h3 className="offer-title text-white mb-3">Special Offer</h3>
-                                <a href="#" className="btn btn-outline-warning">Shop Now</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
         </>
     );
 }

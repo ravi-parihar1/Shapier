@@ -660,7 +660,7 @@ footer ul li {
 
     section:not(.hero) {
         padding: var(--pg-margin);
-        margin: 5%;
+        
     }
 
     #locate p {

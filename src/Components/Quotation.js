@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/Quotation.css";
 import house from "../assets/HomePageAssets/house.png";
+import { Link } from "react-router-dom";
 export default function Quotation() {
   return (
     <>
@@ -17,8 +18,9 @@ export default function Quotation() {
           <p>Home building, getting products, is tough and time consuming</p>
           <p>
             Shapier can help you to simplify your journey starting from idea to
-            final production
+            final production 
           </p>
+          <Link to='/contact'><button className="btn-contact">Contact Us</button></Link>
         </div>
         <img src={house} className="image_quotation" />
       </div>

@@ -3,6 +3,7 @@ import Header from '../Header';
 import '../../css/Store.css';
 import ProductCardContainer from '../ProductCard'; // Import ProductCardContainer component
 import productsData from '../product.json';
+import Footer from "../Footer";
 
 const HeroSection = () => (
     <section className="hero">
@@ -253,6 +254,8 @@ export default function Store() {
             <PlumbingSection/>
             
             <ProductCardContainer products={productsData} />
+
+            <Footer/>
             
 
         </>

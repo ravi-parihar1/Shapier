@@ -657,11 +657,11 @@ footer ul li {
   
   .product-card .product-wish-addtocart .wish-btn {
     margin-left: 1.2rem;
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 20px;
+    height: 20px;
     padding: 1.3rem 1.3rem;
-    background-color: #eee;
-    color: #bbbbbb;
+    background-color:#f5f5f5;
+    /* color: #ffffff; */
     box-shadow: none;
     /* text-content: center; */
   }
@@ -672,7 +672,12 @@ footer ul li {
     align-items: center;
   }
   
+  a.wish-btn{
+    height: 21px;
+    width: 21px;
+  }
   a.wish-btn, a.addtocart-btn {
+    
     background: #2ecc71;
     padding-left: 12%;
     padding-top: 4%;
@@ -716,6 +721,10 @@ footer ul li {
 
   @media (max-width: 426px) {
 
+
+
+   
+
     .product-card-container {
         gap: 0.6rem;
       }
@@ -749,8 +758,8 @@ footer ul li {
     }
     .product-card .product-wish-addtocart .addtocart-btn {
         border-radius: 32px 0 0 32px !important;
-        width: 150px;
-        /* height: 38px; */
+        width: 140px;
+        height: 30px;
         font-size: 10px;
         text-align: center;
         margin-top: 10%;
@@ -758,6 +767,15 @@ footer ul li {
         justify-content: center;
     }
 
+    .product-card .product-wish-addtocart{
+        position: relative;
+        bottom: 75px;
+        right: 0;
+        left: 0;
+      }
+
+
+     
     .product-card:hover .product-wish-addtocart{
         bottom: none;
         transform: none;

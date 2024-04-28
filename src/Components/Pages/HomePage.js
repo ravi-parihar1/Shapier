@@ -64,7 +64,7 @@ export default function HomePage() {
             <Header />
             <Slider1/>
             
-            {/* <BottomBar/> */}
+            <BottomBar/>
             <div className='container mt-4'>
             
                 {/* this is Phase-I Container */}

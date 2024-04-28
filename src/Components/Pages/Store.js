@@ -5,6 +5,7 @@ import ProductCardContainer from '../ProductCard'; // Import ProductCardContaine
 import productsData from '../product.json';
 import Footer from "../Footer";
 import CategoriesData from '../Categories.json';
+import BottomBar from "../BottomBar";
 
 const HeroSection = () => (
     <section className="hero">
@@ -233,6 +234,7 @@ export default function Store() {
     return (
         <>
             <Header />
+            <BottomBar/>
             <HeroSection/>
             <PetShopSection />
             <PlumbingSection/>

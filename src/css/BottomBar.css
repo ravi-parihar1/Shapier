@@ -1,0 +1,35 @@
+.bottom_bar_container{
+    background: rgb(253, 252, 252);
+    bottom: 0;
+    position: fixed;
+    z-index: 9;
+    width: 95%;
+    border-radius: 20px 20px 0px 0px;
+    display: none;
+    margin-left: 0.7rem;
+    -webkit-box-shadow: 3px 1px 140px -21px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 1px 140px -21px rgba(0,0,0,0.75);
+box-shadow: 3px 1px 140px -21px rgba(0,0,0,0.75);
+    
+    
+}
+.active_bottom_link{
+    color: #3de898;
+}
+.bottom_bar_container ul{
+    display: flex;
+    justify-content: space-around;
+    font-size: 22px;
+    font-weight: 600;
+    flex-direction: row;
+}
+.bottom_bar_container ul li {
+    margin-left: 2rem;
+    padding-top: 1rem;
+}
+
+@media (max-width: 426px){
+    .bottom_bar_container{
+        display: block;
+    }
+}

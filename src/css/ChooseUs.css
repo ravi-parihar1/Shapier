@@ -11,10 +11,23 @@
     display: flex;
     justify-content: space-around;
 }
+
+.choose_us_object img{
+    height: 15rem;
+    width: 15rem;
+    align-items: center;
+}
+
 @media (max-width: 769px){
     .choose_us_inner_container{
         flex-wrap: wrap;
         text-align: center;
+    }
+    
+    .choose_us_object img{
+        height: 10rem;
+        width: 10rem;
+        align-items: center;
     }
 }
 @media (max-width: 426px) {
@@ -33,5 +46,14 @@
     }
     .choose_us_object p{
         font-size: 12px;
+    }
+    .choose_us_object{
+        margin: 1px;
+    }
+
+    .choose_us_object img{
+        height: 8rem;
+        width: 8rem;
+        align-items: center;
     }
 }

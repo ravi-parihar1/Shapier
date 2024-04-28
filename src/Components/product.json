@@ -1,0 +1,116 @@
+[
+    {
+        "product_name": "Beast Fly", 
+        "product_price": "$59.99",
+        "category_name": "Faucets & showers",
+        "product_image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=643&q=80",
+        "product_link": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=643&q=80"
+      },
+      {
+        "product_name": "Panda Fly", 
+        "product_price": "$47.69",
+        "category_name": "Kitchen",
+        "product_image": "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=675&q=80",
+        "product_link": "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=675&q=80"
+      },
+      {
+        "product_name": "Bluey Sports", 
+        "product_price": "$71.98",
+        "category_name": "Faucets & showers",
+        "product_image": "https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        "product_link": "https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      },
+      {
+        "product_name": "Black Leather Panther", 
+        "product_price": "$97.89",
+        "category_name": "Plumbing & Sanitary",
+        "product_image": "https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+        "product_link": "https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+      },
+      {
+        "product_name": "Super ShoeWomen", 
+        "product_price": "$52.00",
+        "category_name": "Faucets & showers",
+        "product_image": "https://images.unsplash.com/photo-1465453869711-7e174808ace9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80",
+        "product_link": "https://images.unsplash.com/photo-1465453869711-7e174808ace9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80"
+      },
+      {
+        "product_name": "BlueLabel Men Pack", 
+        "product_price": "$189.19",
+        "category_name": "Faucets & showers",
+        "product_image": "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        "product_link": "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      },
+      {
+        "product_name": "Tigress Cheetah", 
+        "product_price": "$239.19",
+        "category_name": "Wall And Floor Tiles",
+        "product_image": "https://images.unsplash.com/photo-1601924638867-3a6de6b7a500?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        "product_link": "https://images.unsplash.com/photo-1601924638867-3a6de6b7a500?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      },
+      {
+        "product_name": "Smarty Casual", 
+        "product_price": "$76.77",
+        "category_name": "Wall And Floor Tiles",
+        "product_image": "https://images.unsplash.com/photo-1542841791-77f33b752ef1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
+        "product_link": "https://images.unsplash.com/photo-1542841791-77f33b752ef1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80"
+      },
+      {
+        "product_name": "Formal Farmer", 
+        "product_price": "$107.65",
+        "category_name": "Faucets & showers",
+        "product_image": "https://images.unsplash.com/photo-1533867617858-e7b97e060509?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        "product_link": "https://images.unsplash.com/photo-1533867617858-e7b97e060509?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      },
+      {
+        "product_name": "Black_White Combo", 
+        "product_price": "$79.99",
+        "category_name": "Faucets & showers",
+        "product_image": "https://images.unsplash.com/photo-1518894781321-630e638d0742?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1000&q=80",
+        "product_link": "https://images.unsplash.com/photo-1518894781321-630e638d0742?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1000&q=80"
+      },
+      {
+        "product_name": "Chimpa Yellow", 
+        "product_price": "$29.09",
+        "category_name": "Faucets & showers",
+        "product_image": "https://images.unsplash.com/photo-1549298916-f52d724204b4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1001&q=80",
+        "product_link": "https://images.unsplash.com/photo-1549298916-f52d724204b4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1001&q=80"
+      },
+      {
+        "product_name": "Sporty Mens", 
+        "product_price": "$89.99",
+        "category_name": "Electrical",
+        "product_image": "https://images.unsplash.com/photo-1529947031331-2e2017443f26?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
+        "product_link": "https://images.unsplash.com/photo-1529947031331-2e2017443f26?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80"
+      },
+      {
+        "product_name": "Yellow Ranger", 
+        "product_price": "$62.09",
+        "category_name": "Faucets & showers",
+        "product_image": "https://images.unsplash.com/photo-1581343600527-acef96ef2e84?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1421&q=80",
+        "product_link": "https://images.unsplash.com/photo-1581343600527-acef96ef2e84?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1421&q=80"
+      },
+      {
+        "product_name": "Nighty White", 
+        "product_price": "$48.99",
+        "category_name": "Construction Materials",
+        "product_image": "https://images.unsplash.com/photo-1581327323320-dbded32d5598?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1414&q=800",
+        "product_link": "https://images.unsplash.com/photo-1581327323320-dbded32d5598?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1414&q=80"
+      },
+      {
+        "product_name": "Gymmy Grey", 
+        "product_price": "$76.00",
+        "category_name": "Construction Materials",
+        "product_image": "https://images.unsplash.com/photo-1539874202413-c1f47b33169f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        "product_link": "https://images.unsplash.com/photo-1539874202413-c1f47b33169f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      },
+      {
+        "product_name": "Catty Girl", 
+        "product_price": "$87.19",
+        "category_name": "Electrical",
+        "product_image": "https://images.unsplash.com/photo-1494955464529-790512c65305?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+        "product_link": "https://images.unsplash.com/photo-1494955464529-790512c65305?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
+      }
+    
+  ]
+  

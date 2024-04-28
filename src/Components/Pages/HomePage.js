@@ -25,6 +25,7 @@ import Lottie from 'react-lottie';
 
 import Slider1 from '../Slider1'
 import Quotation from '../Quotation'
+import BottomBar from '../BottomBar'
 // import Comprehensive from '../Comprehensive'
 
 export default function HomePage() {
@@ -63,7 +64,7 @@ export default function HomePage() {
             <Header />
             <Slider1/>
             
-
+            {/* <BottomBar/> */}
             <div className='container mt-4'>
             
                 {/* this is Phase-I Container */}

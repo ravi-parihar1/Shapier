@@ -4,6 +4,7 @@ import '../../css/Store.css';
 import ProductCardContainer from '../ProductCard'; // Import ProductCardContainer component
 import productsData from '../product.json';
 import Footer from "../Footer";
+import CategoriesData from '../Categories.json';
 
 const HeroSection = () => (
     <section className="hero">
@@ -149,33 +150,6 @@ const PetShopSection = () => (
     </section>
 );
 
-// const ServicesSection = () => (
-//     <section>
-//         <h2>Our Services</h2>
-//         <ul className="services">
-//             <li className="card-large card-dark card-wide" id="serv-groom">
-//                 <div className="card-image">
-//                     <img src="https://ouch-cdn2.icons8.com/T11rfGmMKgcStJyAFKNgtOfE79cadabx0DVMnvzA9Pk/rs:fit:368:313/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNDQx/LzFlYWU4MWY3LWQ1/ZjYtNDM2Ny1hZjM5/LWVmNTFmMGM5Njk4/MS5wbmc.png" alt="Dog Grooming" />
-//                 </div>
-//                 <ul>
-//                     <li>Dog Grooming <span className="subtitle">Tail-wagging transformations are our specialty.</span></li>
-//                     <li><a href="#">Coat Care</a><span>$80</span></li>
-//                     <li><a href="#">Nail Care</a><span>$16</span></li>
-//                     <li><a href="#">Doggie Deluxe Spa Day</a><span>$160</span></li>
-//                     <button className="store-banner-button btn-outline-dark-cart">
-//                         {/* <span className="material-symbols-outlined">calendar_month</span> */}
-//                         Book Now
-//                     </button>
-//                 </ul>
-//             </li>
-//             {/* Similar card for Dog Boarding */}
-
-            
-//         </ul>
-//     </section>
-// );
-
-
 const PlumbingSection = ()=>(
     <section>
         <h2>Plumbing & Sanitary</h2>
@@ -244,7 +218,17 @@ export default function Store() {
 
 
     // Initialize carousel on component mount (using useEffect)
+    const [productFilter, setProductFilter] = useState([]);
 
+    const handleFilter = (category_name)=>{
+        if(category_name === "All"){
+            setProductFilter(productsData);
+        }
+        else{
+            const filteredProducts = productsData.filter(products => products.category_name === category_name)
+            setProductFilter(filteredProducts)
+        }
+    }
 
     return (
         <>
@@ -252,9 +236,14 @@ export default function Store() {
             <HeroSection/>
             <PetShopSection />
             <PlumbingSection/>
+            <div className="btn_animator_container">
+            <button class="custom-btn btn-8" onClick={() =>handleFilter("All")}><span>All</span></button>
+            {CategoriesData.map(products =>{
+               return <button class="custom-btn btn-8" onClick={()=> handleFilter(products.category_name)}><span>{products.category_name}</span></button>
+            })}
+            </div>
+            <ProductCardContainer products={productFilter.length > 0 ? productFilter : productsData} />
             
-            <ProductCardContainer products={productsData} />
-
             <Footer/>
             
 

@@ -1,0 +1,48 @@
+
+.sidebar-content {
+    max-height: 60rem; /* Set a maximum height for the sidebar content */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+      }
+  }
+  
+  .cart-item img {
+    margin-right: 10px;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 10px;
+  }
+  
+  .cart-item .details {
+    flex-grow: 1;
+    margin-left: 1rem;
+  }
+  
+  .cart-item .title {
+    font-weight: bold;
+    margin-right: 10px; /* Add margin to separate title and delete button */
+  }
+  
+  .cart-item .quantity {
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .cart-item .delete {
+    color: red;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border: none;
+    background-color: transparent;
+  }
+  

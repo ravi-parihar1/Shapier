@@ -6,6 +6,11 @@
   /* Add padding from the top */
 }
 
+
+.blank-container{
+  height: 90px;
+  background-color: white;
+}
 .first-heading {
   margin-top: 3%;
 }
@@ -376,6 +381,12 @@ h6 {
     padding: 6px 10px;
     font-size: 14px;
     width: 8rem;
+  }
+
+
+  .blank-container{
+    height: 5rem;
+  
   }
 }
 

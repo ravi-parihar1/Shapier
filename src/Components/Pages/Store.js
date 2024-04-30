@@ -6,6 +6,7 @@ import productsData from '../product.json';
 import Footer from "../Footer";
 import CategoriesData from '../Categories.json';
 import BottomBar from "../BottomBar";
+import Header2 from "../Header2";
 
 const HeroSection = () => (
     <section className="hero">
@@ -233,7 +234,8 @@ export default function Store() {
 
     return (
         <>
-            <Header />
+            <Header2 />
+            {/* <div className="blank-container"></div> */}
             <BottomBar/>
             <HeroSection/>
             <PetShopSection />

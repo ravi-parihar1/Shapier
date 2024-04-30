@@ -26,6 +26,7 @@ import Lottie from 'react-lottie';
 import Slider1 from '../Slider1'
 import Quotation from '../Quotation'
 import BottomBar from '../BottomBar'
+import Header2 from '../Header2'
 // import Comprehensive from '../Comprehensive'
 
 export default function HomePage() {
@@ -60,8 +61,9 @@ export default function HomePage() {
     return (
         <div>
 
-            
-            <Header />
+            <Header2/> 
+            {/* <Header /> */}
+            <div className="blank-container"></div>
             <Slider1/>
             
             <BottomBar/>

@@ -14,7 +14,7 @@ box-shadow: 3px 1px 140px -21px rgba(0,0,0,0.75);
     
 }
 .active_bottom_link{
-    color: #3de898;
+    color: #000000;
 }
 .bottom_bar_container ul{
     display: flex;
@@ -22,10 +22,12 @@ box-shadow: 3px 1px 140px -21px rgba(0,0,0,0.75);
     font-size: 22px;
     font-weight: 600;
     flex-direction: row;
+    
 }
 .bottom_bar_container ul li {
     margin-left: 2rem;
     padding-top: 1rem;
+    
 }
 
 @media (max-width: 426px){

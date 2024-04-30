@@ -2,6 +2,7 @@ import React,{ useEffect } from 'react';
 import Header from '../Header';
 import '../../css/ContactPage.css'
 import shapelogo from '../../assets/shapelogo.png';
+import Header2 from '../Header2';
 
 export default function ContactPage() {
 
@@ -76,7 +77,8 @@ export default function ContactPage() {
 
     return (
        <>
-         <Header/>
+         <Header2/>
+         <div className="blank-container"></div>
          <div className="contact-container">
             <div className="left-col">
                 {/* <img className="contact-logo" src={shapelogo} alt="Shapier Logo" /> */}

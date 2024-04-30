@@ -87,12 +87,12 @@ export default function Header2() {
 
             {/* Sidebar */}
             <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
-            
+
                 <div className="sidebar-content">
-                    
+
                     <h2>Your Cart</h2>
                     {/* Sample CartItem */}
-                    
+
                     <CartItem
                         image="https://i.ibb.co/F3sVXBH/photo1.png"
                         title="Vintage backbag"
@@ -107,7 +107,7 @@ export default function Header2() {
                         quantity={1}
                     />
 
-<CartItem
+                    <CartItem
                         image="https://i.ibb.co/Z86TPFH/photo2.png"
                         title="Levi shoes"
                         price={74.99}
@@ -115,7 +115,7 @@ export default function Header2() {
                     />
 
 
-<CartItem
+                    <CartItem
                         image="https://i.ibb.co/Z86TPFH/photo2.png"
                         title="Levi shoes"
                         price={74.99}
@@ -123,7 +123,7 @@ export default function Header2() {
                     />
 
 
-<CartItem
+                    <CartItem
                         image="https://i.ibb.co/Z86TPFH/photo2.png"
                         title="Levi shoes"
                         price={74.99}
@@ -131,20 +131,33 @@ export default function Header2() {
                     />
 
 
-<CartItem
+                    <CartItem
                         image="https://i.ibb.co/Z86TPFH/photo2.png"
                         title="Levi shoes"
                         price={74.99}
                         quantity={1}
                     />
 
-<CartItem
+                    <CartItem
                         image="https://i.ibb.co/Z86TPFH/photo2.png"
                         title="Levi shoes"
                         price={74.99}
                         quantity={1}
                     />
+
+
+
+
                 </div>
+
+                {/* Subtotal */}
+                <div className="subtotal">
+                    <span>Subtotal:</span>
+                    <span>$45.00</span>
+                </div>
+                {/* Checkout button */}
+                <button className="checkout-btn">Checkout</button>
+
 
             </div>
 

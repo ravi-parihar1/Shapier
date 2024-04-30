@@ -1,7 +1,38 @@
 
 .sidebar-content {
-    max-height: 60rem; /* Set a maximum height for the sidebar content */
+    max-height: 34rem; /* Set a maximum height for the sidebar content */
     overflow-y: auto; /* Enable vertical scrolling */
+    &::-webkit-scrollbar {
+        display: none;
+      }
+  }
+
+  .subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .checkout-btn {
+    width: 20rem;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-bottom: 10%;
+    
+  }
+  
+  .checkout-btn:hover {
+    background-color: #45a049;
   }
 
 .cart-item {
@@ -10,10 +41,9 @@
     padding: 10px;
     margin-bottom: 1rem;
     border-bottom: 1px solid #ccc;
-    overflow-y: scroll;
-    &::-webkit-scrollbar {
-        display: none;
-      }
+    /* overflow-y: scroll; */
+    
+    
   }
   
   .cart-item img {
@@ -44,5 +74,84 @@
     margin-bottom: 5px;
     border: none;
     background-color: transparent;
+  }
+  
+  /* For screen size 1200px */
+@media only screen and (max-width: 1200px) {
+    .checkout-btn {
+      width: 18rem;
+      margin-left: 20%;
+    }
+    .cart-item img {
+      width: 6rem;
+      height: 6rem;
+    }
+
+    .cart-item .title {
+        
+        font-size: 14px;
+    }
+
+    .cart-item .quantity {
+        font-size: 12px;
+    }
+
+    .sidebar-content {
+        max-height: 35rem; /* Set a maximum height for the sidebar content */
+        
+      }
+  }
+  
+  /* For screen size 769px */
+  @media only screen and (max-width: 769px) {
+    .checkout-btn {
+      width: 15rem;
+      margin-left: 15%;
+    }
+    .cart-item img {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+  
+  /* For screen size 426px */
+  @media only screen and (max-width: 426px) {
+    .checkout-btn {
+      width: 12rem;
+      margin-left: 10%;
+    }
+    .cart-item img {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    .cart-item .title {
+        
+        font-size: 12px;
+    }
+
+    .cart-item .quantity {
+        font-size: 10px;
+    }
+
+    .subtotal{
+        font-size: 18px;
+    }
+    .sidebar-content {
+        max-height: 35rem; /* Set a maximum height for the sidebar content */
+        
+      }
+
+      .checkout-btn {
+        
+        margin-top: 5%;
+        margin-left: 23%;
+        /* margin-bottom: 10%; */
+        
+      }
+    
+    .price{
+        font-size: 12px;
+    }
   }
   

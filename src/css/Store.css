@@ -1007,7 +1007,7 @@ footer ul li {
     .services {
         display: flex;
         flex-direction: column;
-        grid-gap: 24px;
+        grid-gap: 28px;
         
         list-style: none;
         /* Remove default bullets */
@@ -1094,7 +1094,7 @@ footer ul li {
 
     .shop-pets {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 0fr 1fr;
         grid-row: auto auto;
         grid-column-gap: 24px;
         grid-row-gap: 24px;

@@ -17,6 +17,7 @@ import cov from '../../assets/HomePageAssets/Animationc (1).json'
 import ServiceCard from '../ServiceCard';
 import Phase2 from '../Phase2';
 import Phase3 from '../Phase3';
+import PhaseCategories from "../PhaseCategories"
 import Phase4 from '../Phase4';
 
 import TopRatedProduct from "../../TopRatedProduct.json";
@@ -120,7 +121,8 @@ export default function HomePage() {
                 
                 <Phase2/>
                 {/* <Comprehensive/> */}
-                <Phase3/>   
+                <Phase3/>
+                <PhaseCategories/>   
                 <Phase4/>
                 {/* <Phase6/> */}
                 <Phase7 filepath={TopRatedProduct} heading={"Top Product"}/>

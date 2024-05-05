@@ -13,6 +13,7 @@ import Shape from './Components/Pages/Shape';
 import Store from './Components/Pages/Store';
 import ProductDetails from './Components/Pages/ProductDetails';
 import Cart from './Components/Cart';
+import Checkout from './Components/Pages/Checkout';
 
 function App() {
   return (
@@ -25,10 +26,9 @@ function App() {
         <Route path='/store' element={<Store />} />
         <Route path='/product-details' element={<ProductDetails />} />
         <Route path='/cart' element={<Cart />}/>
-
+        <Route path='/Checkout' element={<Checkout/>}/>
       </Routes>
     </BrowserRouter>
   );
 }
-
 export default App;

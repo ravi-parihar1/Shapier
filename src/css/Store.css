@@ -1223,7 +1223,7 @@ footer ul li {
     .services {
         display: flex;
         flex-direction: row;
-        grid-gap: 24px;
+        grid-gap: 6rem;
     }
 
     nav ul.navigation-menu {

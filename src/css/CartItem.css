@@ -1,6 +1,10 @@
 
 .sidebar-content {
+
     max-height: 25rem; /* Set a maximum height for the sidebar content */
+
+   
+
     overflow-y: auto; /* Enable vertical scrolling */
     &::-webkit-scrollbar {
         display: none;

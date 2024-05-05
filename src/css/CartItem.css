@@ -1,6 +1,6 @@
 
 .sidebar-content {
-    max-height: 34rem; /* Set a maximum height for the sidebar content */
+    max-height: 25rem; /* Set a maximum height for the sidebar content */
     overflow-y: auto; /* Enable vertical scrolling */
     &::-webkit-scrollbar {
         display: none;
@@ -96,10 +96,7 @@
         font-size: 12px;
     }
 
-    .sidebar-content {
-        max-height: 35rem; /* Set a maximum height for the sidebar content */
-        
-      }
+    
   }
   
   /* For screen size 769px */
@@ -112,6 +109,7 @@
       width: 5rem;
       height: 5rem;
     }
+    
   }
   
   /* For screen size 426px */
@@ -137,10 +135,7 @@
     .subtotal{
         font-size: 18px;
     }
-    .sidebar-content {
-        max-height: 35rem; /* Set a maximum height for the sidebar content */
-        
-      }
+    
 
       .checkout-btn {
         

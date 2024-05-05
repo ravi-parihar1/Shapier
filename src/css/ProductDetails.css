@@ -93,12 +93,14 @@
   margin-top: 1rem;
 }
 
-.description {
+.product-description {
   border-top: 0.0625rem solid #b8b5b5;
   margin: 2rem 0;
   padding: 1rem 0 0 0;
   font-size: 0.8rem;
 }
+
+
 
 .quantity-button{
   display: flex;

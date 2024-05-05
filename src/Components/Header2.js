@@ -186,7 +186,7 @@ export default function Header2() {
                     <span>$45.00</span>
                 </div>
                 {/* Checkout button */}
-                <button className="checkout-btn">Checkout</button>
+                <button className="checkout-btn"><Link action to='/Checkout'>Checkout</Link></button>
 
 
             </div>

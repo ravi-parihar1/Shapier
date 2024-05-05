@@ -3,6 +3,7 @@ import Header from '../Header';
 import '../../css/ContactPage.css'
 import shapelogo from '../../assets/shapelogo.png';
 import Header2 from '../Header2';
+import BottomBar from '../BottomBar';
 
 export default function ContactPage() {
 
@@ -78,6 +79,7 @@ export default function ContactPage() {
     return (
        <>
          <Header2/>
+         <BottomBar/>
          <div className="blank-container"></div>
          <div className="contact-container">
             <div className="left-col">

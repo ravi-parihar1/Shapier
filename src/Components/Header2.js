@@ -10,9 +10,16 @@ export default function Header2() {
 
 
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [searchQuery, setSearchQuery] = useState('');
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
+    };
+
+    const toggleSearch = () => {
+        console.log("Toggle search called");
+        setIsSearchOpen(!isSearchOpen);
     };
 
     useEffect(() => {
@@ -29,6 +36,10 @@ export default function Header2() {
         };
     }, [isSidebarOpen]);
 
+    const handleSearchChange = (event) => {
+        setSearchQuery(event.target.value);
+    };
+
 
 
 
@@ -36,7 +47,7 @@ export default function Header2() {
     return (
         <>
 
-            <header className="block inset-x-0 z-50 p-5 md:p-10 items-start justify-between gap-10">
+            <header className="block inset-x-0 z-50 p-5 md:p-10 items-start justify-between gap-10 ${isSearchOpen ? 'hidden' : ''}">
 
                 <div className="pl-5 md:pr-10 flex items-center" >
                     <img src={logo} height={"45px"} width={"45px"} alt="" />
@@ -67,7 +78,7 @@ export default function Header2() {
                     </ul>
                     <ul className="d-flex items-center">
                         <li>
-                            <button type="button" aria-label="Search" className="p-3 -m-3 button_for_header2">
+                            <button type="button" aria-label="Search" className="p-3 -m-3 button_for_header2" onClick={toggleSearch}>
                                 <svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM4 11.5a7.5 7.5 0 1 1 13.145 4.938l4.209 4.208-.708.708-4.208-4.209A7.5 7.5 0 0 1 4 11.5Z" /></svg>
                             </button>
                         </li>
@@ -85,12 +96,31 @@ export default function Header2() {
                 </div>
             </header>
 
+
+
+            {/* Search bar */}
+            {isSearchOpen && (
+                <div style={{ backgroundColor: '#ffffff', border: '1px solid #ccc', borderRadius: '4px', padding: '0.5rem', position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', zIndex: '50' }}>
+                <input
+                    type="text"
+                    id="searchInput" // Add id attribute
+                    name="search"     // Add name attribute
+                    placeholder="Search..."
+                    value={searchQuery}
+                    onChange={handleSearchChange}
+                />          
+                {/* You can add search results here */}
+            </div>
+            )}
+
+
             {/* Sidebar */}
             <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
 
+            <h2 className='sidebar-content-heading'>Your Cart</h2>
                 <div className="sidebar-content">
 
-                    <h2>Your Cart</h2>
+                    
                     {/* Sample CartItem */}
 
                     <CartItem

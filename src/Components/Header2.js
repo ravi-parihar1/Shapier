@@ -10,22 +10,33 @@ export default function Header2() {
 
 
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const [isSearchOpen, setIsSearchOpen] = useState(false);
-    const [searchQuery, setSearchQuery] = useState('');
+    // const [isSearchOpen, setIsSearchOpen] = useState(false);
+    // const [searchQuery, setSearchQuery] = useState('');
+    const [isAccountSidebarOpen, setIsAccountSidebarOpen] = useState(false);
+
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
+        setIsAccountSidebarOpen(false);
     };
 
-    const toggleSearch = () => {
-        console.log("Toggle search called");
-        setIsSearchOpen(!isSearchOpen);
+
+    const toggleAccountSidebar = () => {
+        setIsAccountSidebarOpen(!isAccountSidebarOpen);
+        setIsSidebarOpen(false);
     };
+
+
+    // const toggleSearch = () => {
+    //     console.log("Toggle search called");
+    //     setIsSearchOpen(!isSearchOpen);
+    // };
 
     useEffect(() => {
         const closeSidebarOnOutsideClick = (event) => {
-            if (isSidebarOpen && !event.target.closest('.sidebar')) {
+            if ((isSidebarOpen || isAccountSidebarOpen) && !event.target.closest('.sidebar')) {
                 setIsSidebarOpen(false);
+                setIsAccountSidebarOpen(false);
             }
         };
 
@@ -34,11 +45,11 @@ export default function Header2() {
         return () => {
             document.removeEventListener('click', closeSidebarOnOutsideClick);
         };
-    }, [isSidebarOpen]);
+    }, [isSidebarOpen, isAccountSidebarOpen]);
 
-    const handleSearchChange = (event) => {
-        setSearchQuery(event.target.value);
-    };
+    // const handleSearchChange = (event) => {
+    //     setSearchQuery(event.target.value);
+    // };
 
 
 
@@ -78,7 +89,7 @@ export default function Header2() {
                     </ul>
                     <ul className="d-flex items-center">
                         <li>
-                            <button type="button" aria-label="Search" className="p-3 -m-3 button_for_header2" onClick={toggleSearch}>
+                            <button type="button" aria-label="Search" className="p-3 -m-3 button_for_header2" >
                                 <svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM4 11.5a7.5 7.5 0 1 1 13.145 4.938l4.209 4.208-.708.708-4.208-4.209A7.5 7.5 0 0 1 4 11.5Z" /></svg>
                             </button>
                         </li>
@@ -88,7 +99,7 @@ export default function Header2() {
                             </button>
                         </li>
                         <li>
-                            <button type="button" aria-label="Account" className="p-3 -m-3 button_for_header2">
+                            <button type="button" aria-label="Account" className="p-3 -m-3 button_for_header2"  >
                                 <svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 4a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7ZM7.5 7.5a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0Zm0 7.5A3.5 3.5 0 0 0 4 18.5V21H3v-2.5A4.5 4.5 0 0 1 7.5 14h9a4.5 4.5 0 0 1 4.5 4.5V21h-1v-2.5a3.5 3.5 0 0 0-3.5-3.5h-9Z" /></svg>
                             </button>
                         </li>
@@ -98,29 +109,20 @@ export default function Header2() {
 
 
 
-            {/* Search bar */}
-            {isSearchOpen && (
-                <div style={{ backgroundColor: '#ffffff', border: '1px solid #ccc', borderRadius: '4px', padding: '0.5rem', position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', zIndex: '50' }}>
-                <input
-                    type="text"
-                    id="searchInput" // Add id attribute
-                    name="search"     // Add name attribute
-                    placeholder="Search..."
-                    value={searchQuery}
-                    onChange={handleSearchChange}
-                />          
-                {/* You can add search results here */}
-            </div>
-            )}
+            
+            {/* Account Sidebar */}
+            
+
+
 
 
             {/* Sidebar */}
             <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
 
-            <h2 className='sidebar-content-heading'>Your Cart</h2>
+                <h2 className='sidebar-content-heading'>Your Cart</h2>
                 <div className="sidebar-content">
 
-                    
+
                     {/* Sample CartItem */}
 
                     <CartItem

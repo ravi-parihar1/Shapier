@@ -18,7 +18,7 @@
 /* Sidebar Container */
 .sidebar {
     position: fixed;
-    top: 0;
+    top: 9%;
     bottom: 0;
     right: -40rem; /* Initially hide the sidebar */
     width: 40rem;
@@ -34,9 +34,101 @@
 
     /* Mobile */
     @media (max-width: 426px) {
+        top:9.2%;
         width: 20rem;
         right: -20rem; /* Initially hide the sidebar */
     }
+}
+
+
+
+
+
+
+/* CSS for Drawer Component */
+
+/* CSS for Drawer Component */
+
+.drawer {
+    width: 90%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-top: 10%;
+}
+
+.drawer-top {
+    padding: 20px;
+    display: flex;
+    overflow-y: none;
+}
+
+.circular-image img{
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 16px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+
+    @media (max-width: 426px) {
+        height: 80px;
+        width: 80px;
+       /* Initially hide the sidebar */
+    }
+}
+
+
+.drawer-top .circular-image {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 16px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+
+    @media (max-width: 426px) {
+        
+        width: 80px;
+        height: 80px; /* Initially hide the sidebar */
+    }
+}
+
+.login-btn {
+    border: none;
+    background-color: transparent;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.drawer-line {
+    margin: 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.drawer-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.drawer-item {
+    padding: 12px 50px;
+}
+
+.drawer-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.drawer-link:hover {
+    color: #1d81e5;
 }
 
 /* Open Sidebar */
@@ -57,7 +149,7 @@ box-shadow: -24px -4px 218px 16px rgba(0,0,0,0.75);
 .sidebar-content-heading {
     margin-bottom: 20px;
     font-size: 1.8rem;
-    margin-top: 6rem;
+    margin-top: 2.5rem;
 
     margin-left: 1rem;
 
@@ -71,7 +163,7 @@ box-shadow: -24px -4px 218px 16px rgba(0,0,0,0.75);
 .container_nav_bar_of_header_2{
     display: flex;
     background: #ffffffeb;
-    border-radius: 30px;
+    border-radius: 5px;
     height: 3rem;
     font-weight: 500;
     margin-top: 1%;
@@ -186,6 +278,10 @@ box-shadow: 18px -2px 48px -15px rgba(0,0,0,0.75);
 
 .items-center {
     align-items: center;
+}
+
+.items-center h4{
+    color: #248ed4;
 }
 
 .px-6 {
@@ -370,9 +466,10 @@ a {
     .container_nav_bar_of_header_2 ul:first-child li{
         display: none;
     }
+    
 
     .container_nav_bar_of_header_2 {
-        margin-left: 2rem;
+        margin-left: 4%;
         padding-top: 4.3%;
         width: 12.1rem;
     }

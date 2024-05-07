@@ -1,12 +1,12 @@
 .bottom_bar_container{
-    background: rgb(253, 252, 252);
+    background: rgb(254, 254, 254);
     bottom: 0;
     position: fixed;
     z-index: 7;
-    width: 95%;
+    width: 100%;
     border-radius: 20px 20px 0px 0px;
     display: none;
-    margin-left: 0.7rem;
+    /* margin-left: 0.7rem; */
     -webkit-box-shadow: 3px 1px 140px -21px rgba(0,0,0,0.75);
 -moz-box-shadow: 3px 1px 140px -21px rgba(0,0,0,0.75);
 box-shadow: 3px 1px 140px -21px rgba(0,0,0,0.75);

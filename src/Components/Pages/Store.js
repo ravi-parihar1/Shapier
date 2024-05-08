@@ -7,6 +7,7 @@ import Footer from "../Footer";
 import CategoriesData from '../Categories.json';
 import BottomBar from "../BottomBar";
 import Header2 from "../Header2";
+import axios from "axios";
 
 const HeroSection = () => (
     <section className="hero">
@@ -217,17 +218,47 @@ const PlumbingSection = ()=>(
 
 
 export default function Store() {
+    const [categories,setCategories] = useState([]);
 
+    const fetchedCategories = async () => {
+        const {data} = await axios.get("http://localhost:5000/api/v1/product_categories");
+        const arrayOfCategories = data.data;
+        setCategories(arrayOfCategories.map((category)=>({
+            product_category_name: category.product_category_name
+        })))
+       
+    }
 
+    useEffect(()=> {
+        fetchedCategories();
+    })
+    const [product,setProduct] = useState([]);
+
+    const fetchedProduct = async () =>{
+        const { data } = await axios.get("http://localhost:5000/api/v1/product");
+        const arrayOfProduct = data.data;
+        setProduct(arrayOfProduct.map((product)=>({
+            product_id: product.id,
+            product_name: product.product,
+            product_image: product.product_image,
+            product_price: product.product_price,
+            product_description: product.product_description,
+            product_category_name: product.product_category_name
+        })))
+    }
+
+    useEffect(()=>{ 
+        fetchedProduct();
+    })
     // Initialize carousel on component mount (using useEffect)
     const [productFilter, setProductFilter] = useState([]);
 
     const handleFilter = (category_name)=>{
         if(category_name === "All"){
-            setProductFilter(productsData);
+            setProductFilter(product);
         }
         else{
-            const filteredProducts = productsData.filter(products => products.category_name === category_name)
+            const filteredProducts = product.filter(products => products.product_category_name === category_name)
             setProductFilter(filteredProducts)
         }
     }
@@ -242,11 +273,11 @@ export default function Store() {
             <PlumbingSection/>
             <div className="btn_animator_container">
             <button class="custom-btn btn-8" onClick={() =>handleFilter("All")}><span>All</span></button>
-            {CategoriesData.map(products =>{
-               return <button class="custom-btn btn-8" onClick={()=> handleFilter(products.category_name)}><span>{products.category_name}</span></button>
+            {categories.map(cateogy =>{
+               return <button class="custom-btn btn-8" onClick={()=> handleFilter(cateogy.product_category_name)}><span>{cateogy.product_category_name}</span></button>
             })}
             </div>
-            <ProductCardContainer products={productFilter.length > 0 ? productFilter : productsData} />
+            <ProductCardContainer products={productFilter.length > 0 ? productFilter : product} />
             
             <Footer/>
             

@@ -22,7 +22,7 @@ export default function Quotation() {
           </p>
           <Link to='/contact'><button className="btn-contact">Contact Us</button></Link>
         </div>
-        <img src={house} className="image_quotation" />
+        <img src={house} alt="house" className="image_quotation" />
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="waves2">
         <path

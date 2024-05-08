@@ -16,8 +16,20 @@
   justify-content: space-around;
 }
 
+.column-xs-12 h1{
+  font-size: 4rem;
+}
 
+#quantity{
+  margin-left: 5%;
+}
 /* add to cart button  */
+
+.add-to-cart-btn{
+  padding: 2%;
+  border-radius: 10px;
+  margin-top: 5%;
+}
 
 
 

@@ -12,7 +12,7 @@ import ServicesPage from './Components/Pages/ServicesPage';
 import Shape from './Components/Pages/Shape';
 import Store from './Components/Pages/Store';
 import ProductDetails from './Components/Pages/ProductDetails';
-import Cart from './Components/Cart';
+// import Cart from './Components/Cart';
 import Checkout from './Components/Pages/Checkout';
 
 function App() {
@@ -24,8 +24,8 @@ function App() {
         <Route path='/services' element={<ServicesPage />} />
         <Route path='/shape' element={<Shape />} />
         <Route path='/store' element={<Store />} />
-        <Route path='/product-details' element={<ProductDetails />} />
-        <Route path='/cart' element={<Cart />}/>
+        <Route path='/product-details/:id' element={<ProductDetails />} />
+        {/* <Route path='/cart' element={<Cart />}/> */}
         <Route path='/Checkout' element={<Checkout/>}/>
       </Routes>
     </BrowserRouter>

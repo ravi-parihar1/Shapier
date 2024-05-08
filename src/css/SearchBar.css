@@ -1,115 +1,28 @@
-.search-container {
-    display: flex;
-    align-items: center;
-  }
-  
-.search-container:focus{
-  border-color: black;
-}
-  .search-input {
-    padding: 10px;
-    border-radius: 24px;
-    border: 1px solid #ccc;
-    width: 14rem; /* Adjust width as needed */
-  }
-  
-  .search-icon {
-    margin-left: -30px; /* Adjust as needed */
-    color: #888;
-    cursor: pointer;
-  }
+/* CSS for SearchBar Component */
 
-  .search-input:focus {
-    border-color: black; /* Change border color when input is focused */
-  }
-  
-  .search-icon:hover {
-    color: #555;
-  }
-
-/* Media Query for screens smaller than 768px */
-@media (max-width: 769px) {
-  .search-container {
-    
-    padding-left: 20px;
-    width: 200px; /* Adjust as needed */
-  }
-
-  .search-icon {
-    margin-left: -4;
-    margin-bottom: 5;
-  }
+.search-bar {
+  display: flex;
+  align-items: center;
 }
 
-/* Media Query for screens smaller than 768px */
-@media (max-width: 426px) {
-  .search-container {
-    padding-left: 40px; /* Adjust as needed */
-    width: 200px
-  }
-
-  .search-input {
-    padding: 10px;
-    border-radius: 24px;
-    border: 1px solid #ccc;
-    width: 155px;
-  }
-  span{
-    display: none;
-  }
-
-  .search-icon {
-    margin-left: -4;
-  }
+.search-bar input[type="text"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+  font-size: 16px;
 }
 
-@media (max-width: 376px) {
-  .search-container {
-    
-    padding-left: 20px;
-    width: 200px; /* Adjust as needed */
-  }
-
-  .search-input {
-    padding: 10px;
-    border-radius: 24px;
-    border: 1px solid #ccc;
-    width: 155px;
-  }
-  span{
-    display: none;
-  }
-
-  .search-icon {
-    margin-left: -4;
-    margin-bottom: 5;
-  }
+.search-bar button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-@media (max-width: 321px) {
-  .search-container {
-    
-    padding-left: 25px;
-    width: 189px;
-    padding-right: 5px; /* Adjust as needed */
-  }
-  .search-input {
-    padding: 10px;
-    border-radius: 24px;
-    border: 1px solid #ccc;
-    width: 155px;
+.search-bar button:hover {
+  background-color: #0056b3;
 }
-  .search-icon {
-    margin-left: -4;
-    margin-bottom: 5;
-  }
-
-  span{
-    display: none;
-  }
-
-
-  
-}
-
-

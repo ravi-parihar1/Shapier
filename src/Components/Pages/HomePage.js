@@ -1,4 +1,4 @@
-import React from 'react'
+import { React, useState, useEffect } from "react";
 import Header from '../Header'
 import Footer from '../Footer'
 import Phase8 from '../Phase8'
@@ -28,11 +28,38 @@ import Slider1 from '../Slider1'
 import Quotation from '../Quotation'
 import BottomBar from '../BottomBar'
 import Header2 from '../Header2'
+<<<<<<< HEAD
+import axios from 'axios'
+=======
 import Phase9 from '../Phase9'
+>>>>>>> 49ee080c07330596d5a45b5c737cd8945eba6434
 // import Comprehensive from '../Comprehensive'
 
 export default function HomePage() {
+    const [topProduct, setTopProduct] = useState([]);
 
+    const fetchProduct = async () => {
+      try {
+        const { data } = await axios.get(`http://localhost:5000/api/v1/product`);
+        const arrayOfProduct = data.data;
+        setTopProduct(
+          arrayOfProduct.map((fetchedProduct) => ({
+            product_id: fetchedProduct.id,
+            product_name: fetchedProduct.product,
+            product_image: fetchedProduct.product_image,
+            product_price: fetchedProduct.product_price,
+          }))
+        );
+        console.log("arrayOfProduct",arrayOfProduct)
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    useEffect(() => {
+        fetchProduct();
+      }, []);
+    
     const coverOptions = {
         loop: true,
         autoplay: true,
@@ -126,10 +153,14 @@ export default function HomePage() {
                 <PhaseCategories/>   
                 <Phase4/>
                 {/* <Phase6/> */}
-                <Phase7 filepath={TopRatedProduct} heading={"Top Product"}/>
+                <Phase7 filepath={topProduct} heading={"Top Product"}/>
                 <Quotation/>
+<<<<<<< HEAD
+                {/* <Phase7 filepath={Expo} heading={"Top Rated Product"}/> */}
+=======
                 <Phase7 filepath={Expo} heading={"Top Rated Product"}/>
                 {/* <Phase9/> */}
+>>>>>>> 49ee080c07330596d5a45b5c737cd8945eba6434
                 <ChooseUs />
 
             </div>

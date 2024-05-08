@@ -137,7 +137,13 @@
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 431px) {
+  .Tradning_product_page {
+    margin-top: 12%;
+  }
+}
+
+@media (max-width: 431px) {
   .Tradning_product_page {
     margin-top: 0%;
   }

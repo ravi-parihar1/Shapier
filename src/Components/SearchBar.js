@@ -1,18 +1,21 @@
-import React from 'react';
-import { FaSearch } from 'react-icons/fa';
-import '../css/SearchBar.css'; // Import your CSS file for styling
+import React, { useState } from 'react';
 
-const SearchBar = () => {
+const SearchBar = ({ onSearch }) => {
+  const [query, setQuery] = useState('');
+
+  const handleSearch = () => {
+    onSearch(query);
+  };
+
   return (
-    <div className="search-container ml-6">
+    <div className="search-bar">
       <input
         type="text"
-        placeholder="looking for...."
-        className="search-input"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Search..."
       />
-      <div className="search-icon align-center">
-        <FaSearch />
-      </div>
+      <button onClick={handleSearch}>Search</button>
     </div>
   );
 };

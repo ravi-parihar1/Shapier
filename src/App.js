@@ -12,8 +12,9 @@ import ServicesPage from './Components/Pages/ServicesPage';
 import Shape from './Components/Pages/Shape';
 import Store from './Components/Pages/Store';
 import ProductDetails from './Components/Pages/ProductDetails';
-import Cart from './Components/Cart';
+// import Cart from './Components/Cart';
 import Checkout from './Components/Pages/Checkout';
+import LoginPage from './Components/Pages/LoginPage';
 
 function App() {
   return (
@@ -25,8 +26,9 @@ function App() {
         <Route path='/shape' element={<Shape />} />
         <Route path='/store' element={<Store />} />
         <Route path='/product-details' element={<ProductDetails />} />
-        <Route path='/cart' element={<Cart />}/>
+        {/* <Route path='/cart' element={<Cart />}/> */}
         <Route path='/Checkout' element={<Checkout/>}/>
+        <Route path='/login' element={<LoginPage/>}/>
       </Routes>
     </BrowserRouter>
   );

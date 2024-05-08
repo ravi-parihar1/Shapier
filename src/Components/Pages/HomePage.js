@@ -28,6 +28,7 @@ import Slider1 from '../Slider1'
 import Quotation from '../Quotation'
 import BottomBar from '../BottomBar'
 import Header2 from '../Header2'
+import Phase9 from '../Phase9'
 // import Comprehensive from '../Comprehensive'
 
 export default function HomePage() {
@@ -128,6 +129,7 @@ export default function HomePage() {
                 <Phase7 filepath={TopRatedProduct} heading={"Top Product"}/>
                 <Quotation/>
                 <Phase7 filepath={Expo} heading={"Top Rated Product"}/>
+                {/* <Phase9/> */}
                 <ChooseUs />
 
             </div>

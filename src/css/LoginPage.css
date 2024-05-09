@@ -180,11 +180,13 @@ input {
     justify-content: space-around;
     text-align: center;
     z-index: 6;
+    
   }
   
   .left-panel {
     pointer-events: all;
     padding: 3rem 17% 2rem 12%;
+    
   }
   
   .right-panel {
@@ -221,6 +223,13 @@ input {
     font-size: 0.8rem;
   }
 
+  .shapier-name{
+    display: flex;
+    justify-content: start;
+    align-items:center;
+    /* margin-bottom: 1rem; */
+    margin-right: 2rem;
+  }
 
   .right-panel .image,
 .right-panel .content1 {

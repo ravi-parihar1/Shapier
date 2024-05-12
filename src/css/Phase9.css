@@ -1,4 +1,4 @@
 .p9-container{
-    display: block;
+    display: flex;
     overflow-x: scroll;
 }

@@ -152,68 +152,68 @@ const HeroSection = () => (
 //     </section>
 // );
 
-const PlumbingSection = ()=>(
-    <section>
-        <h2>Plumbing & Sanitary</h2>
-        <ul className="shop-pets">
-            <li className="card-large card-light" id="sup-plumbing">
-                <div className="card-image">
-                    <img src="https://buildpro.store/cdn/shop/files/image_38_2.png?v=1662206734" alt="Dog" />
-                </div>
-                <ul>
-                    <li>Bath Tub</li>
+// const PlumbingSection = ()=>(
+//     <section>
+//         <h2>Plumbing & Sanitary</h2>
+//         <ul className="shop-pets">
+//             <li className="card-large card-light" id="sup-plumbing">
+//                 <div className="card-image">
+//                     <img src="https://buildpro.store/cdn/shop/files/image_38_2.png?v=1662206734" alt="Dog" />
+//                 </div>
+//                 <ul>
+//                     <li>Bath Tub</li>
                     
-                    <button className="store-banner-button btn-outline-light-cart">
-                        Shop All
-                        {/* <span className="material-symbols-outlined">arrow_forward</span> */}
-                    </button>
-                </ul>
-            </li>
+//                     <button className="store-banner-button btn-outline-light-cart">
+//                         Shop All
+//                         {/* <span className="material-symbols-outlined">arrow_forward</span> */}
+//                     </button>
+//                 </ul>
+//             </li>
 
-            <li className="card-large card-light" id="sup-plumbing">
-                <div className="card-image">
-                    <img src="https://buildpro.store/cdn/shop/files/image_38_2.png?v=1662206734" alt="Dog" />
-                </div>
-                <ul>
-                    <li>Bath Tub</li>
+//             <li className="card-large card-light" id="sup-plumbing">
+//                 <div className="card-image">
+//                     <img src="https://buildpro.store/cdn/shop/files/image_38_2.png?v=1662206734" alt="Dog" />
+//                 </div>
+//                 <ul>
+//                     <li>Bath Tub</li>
                     
-                    <button className="store-banner-button btn-outline-light-cart">
-                        Shop All
-                        {/* <span className="material-symbols-outlined">arrow_forward</span> */}
-                    </button>
-                </ul>
-            </li>
+//                     <button className="store-banner-button btn-outline-light-cart">
+//                         Shop All
+//                         {/* <span className="material-symbols-outlined">arrow_forward</span> */}
+//                     </button>
+//                 </ul>
+//             </li>
 
-            <li className="card-large card-light" id="sup-plumbing">
-                <div className="card-image">
-                    <img src="https://buildpro.store/cdn/shop/files/image_38_2.png?v=1662206734" alt="Dog" />
-                </div>
-                <ul>
-                    <li>Bath Tub</li>
+//             <li className="card-large card-light" id="sup-plumbing">
+//                 <div className="card-image">
+//                     <img src="https://buildpro.store/cdn/shop/files/image_38_2.png?v=1662206734" alt="Dog" />
+//                 </div>
+//                 <ul>
+//                     <li>Bath Tub</li>
                     
-                    <button className="store-banner-button btn-outline-light-cart">
-                        Shop All
-                        {/* <span className="material-symbols-outlined">arrow_forward</span> */}
-                    </button>
-                </ul>
-            </li>
+//                     <button className="store-banner-button btn-outline-light-cart">
+//                         Shop All
+//                         {/* <span className="material-symbols-outlined">arrow_forward</span> */}
+//                     </button>
+//                 </ul>
+//             </li>
 
-            <li className="card-large card-light" id="sup-plumbing">
-                <div className="card-image">
-                    <img src="https://buildpro.store/cdn/shop/files/image_38_2.png?v=1662206734" alt="Dog" />
-                </div>
-                <ul>
-                    <li>Bath Tub</li>
+//             <li className="card-large card-light" id="sup-plumbing">
+//                 <div className="card-image">
+//                     <img src="https://buildpro.store/cdn/shop/files/image_38_2.png?v=1662206734" alt="Dog" />
+//                 </div>
+//                 <ul>
+//                     <li>Bath Tub</li>
                     
-                    <button className="store-banner-button btn-outline-light-cart">
-                        Shop All
-                        {/* <span className="material-symbols-outlined">arrow_forward</span> */}
-                    </button>
-                </ul>
-            </li>
-        </ul>
-    </section>
-);
+//                     <button className="store-banner-button btn-outline-light-cart">
+//                         Shop All
+//                         {/* <span className="material-symbols-outlined">arrow_forward</span> */}
+//                     </button>
+//                 </ul>
+//             </li>
+//         </ul>
+//     </section>
+// );
 
 
 export default function Store() {
@@ -239,7 +239,7 @@ export default function Store() {
             <BottomBar/>
             <HeroSection/>
             {/* <PetShopSection /> */}
-            <PlumbingSection/>
+            {/* <PlumbingSection/> */}
             <div className="btn_animator_container">
             <button class="custom-btn btn-8" onClick={() =>handleFilter("All")}><span>All</span></button>
             {CategoriesData.map(products =>{

@@ -1,28 +1,35 @@
-/* CSS for SearchBar Component */
+/* Header2.css */
 
-.search-bar {
+.search-bar-container {
+  position: relative;
   display: flex;
   align-items: center;
 }
 
-.search-bar input[type="text"] {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
+.search-input {
+
+  margin-top: -18px;
+    padding: 0.7rem 1rem;
+  border: 2px solid #ccc;
   border-radius: 5px;
-  margin-right: 0.5rem;
-  font-size: 16px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  width: 200px; /* Adjust width as needed */
 }
 
-.search-bar button {
-  padding: 0.5rem 1rem;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+.search-input:focus {
+  border-color: #e2964a; /* Change to your desired focus color */
+}
+
+.search-icon {
+  margin-top: -17px;
+  position: absolute;
+  right: 10px;
   cursor: pointer;
-  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
-.search-bar button:hover {
-  background-color: #0056b3;
+.search-icon:hover {
+  color: #4a90e2; /* Change to your desired hover color */
 }

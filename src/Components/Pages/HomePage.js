@@ -22,6 +22,8 @@ import Phase4 from '../Phase4';
 
 import TopRatedProduct from "../../TopRatedProduct.json";
 import Expo from "../../Exeperimental.json";
+import Product from '../product.json'
+
 import Lottie from 'react-lottie';
 
 import Slider1 from '../Slider1'
@@ -131,7 +133,8 @@ export default function HomePage() {
                 <Phase7 filepath={Expo} heading={"Top Rated Product"}/>
                 {/* <Phase9/> */}
                 <ChooseUs />
-
+                {/* <Phase7 filepath={Product} heading={"Your product"}/> */}
+                
             </div>
             <Footer />
         </div>

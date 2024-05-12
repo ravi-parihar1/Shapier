@@ -21,10 +21,14 @@ function ProductCard({ product }) {
 }
 
 export default function ProductCardContainer({ products }) {
+ 
   return (
     <div className="product-card-container">
       {products.map((product, index) => (
+        <>
+        {console.log(product)}
         <ProductCard key={index} product={product} />
+        </>
       ))}
     </div>
   );

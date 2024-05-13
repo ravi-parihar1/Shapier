@@ -15,6 +15,7 @@ import ProductDetails from './Components/Pages/ProductDetails';
 // import Cart from './Components/Cart';
 import Checkout from './Components/Pages/Checkout';
 import LoginPage from './Components/Pages/LoginPage';
+import FinalBillingPage from './Components/Pages/FinalBillingPage';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         {/* <Route path='/cart' element={<Cart />}/> */}
         <Route path='/Checkout' element={<Checkout/>}/>
         <Route path='/login' element={<LoginPage/>}/>
+        <Route path='/Billing' element={<FinalBillingPage/>}/>
       </Routes>
     </BrowserRouter>
   );

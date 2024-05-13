@@ -1,0 +1,75 @@
+.gird-container-billing {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+    
+  }
+
+  
+  .BillingPage-billing-form-container {
+    max-width: 28rem;
+    margin: auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.BillingPage-form-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.BillingPage-billing-form {
+    padding: 1rem;
+}
+
+.BillingPage-form-group {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.BillingPage-form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.25rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-right: 5%;
+}
+
+.BillingPage-form-input:focus {
+    border-color: #3182ce;
+}
+
+textarea.BillingPage-form-input {
+    height: 6rem;
+}
+
+.BillingPage-submit-button {
+    /* width: 100%; */
+    background-color: #1a202c;
+    color: #fff;
+    border: none;
+    border-radius: 0px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.BillingPage-submit-button:hover {
+    background-color: #2d3748;
+}
+@media (min-width:768px) {
+    .gird-container-billing {
+        grid-template-columns: repeat(2, 1fr);
+      padding: 2rem;
+        
+      }
+
+    .gird-container-billing{
+        grid-gap: 2rem;
+    }
+}

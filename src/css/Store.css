@@ -485,7 +485,7 @@ section h2 {
 
 .card-large>ul>li:last-of-type {
     margin-bottom: 2%;
-
+    text-wrap: pretty;
 }
 
 

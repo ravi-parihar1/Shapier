@@ -5,6 +5,7 @@ import '../../css/CheckOut.css';
 import Footer from '../Footer';
 import { FaMinus } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const CartItem = () => {
   const [quantity, setQuantity] = useState(1);
@@ -85,7 +86,7 @@ const OrderSummary = () => {
           <span>Total:</span>
           <span>$110</span>
         </div>
-        <button className="checkout-button-checkoutPage">Proceed to Checkout</button>
+        <Link action to='/Billing'><button className="checkout-button-checkoutPage">Proceed to Checkout</button></Link>
       </div>
     </div>
   );

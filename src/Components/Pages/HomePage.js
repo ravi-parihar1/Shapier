@@ -1,4 +1,4 @@
-import React from 'react'
+import {React , useEffect, useState} from 'react'
 import Header from '../Header'
 import Footer from '../Footer'
 import Phase8 from '../Phase8'
@@ -31,9 +31,18 @@ import Quotation from '../Quotation'
 import BottomBar from '../BottomBar'
 import Header2 from '../Header2'
 import Phase9 from '../Phase9'
-// import Comprehensive from '../Comprehensive'
+import Phase5 from '../Phase5'
+import Phase10 from '../Phase10'
+import PopupForm from '../PopupForm'
+
 
 export default function HomePage() {
+
+    const [isPopupVisible, setPopupVisible] = useState(true); // State to manage popup visibility
+
+    const closePopup = () => {
+        setPopupVisible(false);
+    };
 
     const coverOptions = {
         loop: true,
@@ -64,7 +73,7 @@ export default function HomePage() {
 
     return (
         <div>
-
+            {isPopupVisible && <PopupForm onClose={closePopup} />}
             <Header2/> 
             {/* <Header /> */}
             <div className="blank-container"></div>
@@ -127,6 +136,8 @@ export default function HomePage() {
                 <Phase3/>
                 <PhaseCategories/>   
                 <Phase4/>
+                <Phase5/>
+                <Phase10/>
                 {/* <Phase6/> */}
                 <Phase7 filepath={TopRatedProduct} heading={"Top Product"}/>
                 <Quotation/>

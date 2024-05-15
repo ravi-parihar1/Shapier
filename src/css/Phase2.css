@@ -39,6 +39,7 @@
 }
 
 .see-button {
+  border: 2px solid black;
   margin-top: 12%;
   height: 50px;
     width: 170px;

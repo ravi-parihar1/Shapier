@@ -31,6 +31,7 @@
 
 .whatsapp-button,
 .call-button {
+  border: 2PX solid black;
   margin-right: 20px;
   margin-top: 20%;
   height: 50px;

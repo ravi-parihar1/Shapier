@@ -69,7 +69,7 @@ export default function ProductDetails() {
             <h1>Bonsai</h1>
             <h2>RS.19.99</h2>
 
-            <div className="quantity-button">
+            <div className="quantity-product-button">
               <button class="custom-btn btn-8"><span>Add To Cart</span></button>
             </div>
 

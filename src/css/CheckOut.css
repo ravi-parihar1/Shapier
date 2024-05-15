@@ -145,7 +145,7 @@
   }
 
   .coupon-code-input-checkoutPage{
-    width: auto;
+    width: 14rem;
     padding: 0.5rem;
   }
   
@@ -178,6 +178,7 @@
 
 
 .coupon-input-checkoutPage {
+ 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -239,3 +240,4 @@
     
   }
   
+ 

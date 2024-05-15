@@ -20,7 +20,7 @@ export default function Quotation() {
             Shapier can help you to simplify your journey starting from idea to
             final production 
           </p>
-          <Link to='/contact'><button className="btn-contact">Contact Us</button></Link>
+          <Link to='/contact'><button className="custom-btn btn-1">Contact Us</button></Link>
         </div>
         <img src={house} className="image_quotation" />
       </div>

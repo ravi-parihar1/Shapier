@@ -761,6 +761,7 @@ footer ul li {
 
   .wish-btn {
     display: flex;
+    background-color: transparent;
     justify-content: center;
     align-items: center;
   }
@@ -768,6 +769,8 @@ footer ul li {
   a.wish-btn{
     height: 21px;
     width: 21px;
+    color: transparent;
+    
   }
   a.wish-btn, a.addtocart-btn {
     
@@ -1240,5 +1243,3 @@ footer ul li {
     }
 
 }
-
-@media (max-width: 353px) {}

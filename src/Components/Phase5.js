@@ -7,19 +7,26 @@ export default function Phase5() {
 
 
     return (
-        <div className="marquee-container">
-            <marquee >
-                {/* Content to be scrolled */}
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Official_Jaquar_Group_Logo.png" alt="" />
-                <img src="https://www.ijaroceramic.com/images/blog/inner/Kajaria%20Ceramic.jpg" alt="" />
-                <img src="https://www.freepnglogos.com/uploads/philips-logo-0.jpg" alt="" />
-                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/96/Ultratech_Cement_Logo.svg/1200px-Ultratech_Cement_Logo.svg.png" alt="" />
-                <img src="https://logowik.com/content/uploads/images/franke3341.jpg" alt="" />
+            <div class="logos">
+                <div class="logos-slide">
+                    <img src="https://www.kajariaceramics.com/assets/images/logo.png" alt='prem'/>
+                    <img src="https://havells.com/media/logo/stores/1/Havells_Logo.svg" alt='prem'/>
+                    <img src="https://zenlayercdn.centuryply.com/assets/img/logo.png" alt='prem'/>
+                    <img src="https://www.ultratechcement.com/content/experience-fragments/ultratechcement/in/en/site/header/master/_jcr_content/root/container_965997150/container_1473792216/image.coreimg.png/1707298113035/ultratech-cement-logo.png" alt='prem'/>
+                    <img src="https://symphonylimited.com/static/media/logo.79a9c99154e53db17057.png" alt='prem'/>
+                    <img src="https://static.asianpaints.com/etc.clientlibs/apcolourcatalogue/clientlibs/clientlib-global-unification/resources/images/header/asian-paints-logo.webp" alt='prem'/>
+                    
+                </div>
 
-                
-
-                
-            </marquee>
-        </div>
+                <div class="logos-slide">
+                <img src="https://www.kajariaceramics.com/assets/images/logo.png" alt='prem'/>
+                    <img src="https://havells.com/media/logo/stores/1/Havells_Logo.svg" alt='prem'/>
+                    <img src="https://zenlayercdn.centuryply.com/assets/img/logo.png" alt='prem'/>
+                    <img src="https://www.ultratechcement.com/content/experience-fragments/ultratechcement/in/en/site/header/master/_jcr_content/root/container_965997150/container_1473792216/image.coreimg.png/1707298113035/ultratech-cement-logo.png" alt='prem'/>
+                    <img src="https://symphonylimited.com/static/media/logo.79a9c99154e53db17057.png" alt='prem'/>
+                    <img src="https://static.asianpaints.com/etc.clientlibs/apcolourcatalogue/clientlibs/clientlib-global-unification/resources/images/header/asian-paints-logo.webp" alt='prem'/>
+                    
+                </div>
+            </div>
     );
 }

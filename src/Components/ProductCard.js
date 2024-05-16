@@ -12,7 +12,7 @@ function ProductCard({ product }) {
       </a>
       <div className="product-wish-addtocart">
         <a className="wish-btn">
-          <img className="wish-btn-img" src="https://tech.mjassociate.co.in/images/svgs/like_red_outerline.svg"  alt="Like" />
+          {/* <img className="wish-btn-img" src="https://tech.mjassociate.co.in/images/svgs/like_red_outerline.svg"  alt="Like" /> */}
         </a>
         <a href="#" className="addtocart-btn">Add To Cart</a>
       </div>

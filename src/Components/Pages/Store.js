@@ -248,6 +248,7 @@ export default function Store() {
             </div>
             <ProductCardContainer products={productFilter.length > 0 ? productFilter : productsData} />
             
+            
             <Footer/>
             
 

@@ -16,17 +16,20 @@
   padding-right: 0px;
   padding-left: 82px;
   display: flex;
-  background-color: #f0ecec; /* Adjust the width as needed */
+  background: linear-gradient(45deg, #b77fe3, #ffa248); /* Adjust the width as needed */
 }
 
 .request-title {
   font-weight: 600;
 }
 
+.RequestTitle{
+  color: white;
+}
 .passage {
   font-size: 17px;
   margin-top: 30px;
-  color: #868686;
+  color: #fffcfc;
 }
 
 .whatsapp-button,

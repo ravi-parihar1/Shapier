@@ -137,7 +137,7 @@ export default function HomePage() {
                 <PhaseCategories/>   
                 <Phase4/>
                 <Phase5/>
-                <Phase10/>
+                {/* <Phase10/> */}
                 {/* <Phase6/> */}
                 <Phase7 filepath={TopRatedProduct} heading={"Top Product"}/>
                 <Quotation/>

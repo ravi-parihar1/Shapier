@@ -25,15 +25,10 @@ export default function Phase7({ filepath, heading }) {
   return (
     <>
       <div className="Tradning_product_page">
-        <div className="d-flex" style={{justifyContent: "center"}}>
+        <div className="d-flex" style={{ justifyContent: "center" }}>
           <h3 className="heading_name_tranding_product">{heading}</h3>
-        
         </div>
-        <div
-          className="container Trending_product_container"
-          style={{ borderRadius: "15px 15px 0 0" }}
-          id=""
-        >
+        <div className="Trending_product_container">
           {filepath.map((product) => (
             <Link
               key={product.id}
@@ -43,24 +38,26 @@ export default function Phase7({ filepath, heading }) {
               }}
               className="product-link"
             >
-              <div className="tranding_page_Card">
-                <img
-                  className="trending_product_img"
-                  src={product.image}
-                  alt={product.name}
-                />
-                <p className="tranding_page_product_name">
-                  {product.name.length > 50
-                    ? `${product.name.slice(0, 5)}...`
-                    : product.name}
-                </p>
-                <div className="price_section">
-                  <div className="tranding_product_text_box_2">
-                    <p className="tranding_page_product_price">Price</p>
-                    <p className="tranding_page_product_price">Rs.380</p>
+
+              <div className="trending-product-card">
+
+                <img className="trending-product-card-img" src={product.image} alt={product.name} />
+                <div className="trending-product-card-details">
+                  <p className="trending-product-name">{product.name}</p>
+                  <p className="trending-product-price">{product.price}</p>
+                </div>
+
+                <div className="product-wish-addtocart">
+                  <div className="add-wish-btn">
+                    {/* <img className="wish-btn-img" src="https://tech.mjassociate.co.in/images/svgs/like_red_outerline.svg" alt="Like" /> */}
                   </div>
+                  <a href="#" className="addtocart-btn">Add To Cart</a>
                 </div>
               </div>
+
+
+
+
             </Link>
           ))}
         </div>

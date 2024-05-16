@@ -25,111 +25,241 @@
 .headsection {
   display: flex;
 }
-.Trending_product_container {
-  scroll-behavior: smooth;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scroll-snap-align: center;
-  white-space: nowrap;
-  .tranding_page_Card {
-    display: inline-block;
-  }
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-.tranding_page_Card {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  /* box-shadow: 1px 1px 1px 1px; */
-  background-color: #ffffff;
-  border-radius: 0px;
-  /* text-align: start; */
-  margin: 5% 6px 5% 5%;
-  width: 15rem;
-  height: auto;
-  transition: transform 0.3s, box-shadow 0.3s;
+
+.Trending_product_container{
+    /* margin-bottom: 1rem; */
+    padding-left: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    gap: 2rem;
+    
+    align-items: center;
+    /* flex-wrap: wrap; */
+    transition: all 1.5s ease;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 }
 
-.tranding_page_Card:hover {
-  transform: scale(1.05);
 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
 
-.trending_product_img {
-  border-radius: 0px;
-  height: 12rem;
-  width: 15rem;
-  margin-bottom: 1rem;
+
+.trending-product-card {
+  width: 18rem;
+  border-radius: 8px;
+  box-shadow: 0 7px 25px -10px rgba(0,0,0,0.33);
+  overflow: hidden;
+  position: relative;
 }
 
-.tranding_page_product_name {
-  font-family: "Jersey 20", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 24px;
-  /* text-align: center; */
-  margin-left: 5%;
-  margin-bottom: 0rem;
-}
-.tranding_page_product_price {
-  margin-top: 5%;
-  margin-bottom: 10%;
-  color: black;
-}
-.tranding_product_text_box {
-  background: #ffffff;
-  width: 14rem;
-  height: 2.3rem;
-  /* border-color: black; */
-  padding-left: 4%;
-  padding-bottom: 5;
-  border-radius: 4px;
-  margin-top: 3%;
+.trending-product-card, .trending-product-card * {
+  transition: all 0.5s ease;
+  text-decoration: none;
 }
 
-.tranding_product_text_box_2 {
+
+.trending-product-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.25);  
+  transform: translateY(-3px);
+}
+
+.trending-product-card .trending-product-card-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: 10% 10% 10% 10%;
+}
+
+.trending-product-card:hover .trending-product-card-img{
+  height: 240px;
+}
+
+.trending-product-card:hover .trending-product-card-details {
+  padding-bottom: 75px;
+}
+
+.trending-product-card .trending-product-card-details{
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(rgba(0,0,0,0.025), transparent);
+}
+
+/*** Product Details: Produt Name & Product Price Styling [STARTS] ***/
+
+.trending-product-card .trending-product-card-details .trending-product-name {
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  color: #555555;
+}
+
+.trending-product-card .trending-product-card-details .trending-product-price {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #2ecc71;
+}
+
+.trending-product-card .product-wish-addtocart{
+  position: absolute;
+  bottom: -75px;
+  right: 0;
+  left: 0;
+}
+
+.trending-product-card:hover .product-wish-addtocart{
+  bottom: 1.1rem;
+}
+
+.trending-product-card .product-wish-addtocart {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trending-product-card .product-wish-addtocart .addtocart-btn {
+  border-radius: 32px 0 0 32px!important;
+  width: 162px;
+}
+
+.trending-product-card .product-wish-addtocart .wish-btn {
+  margin-left: 1.2rem;
+  width: 20px;
+  height: 20px;
+  padding: 1.3rem 1.3rem;
+  background-color:#f5f5f5;
+  /* color: #ffffff; */
+  box-shadow: none;
+  /* text-content: center; */
+}
+
+.add-wish-btn {
+  background-color: transparent;
   display: flex;
   justify-content: center;
-  margin-top: 4%;
-  margin-bottom: 4%;
-  margin-left: 2%;
-  padding-left: 10%;
-  margin-right: 15%;
-  font-family: "Jersey 20", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
-  text-align: center;
-  width: 5rem;
-  border-radius: 20px;
+  align-items: center;
 }
 
-.tranding_page_product_price {
-  margin-left: 200%;
+a.wish-btn{
+  height: 21px;
+  width: 21px;
+}
+a.wish-btn, a.addtocart-btn {
+  
+  background: #2269c6;
+  padding-left: 12%;
+  padding-top: 4%;
+  /* padding: 0.6rem 2.2rem; */
+  font-family: 'Open Sans',sans-serif;
+  font-weight: 600!important;
+  font-size: 15px;
+  border-radius: 100px!important;
+  color: #ffffff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.133);
 }
 
-.Trending_product_container::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-  border-radius: 10px;
+.addtocart-btn:hover, .wish-btn:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-.Trending_product_container::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 10px;
+
+
+@media (max-width: 840px) {
+
+  
+  
+  .trending-product-card .trending-product-card-img {
+    height: 240px;
+  }
+  
+  .trending-product-card .trending-product-card-details {
+    padding-bottom: 72px;
+  }
+  
+  .trending-product-card .product-wish-addtocart{
+    bottom: 1.1rem;
+  }
+  
+  
+  
 }
 
-/* Change the color when the thumb is being hovered */
-.Trending_product_container::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
-  border-radius: 10px;
+
+
+@media (max-width: 426px) {
+
+
+
+   
+
+  .Trending_product_container{
+    gap: 0px;
+  }
+  .trending-product-card{
+      width: 95%;
+      /* width: 40%; */
+      height: 280px;
+      margin-bottom: 8%;
+    }
+    
+    .trending-product-card .trending-product-card-img{
+      height: 150px; /* Reduced height for smaller screens */
+      width: 180px;
+    }
+    
+    .trending-product-card .product-wish-addtocart {
+      bottom: 1.1rem; /* Adjusted position for smaller screens */
+    }
+    
+    /* Adjust product name and price font size for smaller screens */
+    .trending-product-card .trending-product-card-details .trending-product-name {
+      font-size: 14px; /* Adjusted font size for smaller screens */
+    }
+  
+    .trending-product-card .trending-product-card-details .trending-product-price {
+      font-size: 14px; /* Adjusted font size for smaller screens */
+    }
+
+    .trending-product-card .product-wish-addtocart {
+      font-size: 10px;
+      bottom: 1.1rem;
+  }
+  .trending-product-card .product-wish-addtocart .addtocart-btn {
+      border-radius: 32px 0 0 32px !important;
+      width: 140px;
+      height: 30px;
+      font-size: 10px;
+      text-align: center;
+      margin-top: 10%;
+      padding-top: 4%;
+      justify-content: center;
+  }
+
+  .trending-product-card .product-wish-addtocart{
+      position: relative;
+      bottom: 75px;
+      right: 0;
+      left: 0;
+    }
+
+
+   
+  .trending-product-card:hover .product-wish-addtocart{
+      bottom: none;
+      transform: none;
+    }
+  
+  
 }
 
-/* Optional: Customize scrollbar width and height */
-.Trending_product_container::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
+
+
+
+
+
+
 
 @media (max-width: 769px) {
   .Tradning_product_page {

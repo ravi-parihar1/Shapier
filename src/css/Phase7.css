@@ -28,7 +28,7 @@
 
 .Trending_product_container{
     /* margin-bottom: 1rem; */
-    padding-left: 4rem;
+    padding-left: 1rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
     display: flex;
@@ -98,7 +98,7 @@
 
 .trending-product-card .trending-product-card-details .trending-product-price {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  font-weight:  500;
   font-size: 18px;
   color: #2ecc71;
 }
@@ -195,7 +195,7 @@ a.wish-btn, a.addtocart-btn {
    
 
   .Trending_product_container{
-    gap: 0px;
+    gap: 10px;
   }
   .trending-product-card{
       width: 95%;

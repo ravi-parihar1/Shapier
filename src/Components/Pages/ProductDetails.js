@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Header from '../Header';
 import '../../css/ProductDetails.css'; // Assuming this contains styles specific to ProductDetails
-import Header2 from '../Header2';
+
 import BottomBar from '../BottomBar';
 import ProductCardContainer from '../ProductCard';
 import productsData from '../product.json';
@@ -42,7 +42,7 @@ export default function ProductDetails() {
 
   return (
     <>
-      <Header2 />
+      <Header />
       <div className="blank-container"></div>
       <BottomBar />
       <div className="custom-small-container custom-single-product">

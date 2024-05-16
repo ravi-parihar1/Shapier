@@ -30,12 +30,12 @@ export default function Phase4() {
 
     const handleWhatsAppButtonClick = () => {
         // Replace '1234567890' with your actual WhatsApp number
-        window.location.href = 'https://wa.me/6377692127';
+        window.location.href = 'https://wa.me/9265478439';
     };
 
     const handleCallButtonClick = () => {
         // Replace '1234567890' with your actual phone number
-        window.location.href = 'tel:6377692127';
+        window.location.href = 'tel:9265478439';
     };
 
     return (

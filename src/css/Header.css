@@ -1,0 +1,362 @@
+:root {
+    --color-white-100: hsl(206, 5%, 100%);
+    --color-white-200: hsl(206, 5%, 96%);
+    --color-white-300: hsl(206, 5%, 80%);
+    --color-white-400: hsl(206, 5%, 65%);
+    --color-white-500: hsl(206, 5%, 50%);
+    --color-black-100: hsl(213, 20%, 9%);
+    --color-black-200: hsl(213, 23%, 8%);
+    --color-black-300: hsl(214, 21%, 6%);
+    --color-black-400: hsl(210, 21%, 6%);
+    --color-black-500: hsl(216, 22%, 4%);
+    --color-red-100: hsl(349, 100%, 90%);
+    --color-red-200: hsl(349, 100%, 80%);
+    --color-red-300: hsl(349, 100%, 70%);
+    --color-red-400: hsl(349, 100%, 60%);
+    --color-red-500: hsl(349, 100%, 45%);
+    --shadow-small: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+      0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .Headofsection {
+    margin: 0 auto;
+    padding: 5rem 0 2rem;
+  }
+  
+  .Headofcontainer {
+    max-width: 80rem;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+  
+  .Headofcentered {
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 1rem;
+  }
+  
+  .Headofbtn {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    user-select: none;
+    outline: none;
+    border: none;
+    border-radius: 0.25rem;
+    text-transform: unset;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .Headofbtn-darken {
+    padding: 0.75rem 2rem;
+    color: var(--color-white-100);
+    background-color: var(--color-black-200);
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .Headofbtn-neutral {
+    padding: 0.75rem 2rem;
+    color: var(--color-black-500);
+    background-color: var(--color-white-100);
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .Headofheader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: var(--color-white-100);
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .Headofnavbar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    align-content: center;
+    height: auto;
+    padding-top: 0.5rem;
+  }
+  
+  @media only screen and (min-width: 62rem) {
+    .Headofnavbar {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      width: 100%;
+      height: 4.25rem;
+      padding-top: 0;
+      margin: 0 auto;
+    }
+  }
+  
+  .Headofbrand {
+    justify-self: start;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color:#1a77c4;;
+  }
+  
+  .Headofsearch {
+    grid-column: span 2;
+    order: 3;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding-block: 1rem;
+  }
+  
+  .Headofsearch-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding-inline: 1.5rem;
+    border-radius: 3rem;
+    background: var(--color-white-200);
+  }
+  
+  .Headofsearch-input {
+    border: none;
+    display: block;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: inherit;
+    width: 100%;
+    height: 100%;
+    padding: 0.75rem 0;
+    background: none;
+    color: var(--color-black-500);
+  }
+
+  .Headofsearch-input:focus {
+    outline: none;
+  }
+  
+  .Headofsearch-submit {
+    
+    border: none;
+    display: inline-block;
+    justify-self: end;
+    width: auto;
+    height: auto;
+    margin-left: 1rem;
+    font-size: 1.35rem;
+    font-weight: normal;
+    line-height: 1;
+    color: var(--color-white-500);
+    background: transparent;
+  }
+
+  .Headofsearch-submit:focus {
+    outline: none;
+  }
+
+  .Headoflogin-btn {
+    /* Add styling for the login button */
+    display: inline-block;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    user-select: none;
+    outline: none;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.75rem 2rem;
+    background-color: var(--color-red-500);
+    color: var(--color-white-100);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+
+  .Headoflogin-btn:hover {
+    background-color: var(--color-red-400);
+  }
+
+  .logo-head{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-head img{
+        height: 3rem;
+  }
+  
+  @media only screen and (min-width: 62rem) {
+    .Headofsearch {
+      justify-self: center;
+      grid-column: initial;
+      order: initial;
+      width: 100%;
+      height: auto;
+    }
+    .Headofsearch-form {
+      max-width: 30rem;
+    }
+  }
+  
+  .Headofmenu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding-block: 3rem 2rem;
+    background: var(--color-white-100);
+    box-shadow: var(--shadow-medium);
+    transition: all 0.45s ease-in-out;
+  }
+  
+  .Headofmenu.is-active {
+    top: 0;
+    width: 100%;
+    height: inherit;
+  }
+  
+  .Headofmenu-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1.25rem;
+  }
+  
+  .Headofmenu-link {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: inherit;
+    text-transform: uppercase;
+    color: var(--color-black-500);
+    transition: all 0.35s ease-in-out;
+  }
+  
+  .Headofmenu-link:hover {
+    outline: none;
+    color: #1a77c4;
+  }
+  
+  @media only screen and (min-width: 36rem) {
+    .Headofmenu {
+      position: relative;
+      justify-self: end;
+      top: 0;
+      left: inherit;
+      width: auto;
+      height: auto;
+      padding-block: 0;
+      background: none;
+      box-shadow: none;
+      transition: none;
+    }
+    .Headofmenu-inner {
+      display: flex;
+      flex-direction: row;
+      column-gap: 1.25rem;
+      margin: 0 auto;
+    }
+    .Headofmenu-link {
+      text-transform: capitalize;
+    }
+  }
+  
+  .Headofburger {
+    position: relative;
+    justify-self: end;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    width: 1.6rem;
+    height: 1.15rem;
+    border: none;
+    outline: none;
+    background: none;
+    visibility: visible;
+    transform: rotate(0deg);
+    transition: 0.35s ease;
+  }
+  
+  @media only screen and (min-width: 36rem) {
+    .Headofburger {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  
+  .Headofburger-line {
+    position: absolute;
+    display: block;
+    right: 0;
+    width: 100%;
+    height: 2.1px;
+    border: none;
+    outline: none;
+    opacity: 1;
+    border-radius: 1rem;
+    transform: rotate(0deg);
+    background-color: var(--color-black-100);
+    transition: 0.25s ease-in-out;
+  }
+  
+  .Headofburger-line:nth-child(1) {
+    top: 0px;
+  }
+  .Headofburger-line:nth-child(2) {
+    top: 0.5rem;
+    width: 70%;
+  }
+  .Headofburger-line:nth-child(3) {
+    top: 1rem;
+  }
+  
+  .Headofburger.is-active .Headofburger-line:nth-child(1) {
+    top: 0.5rem;
+    transform: rotate(135deg);
+  }
+  .Headofburger.is-active .Headofburger-line:nth-child(2) {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .Headofburger.is-active .Headofburger-line:nth-child(3) {
+    top: 0.5rem;
+    transform: rotate(-135deg);
+  }
+  

@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../css/FinalBillingPage.css'
-import Header2 from '../Header2';
+import Header from '../Header';
 import BottomBar from '../BottomBar';
 import Footer from '../Footer';
 
@@ -47,7 +47,7 @@ const OrderSummary = () => {
 export default function FinalBillingPage() {
     return (
         <>
-            <Header2 />
+            <Header />
             <div className="blank-container"></div>
             <div className="gird-container-billing">
                 <div className="billing-address">

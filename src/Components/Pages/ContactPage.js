@@ -1,8 +1,8 @@
 import React,{ useEffect } from 'react';
-import Header from '../Header';
+
 import '../../css/ContactPage.css'
 import shapelogo from '../../assets/shapelogo.png';
-import Header2 from '../Header2';
+import Header from '../Header';
 import BottomBar from '../BottomBar';
 
 export default function ContactPage() {
@@ -78,7 +78,7 @@ export default function ContactPage() {
 
     return (
        <>
-         <Header2/>
+         <Header/>
          <BottomBar/>
          <div className="blank-container"></div>
          <div className="contact-container">

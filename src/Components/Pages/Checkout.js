@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Header2 from '../Header2';
+import Header from '../Header';
 import BottomBar from '../BottomBar';
 import '../../css/CheckOut.css';
 import Footer from '../Footer';
@@ -95,7 +95,7 @@ const OrderSummary = () => {
 export default function Checkout() {
   return (
     <>
-      <Header2 />
+      <Header />
       <div className="blank-container"></div>
       {/* <h1 className='CheckoutPage_Heading'>Checkout</h1> */}
       <div className="shopping-cart-checkout">

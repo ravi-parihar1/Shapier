@@ -36,6 +36,7 @@ import Phase10 from '../Phase10'
 import PopupForm from '../PopupForm'
 
 
+
 export default function HomePage() {
 
     const [isPopupVisible, setPopupVisible] = useState(true); // State to manage popup visibility
@@ -74,8 +75,9 @@ export default function HomePage() {
     return (
         <div>
             {isPopupVisible && <PopupForm onClose={closePopup} />}
-            <Header2/> 
-            {/* <Header /> */}
+            {/* <Header2/>  */}
+            {/* <Navbar/> */}
+            <Header />
             <div className="blank-container"></div>
             <Slider1/>
             
@@ -130,11 +132,12 @@ export default function HomePage() {
                     </div>
 
                 </div>
-                
+                <PhaseCategories/>
                 <Phase2/>
+                
                 {/* <Comprehensive/> */}
                 <Phase3/>
-                <PhaseCategories/>   
+                   
                 <Phase4/>
                 <Phase5/>
                 {/* <Phase10/> */}

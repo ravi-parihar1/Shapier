@@ -26,11 +26,11 @@ function App() {
         <Route path='/services' element={<ServicesPage />} />
         <Route path='/shape' element={<Shape />} />
         <Route path='/store' element={<Store />} />
-        <Route path='/product-details' element={<ProductDetails />} />
+        <Route path='/product-details/:id' element={<ProductDetails />} />
         {/* <Route path='/cart' element={<Cart />}/> */}
-        <Route path='/Checkout' element={<Checkout/>}/>
-        <Route path='/login' element={<LoginPage/>}/>
-        <Route path='/Billing' element={<FinalBillingPage/>}/>
+        <Route path='/Checkout' element={<Checkout />} />
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/Billing' element={<FinalBillingPage />} />
       </Routes>
     </BrowserRouter>
   );

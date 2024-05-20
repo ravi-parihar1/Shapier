@@ -26,7 +26,6 @@ export default function ProductCardContainer({ products }) {
     <div className="product-card-container">
       {products.map((product, index) => (
         <>
-        {console.log(product)}
         <ProductCard key={index} product={product} />
         </>
       ))}

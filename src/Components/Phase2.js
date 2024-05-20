@@ -1,105 +1,88 @@
-import React, { useState, useEffect } from 'react'
-import '../css/Phase2.css'
-import arcimg from '../assets/HomePageAssets/24487811_6961929.jpg'
-import civil from '../assets/HomePageAssets/HVAC.jpg'
-import vastu from '../assets/HomePageAssets/vastu.svg'
-import desginer from '../assets/HomePageAssets/electrician.jpg'
-import Phase2OverLayImages from './Phase2OverLayImages'
-export default function Phase2() {
+import React, { useState } from 'react';
+import '../css/Phase2.css';
 
-  const OverLayImg = [
-    { src: civil, alt: "no image to display", title: 'Civil Engineer' },
-    { src: arcimg, alt: "no image to display", title: 'Interior Designer' },
-    { src: vastu, alt: "no image to display", title: 'Vastu Consultant' },
-    { src: vastu, alt: "no image to display", title: 'Vastu Consultant' }
+import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
 
-  ];
-
-
-
-  const [imageData, setImageData] = useState([
+const Phase2 = () => {
+  const [items, setItems] = useState([
     {
-      imageSrc: arcimg, // Replace with your image paths
-      altText: 'not working',
-      title: 'Architects',
-      text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum at quisquam praesentium pariatur sapiente magni ad ullam quia necessitatibus itaque? Quidem ratione unde pariatur obcaecati eveniet deleniti accusamus labore nobis?',
+      id: 1,
+      backgroundImage: "url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+      title: "Lossless Youths",
+      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim."
     },
     {
-      imageSrc: desginer,
-      altText: 'Image 2 Description',
-      title: 'Interior Designers',
-      text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio molestiae laboriosam veniam iusto illum totam ducimus error saepe temporibus rem commodi, et quos, reiciendis quo dolorem magnam illo autem inventore.',
+      id: 2,
+      backgroundImage: "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+      title: "Estrange Bond",
+      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim."
     },
     {
-      imageSrc: civil,
-      altText: 'Image 2 Description',
-      title: 'Civil  Engineer',
-      text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio molestiae laboriosam veniam iusto illum totam ducimus error saepe temporibus rem commodi, et quos, reiciendis quo dolorem magnam illo autem inventore.',
+      id: 3,
+      backgroundImage: "url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+      title: "The Gate Keeper",
+      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim."
     },
     {
-      imageSrc: vastu,
-      altText: 'Image 2 Description',
-      title: 'Vastu Consultants',
-      text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio molestiae laboriosam veniam iusto illum totam ducimus error saepe temporibus rem commodi, et quos, reiciendis quo dolorem magnam illo autem inventore.',
+      id: 4,
+      backgroundImage: "url('https://images.unsplash.com/photo-1556912173-3bb406ef7e77?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+      title: "Last Trace Of Us",
+      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim."
     },
-    // Add more image/text objects as needed
+    {
+      id: 5,
+      backgroundImage: "url('https://images.unsplash.com/photo-1471039497385-b6d6ba609f9c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+      title: "Urban Decay",
+      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim."
+    },
+    {
+      id: 6,
+      backgroundImage: "url('https://images.unsplash.com/photo-1703162977778-40a3f90a84e0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+      title: "The Migration",
+      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim."
+    },
   ]);
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const prevSlide = () => {
+    setItems((prevItems) => {
+      const lastItem = prevItems[prevItems.length - 1];
+      return [lastItem, ...prevItems.slice(0, -1)];
+    });
+  };
 
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageData.length);
-    }, 5000); // Change this to your desired time interval in milliseconds
-
-    return () => clearInterval(intervalId); // Cleanup function for the interval
-  }, [imageData.length]); // Run effect only when imageData changes
-
-
+  const nextSlide = () => {
+    setItems((prevItems) => {
+      const [firstItem, ...rest] = prevItems;
+      return [...rest, firstItem];
+    });
+  };
 
   return (
-    <div>
-
-      <div className="container-phase2 mt-4 mb-4">
-        <h2 className='comprehensive_hub_title'>Comprehensive Hub</h2>
-        <div className="image-text-container mt-5">
-          <img
-            className="phase2-image"
-            // src={arcimg}
-            src={imageData[currentImageIndex].imageSrc}
-            alt={imageData[currentImageIndex].altText}
-
-          />
-
-          {/* Text conatiner code start from her  */}
-          <div className="text-container">
-            <h4 className='img-name'>{imageData[currentImageIndex].title}</h4>
-            <p className="phase2-text">{imageData[currentImageIndex].text}</p>
-            
-              <button className="see-button">See More</button>
-            
-          </div>
-        </div>
-
-        {/* { phase2 lower images code begain with here  } */}
-
-        {/* <div className="image-overlay-container">
-          {OverLayImg.map((item, index) => (
-            <Phase2OverLayImages
-              key={index}
-              src={item.src}
-              alt={item.alt}
-              title={item.title}
-            />
+    <div className='BodyPhase2'>
+      <main className="mainPhase2">
+        <ul className='sliderPhase2'>
+          {items.map((item, index) => (
+            <li
+              key={item.id} // Use unique id here
+              className={`itemPhase2`}
+              style={{ backgroundImage: item.backgroundImage }}
+            >
+              <div className='contentPhase2'>
+                <h2 className='titlePhase2'>{item.title}</h2>
+                <p className='descriptionPhase2'>{item.description}</p>
+                <button className='buttonPhase2'>Read More</button>
+              </div>
+            </li>
           ))}
-        </div> */}
-
-
-
-
-      </div>
-
+        </ul>
+        <nav className='navPhase2'>
+          <div className='Phase2arrowButton' onClick={prevSlide}><IoIosArrowBack /></div>
+          <div className='Phase2arrowButton' onClick={nextSlide}><IoIosArrowForward /></div>
+        </nav>
+      </main>
     </div>
-  )
-}
+  );
+};
+
+export default Phase2;

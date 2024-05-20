@@ -31,20 +31,17 @@ export default function Phase7({ filepath, heading }) {
         <div className="Trending_product_container">
           {filepath.map((product) => (
             <Link
-              key={product.id}
-              to={{
-                pathname: "/product-details",
-                state: { product },
-              }}
+              to={`/product-details/${product.product_id}`}
+              key={product.id}            
               className="product-link"
             >
 
               <div className="trending-product-card">
 
-                <img className="trending-product-card-img" src={product.image} alt={product.name} />
+                <img className="trending-product-card-img" src={`http://13.232.110.226:5000/images/${product.product_image}`} alt={product.name} />
                 <div className="trending-product-card-details">
-                  <p className="trending-product-name">{product.name}</p>
-                  <p className="trending-product-price">{product.price}</p>
+                  <p className="trending-product-name">{product.product_name}</p>
+                  <p className="trending-product-price">Rs. {product.product_price}</p>
                 </div>
 
                 <div className="product-wish-addtocart">
@@ -54,10 +51,6 @@ export default function Phase7({ filepath, heading }) {
                   <a href="#" className="addtocart-btn">Add To Cart</a>
                 </div>
               </div>
-
-
-
-
             </Link>
           ))}
         </div>

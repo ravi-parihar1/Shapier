@@ -14,6 +14,10 @@ const CouponInput = () => (
 
 const OrderSummary = () => {
     return (
+        
+        <>
+        
+        
         <div className="order-summary-checkout">
             <h2 className="order-summary-title-checkout">Order Summary</h2>
             <div className="order-summary-details-checkout">
@@ -30,8 +34,7 @@ const OrderSummary = () => {
                     <span>$5</span>
                 </div>
                 <hr className="divider-checkoutPage" />
-                <CouponInput />
-                <hr className="divider-checkoutPage" />
+                
                 <div className="order-summary-row-checkout">
                     <span>Total:</span>
                     <span>$110</span>
@@ -39,6 +42,7 @@ const OrderSummary = () => {
                 <button className="checkout-button-checkoutPage">Pay Now</button>
             </div>
         </div>
+        </>
     );
 };
 

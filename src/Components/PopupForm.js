@@ -26,7 +26,7 @@ export default function PopupForm({ onClose }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission, e.g., send data to server
-        console.log('Form submitted:', formData);
+        // console.log('Form submitted:', formData);
         onClose(); // Close the popup after submission
     };
 

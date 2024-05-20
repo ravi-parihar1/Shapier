@@ -1,838 +1,196 @@
+.BodyPhase2 {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 
-.image-text-container {
-  display: flex;
+  @media (max-width:431px) {
+    height: 70vh;
+  }
+}
+
+.mainPhase2 {
   position: relative;
-}
-
-.text-container {
-  max-width: 100%;
-  /* Adjust margin as needed */
-  padding-left: 30px;
-  justify-content: center;
-  position: relative;
-}
-
-.phase2-image {
-  width: 40rem;
-  /* Adjust this value as needed */
-  height: 20rem;
-  /* Maintain aspect ratio */
-  
-  transition: transform 1s, box-shadow 0.3s;
-}
-/* 
-.phase2-image:hover {
-  transform: scale(1.02);
-  
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  
-} */
-
-.button-container {
-  position: absolute;
-  bottom: 10px;
-  /* Adjust this value to change the distance from the bottom */
-  white-space: nowrap;
-  /* Prevent text from wrapping */
-  /* Adjust the height as needed */
-
-}
-
-.see-button {
-  border: 2px solid black;
-  margin-top: 12%;
-  height: 50px;
-    width: 170px;
-    border-radius: 20px;
-    color: white;
-    background-color: black;
-    transition: transform 0.3s, box-shadow 0.3s;
-
-}
-
-.see-button:hover {
-  transform: scale(1.05);
-  /* Increase size by 5% */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  /* Add shadow effect */
-}
-
-.img-name{
-  font-weight: 500;
-  font-size: 16px;
-}
-
-.image-overlay-container {
-  display: flex;
-  flex-wrap: wrap;
-  padding-right: 20px;
-  overflow-x: scroll;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-.overlay-image {
-  background-size: cover;
-  height: 12rem;
-  width: 18rem;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  padding: 15px;
-  color: white;
-  margin-top: 60px;
-  margin-right: 30px;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: relative;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  z-index: 0;
-  
-}
-
-
-.overlay-image:hover{
-  transform: scale(1.05);
- 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.overlay-title {
-  z-index: 1;
-  text-align: center;
-  margin-top: 3rem;
-}
-
-.overlay-button {
-  height: 3rem;
-  width: 9rem;
-  margin-top: 70px;
-  margin-left: 40%;
-  border-radius: 20px;
-  background-color: #0d1b23;
-  border: none;
-  
-  color: rgb(255, 255, 255);
-  transition: transform 0.3s, box-shadow 0.3s;
-  z-index: 1;
-}
-
-.overlay-button:hover {
-  transform: scale(1.05);
- 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  
-}
-
-
-@media screen and (max-width: 1400px) {
-
-
-  /* Target Laptop-sized screens */
-  .container-card{
-    margin-left: 15px;
-  }
-
-  
-
-  .overlay-image{
-    
-    margin-right: 15px;
-  }
-
-  
-
-  
-}
-
-@media screen and (max-width: 1200px) {
-
-
-  /* Target Laptop-sized screens */
-  .container-card{
-    margin-right: -30px;
-  }
-
-  .overlay-image{
-   
-    margin-right: 12px;
-  }
-
-  .overlay-title{
-    font-size: 24px;
-  }
-
-  .overlay-button{
-    margin-top: 40px;
-    margin-left: 30%;
-  }
-
-  
-}
-
-
-
-@media screen and (max-width: 1025px) {
-
-  /* Target Laptop-sized screens */
-  .container-card{
-    margin-right: 26px;
-  }
-  .container-card img{
-    height: 70px;
-    width: 112px;
-  }
-
-
-
-  .see-more-button {
-    bottom: 0px;
-  }
-
-  .overlay-image {
-
-    margin-right: 20px;
-    height: 160px;
-    width: 209px;
-  }
-
-  
-
-
-  .overlay-button {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    
-  }
-
-  .image-overlay-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding-right: 20px;
-  }
-
-  .overlay-title {
-    padding: 5px;
-  }
-
-  
-}
-
-
-
-@media screen and (max-width: 992px) {
-
-  /* Target desktop-sized screens */
-  .container-card {
-    margin-right: -18px;
-  }
-      
-  .container-card img{
-    height: 60px;
-    width: 85px;
-  }
-
-  .service-title{
-    font-size: 12px;
-  }
-  
-  .phase2-text{
-    font-size: 12px;
-    margin-top: 30%;
-    color: #868686;
-}
-
-.overlay-image {
-  margin-right: 13px;
-  height: 146px;
-  width: 156px;
-  margin-top: 30px;
-}
-
-
-    
- 
-}
-
-
-
-@media screen and (max-width: 769px) {
-
-  /* Target Tablet-sized screens */
-  /* .phase2-image {
-    width: 580px;
-    height: 250px;
-  } */
-
-  .see-button {
-    bottom: -10px;
-  }
-
-  .overlay-image {
-    margin-right: 13px;
-    height: 146px;
-    width: 156px;
-    margin-top: 30px;
-  }
-
-  .overlay-button{
-    position: relative;
-    bottom: 0px;
-    right: 0px;
-  }
-
-  .phase2-text {
-    font-size: 14px;
-    margin-top: 5%;
-}
-  .overlay-button {
-    margin-top: 10px;
-    margin-left: -6px;
-  }
-
-  .overlay-title {
-    padding: 10px;
-    font-size: 18px;
-  }
-
-  .container-card img {
-    height: 58px;
-    width: 92px;
-}
-
-.container-card {
-  margin-left: 16px;
-  margin-bottom: 50px;
-}
-
-}
-
-
-
-@media screen and (max-width: 767px) {
-
-
-  .image-container{
-    display: none;
-  }
-
-  .image-overlay-container {
-    
-    padding-right: 0%;
-}
-
-  .container-card img {
-    height: 100%;
-    width: 120%;
-}
-
-.container-card {
-  margin-left: 10%;
-  margin-bottom: 10%;
-}
-
-  .phase2-image {
-    width: 40%;
-   
-  }
-
-  .see-button {
-    bottom: -10px;
-  }
-
-  .overlay-image {
-    margin-right: 23px;
-    height: 149px;
-    width: 235px;
-    margin-top: 30px;
-  }
-
- 
-
-  .phase2-text {
-    font-size: 12px;
-    margin-top: 5%;
-}
-  .overlay-button {
-    
-    margin-top: 18%;
-      margin-left: -6px;
-      height: 30%;
-      width: 58%;
-  
-  }
-
-  .overlay-title {
-    padding: 10px;
-    font-size: 18px;
-  }
-
-  
-
- .book-now-button,.explore-now-button{
-  height: 10%;
-  margin: 1%;
- }
-
-}
-
-@media screen and (max-width: 540px) {
-
-  .overlay-image {
-    margin-right: 20px;
-    
-  }
-
-.book-now-button,.explore-now-button{
-  height: 10%;
- }
-
-}
-
-@media screen and (max-width: 534px) {
-
-  .overlay-image {
-    margin-right: 19px;
-    
-  }
-
-.book-now-button,.explore-now-button{
-  height: 10%;
- }
-
-}
-
-@media screen and (max-width: 532px) {
-
-  .overlay-image {
-    margin-right: 4vh;
-    
-  }
-
-
-
-}
-
-@media screen and (max-width: 525px) {
-
-  .overlay-image {
-    margin-right: 3vh;
-    
-  }
-
-
-
-}
-
-@media screen and (max-width: 517px) {
-
-  .overlay-image {
-    margin-right: 2vh;
-    
-  }
-
-
-
-}
-
-@media screen and (max-width: 509px) {
-
-  .overlay-image {
-    margin-right: 1vh;
-    
-  }
-
-
-
-}
-
-
-@media screen and (max-width: 502px) {
-
-  .overlay-image {
-    margin-left: 5%;
-    height: 71%;
-    margin-right: 20px;
-    width: 206px;
-    
-  }
-
-
-
-}
-
-@media screen and (max-width: 476px) {
-
-  .buttons-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 7%;
-    padding-left: 7%;
-}
-
-.overlay-button {
-  margin-top: 7%;
-  margin-left: -6px;
-  height: 36%;
-  width: 60%;
-}
-
-.overlay-image {
-  
-  margin-left: 1rem;
-  margin-right: 1rem;
-  height: 12rem;
-  width: 23rem;
-  
-}
-
-.container-card {
-  margin-left: 5%;
-  margin-bottom: 10%;
-  margin-right: 2%;
-}
-
-
-
-}
-
-@media screen and (max-width: 468px) {
-
-  
-
-.overlay-button {
-  margin-top: 7%;
-  margin-left: -6px;
-  height: 36%;
-  width: 60%;
-}
-
-.overlay-image {
-  
-  height: 70%;
-  margin-right: 10px;
-  
-}
-
-
-
-}
-
-
-@media screen and (max-width: 456px) {
-
-  
-
-  .overlay-button {
-    margin-top: 7%;
-    margin-left: -6px;
-    height: 36%;
-    width: 60%;
-  }
-  
-  .overlay-image {
-    
-    
-    margin-right:9px;
-    
-  }
-
-
-  
-  
-  
-  }
-
-
-  @media screen and (max-width: 454px) {
-    .overlay-image {
-      margin-right:8px;
-    }
-    }
-  
-
-    @media screen and (max-width: 453px) {
-      .overlay-image {
-        margin-right:7px;
-      }
-      }
-
-      @media screen and (max-width: 450px) {
-        .overlay-image {
-          margin-right:6px;
-        }
-        }
-        
-        @media screen and (max-width: 448px) {
-          .overlay-image {
-            margin-right:50px;
-            height: 150px;
-            width: 160px;
-          }
-          }
-
-          @media screen and (max-width: 444px) {
-            .overlay-image {
-              margin-right:48px;
-              height: 150px;
-              width: 160px;
-            }
-            }
-
-            @media screen and (max-width: 440px) {
-              .overlay-image {
-                margin-right:46px;
-                height: 150px;
-                width: 160px;
-              }
-              .container-card {
-                margin-left: 4%;
-                
-            }
-
-              }
-
-              /* @media screen and (max-width: 436px) {
-                .overlay-image {
-                  margin-right:44px;
-                  height: 150px;
-                  width: 160px;
-                }
-                .container-card {
-                  margin-left: 4%;
-                  
-              }
-  
-                } */
-
-                @media screen and (max-width: 436px) {
-                  .overlay-image {
-                    margin-right:42px;
-                    height: 150px;
-                    width: 160px;
-                  }
-                  .container-card {
-                    margin-left: 4%;
-                    
-                }
-                .see-button {
-                  margin-top: 1%;
-              }
-
-              .phase2-text {
-                font-size: 10px;
-                margin-top: 5%;
-            }
-
-
-                  }
-
-                  @media screen and (max-width: 428px) {
-                    .overlay-image {
-                      margin-right:40px;
-                      height: 150px;
-                      width: 160px;
-                    }
-                    .container-card {
-                      margin-left: 4%;
-                      
-                  }
-                  
-  
-  
-                    }
-  
-
-@media screen and (max-width: 426px) {
-  .comprehensive_hub_title{
-    font-size: 16px;
-  }
-  .see-button {
-    margin-top: 12%;
-    height: 33px;
-    font-size: 12px;
-    width: 121px;
-    border-radius: 20px;
-    color: white;
-    background-color: black;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  /* Target mobile-L portrait screens */
-  .image-text-container {
-    display: block;
-    position: relative;
-
-  }
-  .image-overlay-container {
-    
-    margin-left: 5%;
-}
-
-  .content{
-    height: auto;
-  }
-
-  .container-card {
-    margin-left: 0%;
-    margin-bottom: 16%;
-}
-
-  .phase2-image {
-    width: 100%;
-    height: 50%;
-
-  }
-  
-  .overlay-title {
-    padding: 10px;
-    font-size: 25px;
-}
-  .phase2-text{
-    font-size: 12px;
-  }
-
-  .see-button{
-    margin-top: 5%;
-  }
-
-  h4{
-    margin-top: 5%;
-  }
-
-  .overlay-button {
-    margin-top: 3rem;
-    margin-left: 7rem;
-    height: 3rem;
-    width: 10rem;
-}
-
-  .text-container{
-    padding-left: 10px;
-    height:auto ;
-  }
-
-  .overlay-image{
-    margin-left: 1%;
-    margin-right: 1%;
-    height: 12rem;
-    width: 20rem;
-  }
-
-  .buttons-container {
-    
-    padding-left: 0%;
-}
-
-.request-title{
-  font-size: 16px;
-}
-  
-.image-container-p4{
-  width: 69%;
-  height: 78%;
-}
-
-
-}
-
-
-
-
-@media screen and (max-width: 407px) {
-
-  /* Target mobile-L portrait screens */
-  .container-card {
-    margin-right: 4px;
-    margin-left: 0%;
-    margin-bottom: 16%;
-}
-
-
-
-}
-
-
-
-@media screen and (max-width: 400px) {
-
-  /* Target mobile-L portrait screens */
-  .container-card {
-    margin-right: 0px;
-    margin-left: 0%;
-    margin-bottom: 16%;
-}
-
-
-
-}
-
-@media screen and (max-width: 390px) {
-
-  /* Target mobile-L portrait screens */
-  .container-card {
-    margin-right: -4px;
-    margin-left: 0%;
-    margin-bottom: 16%;
-}
-
-.container-card img {
+  width: 100%;
   height: 100%;
-  width: 110%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
-
+.sliderPhase2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
+.itemPhase2 {
+  width: 200px;
+  height: 300px;
+  list-style-type: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 30px rgba(255, 255, 255, 0.3) inset;
+  transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s, opacity 0.75s;
 
+  &:nth-child(1),
+  &:nth-child(2) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 1;
+  }
 
+  &:nth-child(3) {
+    left: 50%;
+  }
 
-@media screen and (max-width: 377px) {
+  &:nth-child(4) {
+    left: calc(50% + 220px);
+  }
 
-  /* Target mobile-L portrait screens */
-  .container-card {
-    margin-left: 8%;
-    margin-bottom: 16%;
+  &:nth-child(5) {
+    left: calc(50% + 440px);
+  }
+
+  &:nth-child(6) {
+    left: calc(50% + 660px);
+    opacity: 0;
+  }
 }
-.see-button {
-  margin-top: 5%;
-  font-size: 12px;
-  width: 7rem;
-  height: 2rem;
+
+.contentPhase2 {
+  width: min(30vw, 400px);
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translateY(-50%);
+  font: 400 0.85rem helvetica, sans-serif;
+  color: white;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: none;
+
+  & .titlePhase2 {
+    font-family: 'arial-black';
+    text-transform: uppercase;
+  }
+
+  & .descriptionPhase2 {
+    line-height: 1.7;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  & .buttonPhase2 {
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    border: 2px solid white;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    cursor: pointer;
+  }
 }
+
+.itemPhase2:nth-of-type(2) .contentPhase2 {
+  display: block;
+  animation: show 0.75s ease-in-out 0.3s forwards;
+}
+
+.navPhase2 {
+  color: aliceblue;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  user-select: none;
+  display: flex; /* Ensure that buttons are displayed in a row */
+  gap: 1.5rem; /* Add space between buttons */
+
   
+}
+
+ .Phase2arrowButton {
+  background-color: rgba(255,255,255,0.5);
+    color: rgba(0,0,0,0.7);
+    /* border: 2px solid rgba(0,0,0,0.6); */
+    margin: 0 0.25rem;
+    padding: 0.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    
+
+  
+}
 
 
+.Phase2arrowButton:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
 
+.Phase2arrowButton ion-icon {
+  font-size: 1.5rem;
 }
 
 
 
 
 
-
-
-
-
-
-
-@media screen and (max-width: 321px) {
-
-  /* Target small mobile -sized screens */
-  .container-card {
-    margin-left: 7%;
-    margin-bottom: 16%;
+@keyframes show {
+  0% {
+    filter: blur(5px);
+    transform: translateY(calc(-50% + 75px));
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
 }
 
-.book-now-button, .explore-now-button {
-  height: 52px;
-  margin: 1%;
+
+
+@media (min-width : 650px) and (max-width : 900px) {
+  .contentPhase2 {
+    & .titlePhase2 { font-size: 1rem; }
+    & .descriptionPhase2 { font-size: 0.7rem; }
+    & .buttonPhase2 { font-size: 0.7rem; }
+  }
+  .itemPhase2 {
+    width: 160px;
+    height: 270px;
+
+    &:nth-child(3) { left: 50%; }
+    &:nth-child(4) { left: calc(50% + 170px); }
+    &:nth-child(5) { left: calc(50% + 340px); }
+    &:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
+  }
 }
 
-.overlay-image {
-  margin-left: 1%;
-  height: 76%;
-  width: 290px;
-}
+@media (max-width : 650px) {
+  .contentPhase2 {
+    & .titlePhase2 { font-size: 0.9rem; }
+    & .descriptionPhase2 { font-size: 0.65rem; }
+    & .buttonPhase2 { font-size: 0.7rem; }
+  }
+  .itemPhase2 {
+    width: 130px;
+    height: 220px;
 
+    &:nth-child(3) { left: 50%; }
+    &:nth-child(4) { left: calc(50% + 140px); }
+    &:nth-child(5) { left: calc(50% + 280px); }
+    &:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
+  }
 }

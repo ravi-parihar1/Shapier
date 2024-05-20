@@ -1,4 +1,4 @@
-import {React , useEffect, useState} from 'react'
+import { React, useEffect, useState } from 'react'
 import Header from '../Header'
 import Footer from '../Footer'
 import Phase8 from '../Phase8'
@@ -32,12 +32,33 @@ import BottomBar from '../BottomBar'
 import Header2 from '../Header2'
 import Phase9 from '../Phase9'
 import Phase5 from '../Phase5'
-import Phase10 from '../Phase10'
 import PopupForm from '../PopupForm'
-
+import axios from 'axios'
 
 
 export default function HomePage() {
+    const [topProduct, setTopProduct] = useState([]);
+
+    const fetchProduct = async () => {
+        try {
+            const { data } = await axios.get(`http://13.232.110.226:5000/api/v1/product`);
+            const arrayProduct = data.data;
+            setTopProduct(
+                arrayProduct.map((fetchedProduct)=>({
+                    product_id: fetchedProduct.id,
+                    product_name: fetchedProduct.product,
+                    product_image: fetchedProduct.product_image,
+                    product_price: fetchedProduct.product_price,
+                }))
+            ); 
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        fetchProduct();
+    },[]);
 
     const [isPopupVisible, setPopupVisible] = useState(true); // State to manage popup visibility
 
@@ -79,16 +100,16 @@ export default function HomePage() {
             {/* <Navbar/> */}
             <Header />
             <div className="blank-container"></div>
-            <Slider1/>
-            
-            <BottomBar/>
+            <Slider1 />
+
+            <BottomBar />
             <div className='container mt-4'>
-            
+
                 {/* this is Phase-I Container */}
                 <div className='container-fluid'>
-                
-                {/* <Phase6/> */}
-                    
+
+                    {/* <Phase6/> */}
+
                     <h2 className='first-heading'>Streamline construction<br />projects</h2>
                     {/* from this point the first container code begin of choose service */}
                     <div className='inner-container'>
@@ -125,30 +146,30 @@ export default function HomePage() {
                         <div className=' image-container'> {/* Add a separate container for image */}
                             <Lottie
                                 options={coverOptions}
-                                
+
                             />
                         </div>
 
                     </div>
 
                 </div>
-                <PhaseCategories/>
-                <Phase2/>
-                
+                <PhaseCategories />
+                <Phase2 />
+
                 {/* <Comprehensive/> */}
-                <Phase3/>
-                   
-                <Phase4/>
-                <Phase5/>
+                <Phase3 />
+
+                <Phase4 />
+                <Phase5 />
                 {/* <Phase10/> */}
                 {/* <Phase6/> */}
-                <Phase7 filepath={TopRatedProduct} heading={"Top Product"}/>
-                <Quotation/>
-                <Phase7 filepath={Expo} heading={"Top Rated Product"}/>
+                <Phase7 filepath={topProduct} heading={"Top Product"} />
+                <Quotation />
+                {/* <Phase7 filepath={Expo} heading={"Top Rated Product"} /> */}
                 {/* <Phase9/> */}
                 <ChooseUs />
                 {/* <Phase7 filepath={Product} heading={"Your product"}/> */}
-                
+
             </div>
             <Footer />
         </div>

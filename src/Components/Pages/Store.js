@@ -236,7 +236,7 @@ export default function Store() {
         <>
             
             <Header />
-            {/* <div className="blank-container"></div> */}
+            <div className="blank-container"></div>
             <BottomBar/>
             <HeroSection/>
             {/* <PetShopSection /> */}

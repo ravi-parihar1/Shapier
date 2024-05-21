@@ -13,6 +13,7 @@
 }
 .first-heading {
   margin-top: 3%;
+  padding-top: 1rem;
 }
 
 .w-100 {
@@ -330,7 +331,7 @@ h6 {
   /* Target Mobile-L-sized screens */
   .first-heading {
     margin-top: 3%;
-    font-size: 16px;
+    font-weight: 600;    /* font-size: 20px; */
 }
   .header_of_what_are_you_looking{
     font-size: 16px;

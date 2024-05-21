@@ -21,7 +21,7 @@ export default function LoginPage() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://13.232.110.226:5000/api/v1/register",
+        "https://free.shapier.in/api/v1/register",
         {
           username,
           email,
@@ -43,7 +43,7 @@ export default function LoginPage() {
   const handleSignIn = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://13.232.110.226:5000/api/v1/login", {
+      const response = await axios.post("https://free.shapier.in/api/v1/login", {
         email,
         password,
       });

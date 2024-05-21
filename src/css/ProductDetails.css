@@ -1,4 +1,98 @@
 /* Specific styles for ProductDetails component */
+.quantity-selector {
+  gap: 1rem;
+  /* justify-content: space-between; */
+  align-items: center;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.quantity-selector label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.quantity-selector input {
+  width: 60px;
+  height: 40px;
+  padding: 5px 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.quantity-selector input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.quantity-selector input[type='number']::-webkit-inner-spin-button,
+.quantity-selector input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-selector input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.quantity-product-button {
+  margin-top: 10px;
+}
+
+.gb-shutter::before,
+.gb-shutter::after
+
+{
+    
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+
+.gb-shutter{
+  padding: 0.4rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 3px 3px 0 black;
+  font-size: 1.125rem;
+  font-weight: 700;
+  overflow: hidden;
+  color: black;
+}
+.gb-shutter::after, .gb-shutter::before{
+  top: 0;
+  left: 0;
+  width: 130%;
+  aspect-ratio: 1;
+  /* background: black; */
+}
+.gb-shutter::after{
+  transform: translate(-100%,-80%) rotate(30deg);
+}
+.gb-shutter::before{
+  transform: translate(100%,30%) rotate(30deg);
+}
+.gb-shutter:hover::after{
+  transform: translate(-50%,-50%) rotate(30deg);
+}
+.gb-shutter:hover::before{
+  transform: translate(30%,-10%) rotate(30deg);
+}
+.gb-shutter:hover{
+  background-color: black;
+  color: #ffffff;
+  box-shadow: 0 0 0;
+}
+
+
+
+
+
 
 
 .custom-small-container {

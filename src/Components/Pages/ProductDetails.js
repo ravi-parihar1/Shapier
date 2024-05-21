@@ -21,7 +21,7 @@ export default function ProductDetails() {
   useEffect(() => {
     const fetchAllProducts = async () => {
       try {
-        const { data } = await axios.get('http://13.232.110.226:5000/api/v1/product');
+        const { data } = await axios.get('https://free.shapier.in/api/v1/product');
         const arrayOfProducts = data.data;
         setProduct(arrayOfProducts.map(product => ({
           product_id: product.id,
@@ -41,7 +41,7 @@ export default function ProductDetails() {
   useEffect(() => {
     const fetchProductById = async () => {
       try {
-        const { data } = await axios.get(`http://13.232.110.226:5000/api/v1/product/${id}`);
+        const { data } = await axios.get(`https://free.shapier.in/api/v1/product/${id}`);
         const arrayOfProducts = data.data;
         setProductById(arrayOfProducts.map(product => ({
           product_id: product.id,
@@ -51,6 +51,7 @@ export default function ProductDetails() {
           product_description: product.product_description,
           product_category_id: product.product_category_id,
         })));
+        window.scrollTo(0,0)
       } catch (error) {
         console.log("Error fetching product by ID: ", error);
       }
@@ -66,7 +67,7 @@ export default function ProductDetails() {
     }
 
     try {
-      await axios.post('http://13.232.110.226:5000/api/v1/cart', {
+      await axios.post('https://free.shapier.in/api/v1/cart', {
         user_id: userId,
         product_id: productById[0].product_id,
         quantity: quantity,
@@ -121,7 +122,7 @@ export default function ProductDetails() {
             <div className="custom-col-2">
               <img 
                 className='ProductDetailsImage' 
-                src={`http://13.232.110.226:5000/images/${productbyid.product_image}`} 
+                src={`https://free.shapier.in/images/${productbyid.product_image}`} 
                 alt="product" 
                 width="100%" 
                 id="ProductImg" 
@@ -129,6 +130,7 @@ export default function ProductDetails() {
             </div>
             <div className="column-xs-12 column-md-5">
               <h1>{productbyid.product_name}</h1>
+              <hr />
               <h2>RS.{productbyid.product_price}</h2>
               <div className='quantity-selector'>
                 <label htmlFor='quantity'>Quantity:</label>

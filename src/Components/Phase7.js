@@ -38,7 +38,7 @@ export default function Phase7({ filepath, heading }) {
 
               <div className="trending-product-card">
 
-                <img className="trending-product-card-img" src={`http://13.232.110.226:5000/images/${product.product_image}`} alt={product.name} />
+                <img className="trending-product-card-img" src={`https://free.shapier.in/images/${product.product_image}`} alt={product.name} />
                 <div className="trending-product-card-details">
                   <p className="trending-product-name">{product.product_name}</p>
                   <p className="trending-product-price">Rs. {product.product_price}</p>

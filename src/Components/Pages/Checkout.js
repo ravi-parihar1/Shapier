@@ -59,7 +59,7 @@ export default function Checkout() {
 
     const { token, userId } = storedData;
     try {
-      const response = await axios.get(`http://13.232.110.226:5000/api/v1/cart_by_userId/${userId}`, {
+      const response = await axios.get(`https://free.shapier.in/api/v1/cart_by_userId/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }

@@ -34,6 +34,7 @@ import Phase9 from '../Phase9'
 import Phase5 from '../Phase5'
 import PopupForm from '../PopupForm'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 
 export default function HomePage() {
@@ -41,7 +42,7 @@ export default function HomePage() {
 
     const fetchProduct = async () => {
         try {
-            const { data } = await axios.get(`http://13.232.110.226:5000/api/v1/product`);
+            const { data } = await axios.get(`https://free.shapier.in/api/v1/product`);
             const arrayProduct = data.data;
             setTopProduct(
                 arrayProduct.map((fetchedProduct)=>({
@@ -110,7 +111,7 @@ export default function HomePage() {
 
                     {/* <Phase6/> */}
 
-                    <h2 className='first-heading'>Streamline construction<br />projects</h2>
+                    <h1 className='first-heading'>Streamline construction<br />projects</h1>
                     {/* from this point the first container code begin of choose service */}
                     <div className='inner-container'>
                         <div className='content'>
@@ -132,7 +133,7 @@ export default function HomePage() {
                             {/* button code start from here  */}
                             {/* Buttons */}
                             <div className="buttons-container">
-                                <button className="book-now-button">Book Now</button>
+                                <Link to='/services'><button className="book-now-button">Book Now</button></Link>
                                 <button className="explore-now-button">Explore Now</button>
                             </div>
 

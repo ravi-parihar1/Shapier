@@ -593,7 +593,7 @@ footer ul li {
   .btn-8 {
     
     background-color: #f0ecfc;
-  background-image: linear-gradient(315deg, #49f87d 0%, #15d4b5 74%);
+  background-image: linear-gradient(315deg, #388de9 0%, #255ad7 74%);
   /* background-image: linear-gradient(315deg, #49c4f8 0%, #15d4b5 74%); */
     line-height: 42px;
     padding: 2px 20px;
@@ -626,7 +626,7 @@ footer ul li {
     background: transparent;
   }
   .btn-8 span:hover{
-    color: #1cd12e;
+    color: #1c6ad1;
   }
  
   .btn-8 span:before {
@@ -724,7 +724,7 @@ footer ul li {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 18px;
-    color: #2ecc71;
+    color: #1b7ac6;
   }
 
   .product-card .product-wish-addtocart{
@@ -774,7 +774,7 @@ footer ul li {
   }
   a.wish-btn, a.addtocart-btn {
     
-    background: #2ecc71;
+    background: #1b7ac6;
     padding-left: 12%;
     padding-top: 4%;
     /* padding: 0.6rem 2.2rem; */

@@ -1,132 +1,180 @@
-/* Styles for the whole page */
-.ServicePageBody {
-  margin: 0;
-  padding: 0;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-}
-
-/* Styles for the background container */
-.ServicePageBackgroundContainer {
-  background-image: url('https://images.unsplash.com/photo-1599995903128-531fc7fb694b?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  position: relative;
-  width: 100%;
-  height: 100vh;
+.ServiceBookingPage-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  padding: 16px;
+  background-image: url('https://images.unsplash.com/photo-1669835122130-634df4039083?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;
   background-position: center;
+}
+
+.ServiceBookingPage-sidebar-description{
+  
+  color: #718096;
+}
+
+.BookingPage-mt-4 {
+  margin-top: 1rem; /* Adjust as needed */
+}
+
+.BookingPage-block {
+  display: block;
+}
+
+.BookingPage-text-zinc-700 {
+  color: #718096; /* Adjust color as needed */
+}
+
+.BookingPage-dark .BookingPage-text-zinc-300 {
+  color: #a0aec0; /* Adjust color as needed */
+}
+
+.BookingPage-w-full {
+  width: 100%;
+}
+
+.BookingPage-p-2 {
+  padding: 0.5rem; /* Adjust padding as needed */
+}
+
+.BookingPage-border {
+  border-width: 1px;
+}
+
+.BookingPage-border-zinc-300 {
+  border-color: #cbd5e0; /* Adjust color as needed */
+}
+
+.BookingPage-rounded {
+  border-radius: 0.25rem; /* Adjust radius as needed */
+}
+
+.BookingPage-mt-2 {
+  margin-top: 0.5rem; /* Adjust as needed */
+}
+
+.BookingPage-bg-orange-500 {
+  background-color: #1a5aa4; /* Adjust color as needed */
+}
+
+.BookingPage-text-white {
+  color: #fff; /* Adjust color as needed */
+}
+
+
+.BookingPage-Details-header{
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
+  gap: 0.5rem;
 }
 
-/* Styles for the form container */
-.ServicePageFormContainer {
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 30px;
-  border-radius: 15px;
+@media (min-width: 1024px) {
+  .ServiceBookingPage-container {
+    flex-direction: row;
+  }
+}
+
+.ServiceBookingPage-content {
+  width: 100%;
+  padding: 16px;
+}
+
+@media (min-width: 1024px) {
+  .ServiceBookingPage-content {
+    width: 66.6667%;
+  }
+}
+
+.ServiceBookingPage-header {
+  color: rgb(255, 255, 255);
+}
+
+.ServiceBookingPage-title,
+.ServiceBookingPage-subtitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.ServiceBookingPage-description {
+  margin-top: 8px;
+  font-size: 1.125rem;
+}
+
+.ServiceBookingPage-features {
+  display: flex;
+  margin-top: 32px;
+  gap: 16px;
+}
+
+.ServiceBookingPage-feature-card {
+  width: 96px;
+  height: 96px;
+  border-radius: 9999px;
+  border: 4px solid #12589e;
+  overflow: hidden;
+}
+
+.ServiceBookingPage-feature-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ServiceBookingPage-feature-text {
+  margin-top: 8px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+.ServiceBookingPage-sidebar {
   width: 100%;
-  max-width: 400px;
-  margin: 20px;
-  animation: fadeIn 0.5s ease-in-out;
-  box-sizing: border-box;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.ServicePageFormContainer h2 {
-  margin-bottom: 20px;
-  font-size: 26px;
-  color: #333;
-}
-
-.ServicePageFormContainer p {
-  font-size: 18px;
-  color: #555;
-}
-
-.ServicePageFormContainer input,
-.ServicePageFormContainer select,
-.ServicePageFormContainer textarea {
-  width: 100%;
-  margin-bottom: 15px;
-  padding: 12px;
+  background-color: white;
+  padding: 24px;
   border-radius: 8px;
-  border: 1px solid #ddd;
-  font-size: 16px;
-  transition: border-color 0.3s ease;
-  box-sizing: border-box;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  color: black;
 }
 
-.ServicePageFormContainer input:focus,
-.ServicePageFormContainer select:focus,
-.ServicePageFormContainer textarea:focus {
-  border-color: #007bff;
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+@media (min-width: 1024px) {
+  .ServiceBookingPage-sidebar {
+    width: 30.3333%;
+  }
 }
 
-.ServicePageFormContainer button {
+.ServiceBookingPage-sidebar-title {
+  color: #1a5aa4;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.ServiceBookingPage-sidebar-description {
+  margin-bottom: 16px;
+}
+
+.ServiceBookingPage-sidebar-list {
+  list-style-type: disc;
+  padding-left: 16px;
+  margin-bottom: 16px;
+}
+
+.ServiceBookingPage-list-item {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.ServiceBookingPage-button {
   width: 100%;
-  padding: 12px;
+  padding: 8px 0;
+  color: white;
+  background-color: #1a5aa4;
   border-radius: 8px;
-  border: none;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.ServicePageFormContainer button:hover {
-  background-color: #0056b3;
-  box-shadow: 0 5px 15px rgba(0, 87, 179, 0.4);
-}
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .ServicePageBackgroundContainer {
-    padding: 10px;
-  }
-
-  .ServicePageFormContainer {
-    padding: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .ServicePageFormContainer {
-    padding: 15px;
-  }
-
-  .ServicePageFormContainer h2 {
-    font-size: 22px;
-  }
-
-  .ServicePageFormContainer p {
-    font-size: 16px;
-  }
-
-  .ServicePageFormContainer input,
-  .ServicePageFormContainer select,
-  .ServicePageFormContainer textarea {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .ServicePageFormContainer button {
-    padding: 10px;
-    font-size: 14px;
+@media (max-width:431px) {
+  .ServiceBookingPage-sidebar-description{
+    font-size: 12px;
+    color: #718096;
   }
 }

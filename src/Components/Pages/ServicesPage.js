@@ -2,81 +2,117 @@ import React, { useState } from 'react';
 import BottomBar from '../BottomBar';
 import Header from '../Header';
 import '../../css/ServicesPage.css';
+import Footer from '../Footer';
 
 export default function ServicePage() {
-  const [step, setStep] = useState(1);
-  const [zipCode, setZipCode] = useState('');
-  const [selectedService, setSelectedService] = useState('');
-  const [userInfo, setUserInfo] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    address: ''
-  });
+  const [availabilityChecked, setAvailabilityChecked] = useState(false);
 
-  const handleNext = () => {
-    setStep(step + 1);
-  };
-
-  const handleZipCodeChange = (e) => {
-    setZipCode(e.target.value);
-  };
-
-  const handleServiceChange = (e) => {
-    setSelectedService(e.target.value);
-  };
-
-  const handleUserInfoChange = (e) => {
-    const { name, value } = e.target;
-    setUserInfo({ ...userInfo, [name]: value });
-  };
-
-  const handleSubmit = () => {
-    setStep(step + 1); // Assuming step 4 is the thank you message
+  const handleCheckAvailability = (e) => {
+    e.preventDefault();
+    setAvailabilityChecked(true);
   };
 
   return (
     <>
       <Header />
-      <div className="ServicePageBackgroundContainer">
-        <div className="ServicePageFormContainer">
-          {step === 1 && (
-            <div className="form-step">
-              <h2>Enter Your Zip Code</h2>
-              <input type="text" value={zipCode} onChange={handleZipCodeChange} />
-              <button onClick={handleNext}>Next</button>
+      <div className="blank-container"></div>
+      <div className="ServicePage-container">
+        {/* Your existing content */}
+        <div className="ServiceBookingPage-container">
+          <div className="ServiceBookingPage-content">
+            <div className="ServiceBookingPage-header">
+              <h1 className="ServiceBookingPage-title">Professional Blinds</h1>
+              <h2 className="ServiceBookingPage-subtitle">Measure and Install</h2>
+              <p className="ServiceBookingPage-description">Relax while we do it for you</p>
             </div>
-          )}
-          {step === 2 && (
-            <div className="form-step">
-              <h2>Service Selection</h2>
-              <select value={selectedService} onChange={handleServiceChange}>
-                <option value="">Select a service</option>
-                <option value="service1">Service 1</option>
-                <option value="service2">Service 2</option>
-              </select>
-              <button onClick={handleNext}>Next</button>
+            <div className="ServiceBookingPage-features">
+              <div className="ServiceBookingPage-feature-card">
+                <img src="https://placehold.co/100x100" alt="High-Quality Products" className="ServiceBookingPage-feature-image" />
+                <p>High-Quality Products</p>
+              </div>
+              <div className="ServiceBookingPage-feature-card">
+                <img src="https://placehold.co/100x100" alt="Top-rated Services" className="ServiceBookingPage-feature-image" />
+                <p>Top-rated Services</p>
+              </div>
+              <div className="ServiceBookingPage-feature-card">
+                <img src="https://placehold.co/100x100" alt="Licensed Installation Professionals" className="ServiceBookingPage-feature-image" />
+                <p>Licensed Installation Professionals</p>
+              </div>
             </div>
-          )}
-          {step === 3 && (
-            <div className="form-step">
-              <h2>Enter Your Information</h2>
-              <input type="text" name="name" placeholder="Name" value={userInfo.name} onChange={handleUserInfoChange} />
-              <input type="text" name="phone" placeholder="Phone" value={userInfo.phone} onChange={handleUserInfoChange} />
-              <input type="email" name="email" placeholder="Email" value={userInfo.email} onChange={handleUserInfoChange} />
-              <textarea name="address" placeholder="Address" value={userInfo.address} onChange={handleUserInfoChange}></textarea>
-              <button onClick={handleSubmit}>Submit</button>
-            </div>
-          )}
-          {step === 4 && (
-            <div className="form-step">
-              <h2>Thank You!</h2>
-              <p>Your submission has been received.</p>
-            </div>
-          )}
+          </div>
+          <div className="ServiceBookingPage-sidebar">
+            {availabilityChecked ? (
+              <div>
+                <h3 className="ServiceBookingPage-sidebar-title">Professional Installation is Available in Your Area!</h3>
+                <p className="ServiceBookingPage-sidebar-description">
+                  Fill out this form to begin your FREE consultation. One of our expert consultants will reach out to help you make your selection and schedule your measure appointment.
+                </p>
+                <form className="BookingPage-mt-4">
+                  <div className="BookingPage-Details-header ">
+                    <input
+                      type="text"
+                      className="BookingPage-w-full BookingPage-p-2 BookingPage-border BookingPage-border-zinc-300 BookingPage-rounded BookingPage-mt-2"
+                      placeholder="First Name"
+                    />
+                    <input
+                      type="text"
+                      className="BookingPage-w-full BookingPage-p-2 BookingPage-border BookingPage-border-zinc-300 BookingPage-rounded BookingPage-mt-2"
+                      placeholder="Last Name"
+                    />
+                  </div>
+                  <input
+                    type="text"
+                    className="BookingPage-w-full BookingPage-p-2 BookingPage-border BookingPage-border-zinc-300 BookingPage-rounded BookingPage-mt-2"
+                    placeholder="Phone Number"
+                  />
+                  <input
+                    type="email"
+                    className="BookingPage-w-full BookingPage-p-2 BookingPage-border BookingPage-border-zinc-300 BookingPage-rounded BookingPage-mt-2"
+                    placeholder="Email"
+                  />
+                  <input
+                    type="text"
+                    className="BookingPage-w-full BookingPage-p-2 BookingPage-border BookingPage-border-zinc-300 BookingPage-rounded BookingPage-mt-2"
+                    placeholder="Address"
+                  />
+                  <button type="submit" className="BookingPage-w-full BookingPage-mt-4 BookingPage-bg-orange-500 BookingPage-text-white BookingPage-p-2 BookingPage-rounded">
+                    Submit
+                  </button>
+                </form>
+              </div>
+            ) : (
+              <div>
+                <h3 className="ServiceBookingPage-sidebar-title">Let's Get Started</h3>
+                <p className="ServiceBookingPage-sidebar-description">
+                  Our installation prices start at 135 for up to 10 blinds.
+                </p>
+                <ul className="ServiceBookingPage-sidebar-list">
+                  <li className="ServiceBookingPage-list-item">Free in-home consultation</li>
+                  <li className="ServiceBookingPage-list-item">Wide range of blinds</li>
+                  <li className="ServiceBookingPage-list-item">Professional measurement</li>
+                  <li className="ServiceBookingPage-list-item">Expert installation</li>
+                </ul>
+                <form className="BookingPage-mt-4" onSubmit={handleCheckAvailability}>
+                  <label htmlFor="zip" className="BookingPage-block BookingPage-text-zinc-700 BookingPage-dark:text-zinc-300">
+                    Zip Code*
+                  </label>
+                  <input
+                    id="zip"
+                    type="text"
+                    className="BookingPage-w-full BookingPage-p-2 BookingPage-border BookingPage-border-zinc-300 BookingPage-rounded BookingPage-mt-2"
+                    placeholder="Please enter a zip code"
+                  />
+                  <button type="submit" className="BookingPage-w-full BookingPage-mt-4 BookingPage-bg-orange-500 BookingPage-text-white BookingPage-p-2 BookingPage-rounded">
+                    Check Availability
+                  </button>
+                </form>
+              </div>
+            )}
+          </div>
         </div>
       </div>
       <BottomBar />
+      <Footer />
     </>
   );
 }

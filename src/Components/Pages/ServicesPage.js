@@ -27,15 +27,15 @@ export default function ServicePage() {
             </div>
             <div className="ServiceBookingPage-features">
               <div className="ServiceBookingPage-feature-card">
-                <img src="https://placehold.co/100x100" alt="High-Quality Products" className="ServiceBookingPage-feature-image" />
+                <img src="https://images.unsplash.com/photo-1588796460718-f457ad1e1a1f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="High-Quality Products" className="ServiceBookingPage-feature-image" />
                 <p>High-Quality Products</p>
               </div>
               <div className="ServiceBookingPage-feature-card">
-                <img src="https://placehold.co/100x100" alt="Top-rated Services" className="ServiceBookingPage-feature-image" />
+                <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Top-rated Services" className="ServiceBookingPage-feature-image" />
                 <p>Top-rated Services</p>
               </div>
               <div className="ServiceBookingPage-feature-card">
-                <img src="https://placehold.co/100x100" alt="Licensed Installation Professionals" className="ServiceBookingPage-feature-image" />
+                <img src="https://images.unsplash.com/photo-1542621323-be453184db76?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Licensed Installation Professionals" className="ServiceBookingPage-feature-image" />
                 <p>Licensed Installation Professionals</p>
               </div>
             </div>
@@ -70,6 +70,14 @@ export default function ServicePage() {
                     className="BookingPage-w-full BookingPage-p-2 BookingPage-border BookingPage-border-zinc-300 BookingPage-rounded BookingPage-mt-2"
                     placeholder="Email"
                   />
+                  <select
+                    className="BookingPage-w-full BookingPage-p-2 BookingPage-border BookingPage-border-zinc-300 BookingPage-rounded BookingPage-mt-2"
+                  >
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="installation">Installation</option>
+                    <option value="measurement">Measurement</option>
+                    <option value="consultation">Consultation</option>
+                  </select>
                   <input
                     type="text"
                     className="BookingPage-w-full BookingPage-p-2 BookingPage-border BookingPage-border-zinc-300 BookingPage-rounded BookingPage-mt-2"
@@ -109,6 +117,34 @@ export default function ServicePage() {
               </div>
             )}
           </div>
+        </div>
+      </div>
+      <div className="why-choose">
+        <h4 className="why-choose-heading">How It Works</h4>
+        <div className="why-choose-content">
+          <div className="choose-reason">
+            <h4>1.</h4>
+            <h6 className='reason-details'>Fill out the short form, we'll contact you to schedule your measure appointment</h6>
+          </div>
+
+          <div className="choose-reason">
+            <h4>2.</h4>
+            <h6 className='reason-details'>Our team will Schedule a meeting for you with our Specialist</h6>
+          </div>
+
+          <div className="choose-reason">
+            <h4>3.</h4>
+            <h6 className='reason-details'>Your treatments are made and shipped to your doorstep</h6>
+          </div>
+
+          <div className="choose-reason">
+            <h4>4.</h4>
+            <h6 className='reason-details'>Your treatments are made and shipped to your doorstep</h6>
+          </div>
+
+          
+
+          
         </div>
       </div>
       <BottomBar />

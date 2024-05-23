@@ -10,6 +10,7 @@
 .choose_us_inner_container{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .choose_us_object img{

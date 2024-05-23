@@ -12,7 +12,9 @@ export default function BottomBar() {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
     const toggleDrawer = () => {
-        setIsDrawerOpen(!isDrawerOpen);
+        if (location.pathname !== '/services') {
+            setIsDrawerOpen(!isDrawerOpen);
+        }
     };
 
     const closeDrawer = () => {
@@ -79,19 +81,20 @@ function Drawer({ isOpen, toggleDrawer }) {
                 <h4 className='drawer-heading'>Services</h4>
                 <AiOutlineClose className="close-icon" onClick={toggleDrawer} />
             </div>
+            <hr />
             <div className="drawer-content">
                 <ul>
-                    <li>Bathroom Remodeling</li>
-                    <li>Blind Installation</li>
-                    <li>Cabinet Makeover</li>
-                    <li>Carpet Installation</li>
-                    <li>Closet Installation</li>
-                    <li>Door Installation</li>
-                    <li>General Installation</li>
-                    <li>HVAC Installation</li>
-                    <li>Kitchen Design Services</li>
-                    <li>Plumbing Repair</li>
-                    <li>Water Heater Installation</li>
+                    <li><Link to='/services'>Blind Installation</Link></li>
+                    <li><Link to='/services'>Bathroom Remodeling</Link></li>
+                    <li><Link to='/services'>Cabinet Makeover</Link></li>
+                    <li><Link to='/services'>Carpet Installation</Link></li>
+                    <li><Link to='/services'>Closet Installation</Link></li>
+                    <li><Link to='/services'>Door Installation</Link></li>
+                    <li><Link to='/services'>General Installation</Link></li>
+                    <li><Link to='/services'>HVAC Installation</Link></li>
+                    <li><Link to='/services'>Kitchen Design Services</Link></li>
+                    <li><Link to='/services'>Plumbing Repair</Link></li>
+                    <li><Link to='/services'>Water Heater Installation</Link></li>
                 </ul>
             </div>
         </div>

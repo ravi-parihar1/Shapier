@@ -8,8 +8,72 @@
   background-position: center;
 }
 
+.why-choose{
+  background-color: #f1f1f1;
+  padding: 2rem;
+}
+
+.why-choose-heading{
+  color: black;
+  font-weight: 700;
+}
+
+.why-choose-content{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  margin-top: 2rem;
+  @media (max-width:431px) {
+    gap: 2rem;
+    justify-content: start;
+  }
+
+  @media (max-width:416px) {
+    gap: 10px;
+  }
+}
+
+.choose-reason{
+  width: 10rem;
+  /* align-items: center; */
+  justify-content: center;
+  display: flex;
+  @media (max-width:431px) {
+    justify-content: start;
+    width: 9rem;
+  }
+}
+
+.choose-point{
+  background-color: rgb(13, 99, 180);
+  width: 3rem;
+  height: 3rem;
+  padding-left: 1.3rem;
+  padding-top: 0.8rem;
+  border-radius: 50%;
+  @media (max-width:431px) {
+    width: 2rem;
+  height: 2rem;
+  padding-left: 0.8rem;
+    padding-top: 0.3rem;
+  }
+}
+
+.reason1{
+  color: white;
+  align-self: center;
+}
+.reason-details{
+  color: #718096;
+  font-size: 14px;
+  @media (max-width:431px) {
+    font-size: 12px;
+  }
+}
+
 .ServiceBookingPage-sidebar-description{
-  
+  font-size: medium;
   color: #718096;
 }
 

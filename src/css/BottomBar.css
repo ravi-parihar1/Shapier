@@ -1,4 +1,4 @@
-.bottom_bar_container{
+.bottom_bar_container {
     background: rgb(254, 254, 254);
     bottom: 0;
     position: fixed;
@@ -6,12 +6,7 @@
     width: 100%;
     border-radius: 20px 20px 0px 0px;
     display: none;
-    /* margin-left: 0.7rem; */
-    -webkit-box-shadow: 3px 1px 140px -21px rgba(0,0,0,0.75);
--moz-box-shadow: 3px 1px 140px -21px rgba(0,0,0,0.75);
-box-shadow: 3px 1px 140px -21px rgba(0,0,0,0.75);
-    
-    
+    box-shadow: 3px 1px 140px -21px rgba(0,0,0,0.75);
 }
 
 .drawer {
@@ -27,8 +22,6 @@ box-shadow: 3px 1px 140px -21px rgba(0,0,0,0.75);
     box-sizing: border-box;
     transform: translateY(100%);
     transition: transform 0.3s ease-in-out;
-
-    
 }
 
 .drawer.open {
@@ -51,19 +44,28 @@ box-shadow: 3px 1px 140px -21px rgba(0,0,0,0.75);
     padding: 0.5rem;
     margin-bottom: 1rem;
     height: 25rem;
-    overflow-y: scroll; /* Enable vertical scrolling */
-    &::-webkit-scrollbar {
-        display: none;
-      }
+    overflow-y: scroll;
+    scrollbar-width: none; /* For Firefox */
+}
+
+.drawer-content ul::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
 }
 
 .drawer-content ul li {
     padding: 1rem 0;
     border-bottom: 1px solid #e0e0e0;
+    color: inherit;
+    text-decoration: none;
 }
 
 .drawer-content ul li:last-child {
     border-bottom: none;
+}
+
+.drawer-content ul li a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .drawer-overlay {
@@ -76,27 +78,30 @@ box-shadow: 3px 1px 140px -21px rgba(0,0,0,0.75);
     z-index: 5;
 }
 
-
-
-.active_bottom_link{
+.active_bottom_link {
     color: #000000;
 }
-.bottom_bar_container ul{
+
+.bottom_bar_container ul {
     display: flex;
     justify-content: space-around;
     font-size: 22px;
     font-weight: 600;
     flex-direction: row;
-    
 }
+
 .bottom_bar_container ul li {
     margin-left: 2rem;
     padding-top: 1rem;
-    
 }
 
-@media (max-width: 431px){
-    .bottom_bar_container{
+.bottom_bar_container ul li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+@media (max-width: 431px) {
+    .bottom_bar_container {
         display: block;
     }
 }

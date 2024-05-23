@@ -144,7 +144,7 @@ export default function ServicePage() {
 
           <div className="choose-reason">
           <div className="circle-number">4</div>
-            <h6 className='reason-details'>Your treatments are made and shipped to your doorstep</h6>
+          <h6 className='reason-details'>Your treatments are made and shipped to your doorstep</h6>
           </div>
 
           

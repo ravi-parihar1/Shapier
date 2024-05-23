@@ -3,6 +3,7 @@ import BottomBar from '../BottomBar';
 import Header from '../Header';
 import '../../css/ServicesPage.css';
 import Footer from '../Footer';
+import FaqComponent from '../FaqComponent';
 
 export default function ServicePage() {
   const [availabilityChecked, setAvailabilityChecked] = useState(false);
@@ -119,26 +120,30 @@ export default function ServicePage() {
           </div>
         </div>
       </div>
+
+
+
+      {/* why choose use text  */}
       <div className="why-choose">
         <h4 className="why-choose-heading">How It Works</h4>
         <div className="why-choose-content">
           <div className="choose-reason">
-            <h4>1.</h4>
+          <div className="circle-number">1</div>
             <h6 className='reason-details'>Fill out the short form, we'll contact you to schedule your measure appointment</h6>
           </div>
 
           <div className="choose-reason">
-            <h4>2.</h4>
+          <div className="circle-number">2</div>
             <h6 className='reason-details'>Our team will Schedule a meeting for you with our Specialist</h6>
           </div>
 
           <div className="choose-reason">
-            <h4>3.</h4>
+          <div className="circle-number">3</div>
             <h6 className='reason-details'>Your treatments are made and shipped to your doorstep</h6>
           </div>
 
           <div className="choose-reason">
-            <h4>4.</h4>
+          <div className="circle-number">4</div>
             <h6 className='reason-details'>Your treatments are made and shipped to your doorstep</h6>
           </div>
 
@@ -147,6 +152,12 @@ export default function ServicePage() {
           
         </div>
       </div>
+      
+      {/* FAQ start from here  */}
+
+
+
+      <FaqComponent/>
       <BottomBar />
       <Footer />
     </>

@@ -1,0 +1,14 @@
+/* AdminPanel.css */
+
+.admin-panel-container {
+    display: flex;
+    
+     /* Adjust alignment as needed */
+}
+
+.form-container {
+     /* Allow the form container to grow and fill the available space */
+     padding: 20px;
+     width: 78%;
+     margin-left: 18%;
+}

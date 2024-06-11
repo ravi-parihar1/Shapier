@@ -1,0 +1,254 @@
+.DTcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.DTproduct-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.DTproduct-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.DTproduct-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.DTproduct-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.DTh1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.DTavailability span,
+.DTprice span {
+    color: #28a745;
+}
+
+.DTprice {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.DTprice small {
+    color: #dc3545;
+}
+
+.DTdescription {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+.DTquantity {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.DTquantity label {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.DTquantity input {
+    width: 80px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.DTbuttons {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.DTadd-to-cart,
+.DTcheckout {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    font-size: 18px;
+}
+
+.DTadd-to-cart {
+    background-color: #0dd038;
+    color: #fff;
+}
+
+.DTadd-to-cart:hover {
+    background-color: #00d00e;
+    transform: scale(1.05);
+}
+
+.DTcheckout {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.DTcheckout:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.DTdelivery,
+.DTshipping,
+.DTpayment-options {
+    margin-top: 20px;
+}
+
+.DTdelivery h2,
+.DTshipping h2,
+.DTpayment-options h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.DTpayment-options ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.DTpayment-options li {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+@media (max-width: 1024px) {
+    .DTcontainer {
+        grid-template-columns: 1fr;
+    }
+
+    .DTbuttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .DTproduct-image,
+    .DTproduct-details {
+        padding: 10px;
+    }
+
+    .DTproduct-image img {
+        max-width: 100%;
+    }
+
+    .DTadd-to-cart,
+    .DTcheckout {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .DTh1 {
+        font-size: 28px;
+    }
+
+    .DTavailability,
+    .DTprice {
+        font-size: 20px;
+    }
+
+    .DTdescription {
+        font-size: 16px;
+    }
+
+    .DTquantity label {
+        font-size: 16px;
+    }
+
+    .DTquantity input {
+        font-size: 14px;
+    }
+
+    .DTadd-to-cart,
+    .DTcheckout {
+        font-size: 16px;
+    }
+
+    .DTdelivery h2,
+    .DTshipping h2,
+    .DTpayment-options h2 {
+        font-size: 20px;
+    }
+
+    .DTpayment-options li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .DTh1 {
+        font-size: 24px;
+    }
+
+    .DTavailability,
+    .DTprice {
+        font-size: 18px;
+    }
+
+    .DTdescription {
+        font-size: 14px;
+    }
+
+    .DTquantity label {
+        font-size: 14px;
+    }
+
+    .DTquantity input {
+        font-size: 12px;
+    }
+
+    .DTadd-to-cart,
+    .DTcheckout {
+        font-size: 14px;
+    }
+
+    .DTdelivery h2,
+    .DTshipping h2,
+    .DTpayment-options h2 {
+        font-size: 18px;
+    }
+
+    .DTpayment-options li {
+        font-size: 14px;
+    }
+
+    .DTproduct-image img {
+        width: 100%;
+        height: auto;
+        max-width: 300px; /* Fixed size for mobile screen */
+        max-height: 300px; /* Fixed size for mobile screen */
+    }
+}

@@ -1,5 +1,6 @@
 .FruityFooter-contact-area {
-  background: linear-gradient(135deg, #1A1E25, #353C46);
+  /* background: linear-gradient(135deg, #1A1E25, #353C46); */
+  background: linear-gradient(135deg, #000000, #0d2e5e);
   color: #ffffff;
   padding: 3rem 0;
   text-align: center;

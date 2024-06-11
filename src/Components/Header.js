@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Await, Link, useNavigate } from "react-router-dom";
 import "../css/Header.css";
 import { IoSearch } from "react-icons/io5";
 import { RiShoppingBag3Line } from "react-icons/ri";
@@ -13,8 +13,82 @@ const Header = () => {
     const [username, setUsername] = useState(null);
     const [isAuthorize, setIsAuthorize] = useState(false);
     const [menuActive, setMenuActive] = useState(false);
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const localData = JSON.parse(localStorage.getItem("data"));
+    const [isOpenCategory, setIsOpenCategory] = useState(false);
+    const [categoryName, setCategoryName] = useState("");
+    const [categories, setCategories] = useState([]);
+    //Handel query for search 
+    const [searchQuery, setSearchQuery] = useState("");
+    const [searchResults, setSearchResults] = useState([]);
+
+
+
+    const handleMouseEnter = () => {
+        setIsOpenCategory(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsOpenCategory(false);
+    };
+
+
+    const handleSearchSubmit = async (event) => {
+        event.preventDefault();
+        try {
+            const { data } = await axios.get(`https://free.shapier.in/api/v1/products/search`, {
+                params: { query: searchQuery }
+            });
+            setSearchResults(data.data); // Assuming your backend returns results in `data.data`
+            navigate('/search-results', { state: { results: data.data } }); // Navigate to search results page
+        } catch (error) {
+            console.error("Error searching products: ", error);
+        }
+    };
+
+
+
+
+    //function to fetch categories from backend 
+    const fetchAllCategories = async () => {
+        try {
+            const { data } = await axios.get(`https://free.shapier.in/api/v1/product_categories`);
+            const arrayOfCategories = data.data;
+            setCategories(
+                arrayOfCategories.map((category) => ({
+                    category_id: category.id,
+                    product_category_name: category.product_category_name,
+                    product_category_image: category.product_category_image
+                }))
+            )
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+
+    useEffect(() => {
+        fetchAllCategories();
+    }, []); // Add empty dependency array to run effect only once
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    const handleCategoryClick = (category) => {
+        setCategoryName(category);
+        setIsOpenCategory(false);
+        navigate(`/categories/${category}`)
+        // Close the dropdown after selecting a category
+    };
 
     const fetchUser = async () => {
         try {
@@ -43,6 +117,7 @@ const Header = () => {
 
     useEffect(() => {
         fetchUser();
+
     }, []);
 
     const handleSignOut = () => {
@@ -60,14 +135,6 @@ const Header = () => {
         setMenuActive(false);
     };
 
-    const toggleSidebar = () => {
-        setIsSidebarOpen(!isSidebarOpen);
-    };
-
-    const closeSidebar = () => {
-        setIsSidebarOpen(false);
-    };
-
     return (
         <header className="Headofheader" id="header">
             <nav className="Headofnavbar Headofcontainer">
@@ -78,10 +145,24 @@ const Header = () => {
 
                 <div className={`Headofmenu ${menuActive ? "is-active" : ""}`} id="menu">
                     <ul className="Headofmenu-inner">
-                        <li className="Headofmenu-item"><Link to="/" className="Headofmenu-link" onClick={closeMenu}>Home</Link></li>
-                        <li className="Headofmenu-item"><Link to="/store" className="Headofmenu-link" onClick={closeMenu}>Shop</Link></li>
-                        <li className="Headofmenu-item"><Link to="#" className="Headofmenu-link" onClick={toggleSidebar}>Categories</Link></li>
-                        <li className="Headofmenu-item"><Link to="/contact" className="Headofmenu-link" onClick={closeMenu}>Support</Link></li>
+                        <li className="Headofmenu-item"  ><Link to="/" className="Headofmenu-link" >Home</Link></li>
+                        <li className="Headofmenu-item"><Link to="/store" className="Headofmenu-link" >Shop</Link></li>
+                        <li className="Headofmenu-item dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                            <a href="#" className="Headofmenu-link">Categories</a>
+                            {isOpenCategory && (
+                                <div className="premdropdown-content">
+                                    {categories.map((category) => (
+                                        <div className="categories_nameitems">
+                                            <ul className="premdropdown-list">
+                                                <li className="cat-list-item" onClick={() => handleCategoryClick(category.product_category_name)}>{category.product_category_name}</li>
+                                                
+                                            </ul>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </li>
+                        <li className="Headofmenu-item"><Link to="/contact"  className="Headofmenu-link" onClick={closeMenu}>Support</Link></li>
                         {username ? (
                             <li className="Headofmenu-item"><a className="Headofmenu-link">{username.split(" ")[0]}</a></li>
                         ) : (
@@ -91,17 +172,20 @@ const Header = () => {
                 </div>
 
                 <div className="Headofsearch">
-                    <form className="Headofsearch-form">
+                    <form className="Headofsearch-form" onSubmit={handleSearchSubmit}>
                         <input
                             type="text"
                             name="search"
                             className="Headofsearch-input"
                             placeholder="Search"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
                         />
-                        <button type="submit" className="Headofsearch-submit" disabled>
+                        <button type="submit" className="Headofsearch-submit">
                             <IoSearch />
                         </button>
                     </form>
+
                     <div className="partsecond">
                         <Link to='/Checkout'><div className="cart-icon custom-cart-icon">
                             <RiShoppingBag3Line />
@@ -122,29 +206,6 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
-
-            {isSidebarOpen && <div className="sidebar-overlay" onClick={closeSidebar}></div>}
-            <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
-                <div className="sidebar-header">
-                    <h4 className="sidebar-heading">Services</h4>
-                    <AiOutlineClose className="close-icon" onClick={closeSidebar} />
-                </div>
-                <div className="sidebar-content">
-                    <ul>
-                        <li>Bathroom Remodeling</li>
-                        <li>Blind Installation</li>
-                        <li>Cabinet Makeover</li>
-                        <li>Carpet Installation</li>
-                        <li>Closet Installation</li>
-                        <li>Door Installation</li>
-                        <li>General Installation</li>
-                        <li>HVAC Installation</li>
-                        <li>Kitchen Design Services</li>
-                        <li>Plumbing Repair</li>
-                        <li>Water Heater Installation</li>
-                    </ul>
-                </div>
-            </div>
         </header>
     );
 };

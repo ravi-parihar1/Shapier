@@ -532,8 +532,13 @@ section h2 {
     display: flex;
     flex-direction: row;
     grid-gap: 16px;
+    text-decoration: none;
 }
 
+.btn-group a {
+    text-decoration: none;
+    color: inherit;
+}
 
 .custom-btn {
     /* width: 130px; */
@@ -546,7 +551,7 @@ section h2 {
     margin-right: 20px;
     background: transparent;
     cursor: pointer;
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease; */
     position: relative;
     display: inline-block;
      box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
@@ -589,25 +594,27 @@ section h2 {
   }
   .btn-8:hover{
     background: transparent;
-  }
-  .btn-8 span:hover{
     color: #1c6ad1;
+
   }
+  /* .btn-8 span:hover{
+    color: #1c6ad1;
+  } */
  
-  .btn-8 span:before {
-    /* width: 2px; */
+  /* .btn-8 span:before {
+    width: 2px;
     height: 0%;
-  }
-  .btn-8 span:after {
+  } */
+  /* .btn-8 span:after {
     height: 2px;
-    /* width: 0%; */
-  }
-  .btn-8 span:hover:before {
+    
+  } */
+  /* .btn-8 span:hover:before {
     height: 100%;
   }
   .btn-8 span:hover:after {
     width: 100%;
-  }
+  } */
 
 
 .btn_animator_container{

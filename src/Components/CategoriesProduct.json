@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "Sugna TMT Fe-550 Grade - 16mm",
+      "mrp": "92,115.00",
+      "salePrice": "62,155.00",
+      "unit": "Kg",
+      "discount": "32%",
+      "brand": "Sugna-TMT",
+      "image": "path_to_image"
+    },
+    {
+      "id": 2,
+      "name": "Local Red Brick - 8-10 x 3.8 x 2.9",
+      "mrp": "14.00",
+      "salePrice": "12.00",
+      "unit": "Piece",
+      "discount": "14%",
+      "brand": "Karnataka Red Brick",
+      "image": "path_to_image"
+    },
+    {
+      "id": 3,
+      "name": "CCI OPC Cement",
+      "mrp": "450.00",
+      "salePrice": "325.00",
+      "unit": "Bag",
+      "discount": "27%",
+      "brand": "CCI",
+      "image": "path_to_image"
+    },
+    {
+      "id": 4,
+      "name": "Birla.A1 StrongCrete",
+      "mrp": "470.00",
+      "salePrice": "340.00",
+      "unit": "Bag",
+      "discount": "27%",
+      "brand": "Birla-A1",
+      "image": "path_to_image"
+    },
+    {
+      "id": 5,
+      "name": "Brown Garnet - 60x120cm",
+      "mrp": "98.00",
+      "salePrice": "95.00",
+      "unit": "Sft",
+      "discount": "3%",
+      "brand": "Kajaria Ceramics Limited",
+      "image": "path_to_image"
+    },
+    {
+      "id": 6,
+      "name": "ACC Suraksha Cement",
+      "mrp": "480.00",
+      "salePrice": "330.00",
+      "unit": "Bag",
+      "discount": "31%",
+      "brand": "ACC Cement",
+      "image": "path_to_image"
+    }
+  ]
+  

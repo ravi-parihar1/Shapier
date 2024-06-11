@@ -1,0 +1,170 @@
+/* Container Styles */
+.TS-container {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Heading Styles */
+.TS-heading {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Steps Container Styles */
+.TS-steps-container {
+  position: relative;
+}
+
+.TS-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Connector Styles */
+.TS-connector {
+  width: 60px;
+  height: 2px;
+  background-color: #007BFF;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateX(10px);
+}
+
+.TS-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #007BFF;
+  border-radius: 50%;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* Individual Step Styles */
+.TS-step {
+  flex: 1;
+  min-width: 280px;
+  margin: 10px;
+  padding: 30px 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.TS-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Step Number Styles */
+.TS-step-number {
+  display: inline-block;
+  background: #007BFF;
+  color: white;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* Step Title Styles */
+.TS-step-title {
+  font-size: 18px;
+  color: #003366;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+/* Step Description Styles */
+.TS-step-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Get Started Button Styles */
+.TS-get-started-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.TS-get-started-button:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #003366 100%);
+  transform: translateY(-3px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .TS-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .TS-connector {
+    display: none;
+  }
+
+  .TS-step:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .TS-step {
+    min-width: 100%;
+  }
+
+  .TS-step-number {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+  }
+
+  .TS-heading {
+    font-size: 24px;
+  }
+
+  .TS-step-title {
+    font-size: 16px;
+  }
+
+  .TS-step-description {
+    font-size: 12px;
+  }
+
+  .TS-get-started-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

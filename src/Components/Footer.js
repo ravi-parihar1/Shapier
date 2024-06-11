@@ -16,16 +16,16 @@ export default function Footer() {
             <div className="FruityFooter-col-lg-6 FruityFooter-offset-lg-3">
               <div className="FruityFooter-contact-content FruityFooter-text-center">
                 <a href="#"><img src={shapierlogo} height={'60rem'} width={'50rem'} alt="logo" /></a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum </p>
+                <p>Step into a world where innovation meets construction , and together , we redefine the landscape of possibility . We're here to transform your vision into concrete reality. How can we help bring your boldest architectural dreams to life   </p>
                 <div className="FruityFooter-hr"></div>
-                <h6><SlLocationPin /> 1120 Lorem ipsum dolor sit amet, KC 179050, Udaipur.</h6>
-                <h6><IoCallOutline /> +01 2345 6789 12<span>|</span><IoCallOutline /> +01 2345 6789 12</h6>
+                <h6><SlLocationPin />320 third floor,Samradhhi complex , Savina , Udaipur , 313001.</h6>
+                <h6><IoCallOutline />+91 9610357494<span>|</span><IoCallOutline /> +91 9265478439</h6>
                 <div className="FruityFooter-contact-social">
                   <ul>
-                    <li><a className="FruityFooter-hover-target" href=""><IoLogoInstagram /></a></li>
-                    <li><a className="FruityFooter-hover-target" href=""><ImFacebook2 /></a></li>
-                    <li><a className="FruityFooter-hover-target" href=""><BsTwitterX /></a></li>
-                    <li><a className="FruityFooter-hover-target" href=""><LuMailCheck /></a></li>
+                    <li><a className="FruityFooter-hover-target" href="https://www.instagram.com/shapier.in/"><IoLogoInstagram /></a></li>
+                    <li><a className="FruityFooter-hover-target" href="https://www.facebook.com/shapier.in/"><ImFacebook2 /></a></li>
+                    {/* <li><a className="FruityFooter-hover-target" href=""><BsTwitterX /></a></li> */}
+                    {/* <li><a className="FruityFooter-hover-target" href="Anil.kalal@shapier.in"><LuMailCheck /></a></li> */}
                   </ul>
                   <p>Copyright © 2023 All Rights Reserved.</p>
                 </div>
@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
       </section>
       <footer className="FruityFooter-footer">
-        
+
       </footer>
     </>
   );

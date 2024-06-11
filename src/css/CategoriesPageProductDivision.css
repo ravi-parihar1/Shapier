@@ -1,0 +1,138 @@
+.ProductDivision {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.ProductDivision-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+}
+
+.ProductDivision-brand-card {
+    width: 15rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 10px;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    @media (max-width: 432px) {
+        width: 12rem;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    }
+}
+
+.ProductDivision-brand-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.05);
+}
+
+.ProductDivision a {
+    text-decoration: none;
+    color: inherit; /* Optional: to inherit the color from parent */
+}
+
+.ProductDivision a:hover {
+    text-decoration: none;
+}
+
+.ProductDivision-product-name {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (max-width: 432px) {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+}
+
+.ProductDivision-product-MRP {
+    font-size: 12px;
+    color: #8c8b8b;
+    text-decoration: line-through;
+    margin-bottom: 0px;
+}
+
+.discount-percent {
+    background-color: rgb(35, 140, 52);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    width: auto;
+}
+
+.ProductDivision-product-discount {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 0px;
+}
+
+.ProductDivision-product-sale {
+    font-size: 12px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.pricing-sec {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.ProductDivision-product-end {
+    font-size: 12px;
+    color: #8c8b8b;
+    margin-bottom: 0px;
+}
+
+.ProductDivision-product-price {
+    font-size: 12px;
+    margin-bottom: 2px;
+    margin-right: 0.5rem;
+}
+
+.ProductDivision-brand-card-image {
+    margin-left: 0.6rem;
+    width: 12rem;
+    height: 12rem;
+    background-color: #f9f9f9;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    @media (max-width: 432px) {
+        height: 8rem;
+        width: 8rem;
+    }
+}
+
+.ProductDivision-brand-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}

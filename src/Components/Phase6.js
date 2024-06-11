@@ -17,7 +17,6 @@ export default function Phase6() {
   };
 
   useEffect(() => {
-    // console.log(displayedProducts);
   }, [displayedProducts]);
 
   return (

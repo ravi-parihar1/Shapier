@@ -1,0 +1,95 @@
+/* Container Styling */
+.ViewAllBrand-container {
+    padding: 40px;
+    background-color: #f0f2f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+  
+  /* Heading Styling */
+  .ViewAllBrand-heading {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    @media (max-width:432px) {
+      font-size: 26px;
+    }
+  }
+  .ViewAllBrand-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    background-color: #3f41de;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    @media (max-width:432px) {
+      font-size: 0.8rem;
+    }
+}
+  /* Row Styling */
+  .ViewAllBrand-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Column Styling */
+  .ViewAllBrand-col {
+    padding: 15px;
+  }
+  
+  /* Card Styling */
+  .ViewAllBrand-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-size: cover;
+    /* background-size: contain; */
+    padding: 30px;
+    height: 180px;
+    background: linear-gradient(135deg, #ffffff, #f7f7f7);
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ViewAllBrand-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+
+
+  
+  
+  /* Logo Styling */
+  .ViewAllBrand-logo {
+    max-height: 80px;
+    max-width: 100%;
+    transition: transform 0.3s;
+  }
+  
+  .ViewAllBrand-card:hover .ViewAllBrand-logo {
+    transform: scale(1.1);
+  }
+
+  .ViewAllBrand-card:hover .ViewAllBrand-text {
+    transform: scale(1.1);
+  }
+  
+  .ViewAllBrand-container-h4{
+    font-weight: 600;
+  }
+
+  .ViewAllBrand-container-h4:hover{
+    transform: scale(1.1);
+  }

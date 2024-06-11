@@ -6,6 +6,7 @@ import { CgShoppingBag } from "react-icons/cg";
 import { GrBusinessService } from "react-icons/gr";
 import { LuShapes } from "react-icons/lu";
 import { AiOutlineClose } from "react-icons/ai";
+import { VscAccount } from "react-icons/vsc";
 
 export default function BottomBar() {
     const location = useLocation();
@@ -47,56 +48,33 @@ export default function BottomBar() {
             <div className='bottom_bar_container'>
                 <ul>
                     <li>
-                        <Link className='active_bottom_link' to="/" style={{ color: getIconColor('/') }}>
+                        <Link className='active_bottom_link' to="/" onClick={window.scrollTo(0,0)} style={{ color: getIconColor('/') }}>
                             <GrHomeRounded />
                         </Link>
                     </li>
                     <li>
-                        <Link className='active_bottom_link' to="/store" style={{ color: getIconColor('/store') }}>
+                        <Link className='active_bottom_link' to="/store" onClick={window.scrollTo(0,0)} style={{ color: getIconColor('/store') }}>
                             <CgShoppingBag />
                         </Link>
                     </li>
                     <li>
-                        <div className='active_bottom_link' onClick={toggleDrawer} style={{ color: getIconColor('/services') }}>
+                        {/* <div className='active_bottom_link' onClick={toggleDrawer} style={{ color: getIconColor('/services') }}>
                             <GrBusinessService />
-                        </div>
+                        </div> */}
+
+                        <Link className='active_bottom_link' to='/explore' onClick={window.scrollTo(0,0)} style={{ color: getIconColor('/services') }}>
+                            <GrBusinessService />
+                        </Link>
                     </li>
                     <li>
-                        <Link className='active_bottom_link' to="/shape" style={{ color: getIconColor('/shape') }}>
+                        <Link className='active_bottom_link' to="/shape-section" onClick={window.scrollTo(0,0)} style={{ color: getIconColor('/shape') }}>
                             <LuShapes />
                         </Link>
                     </li>
                 </ul>
             </div>
-            {isDrawerOpen && <div className="drawer-overlay" onClick={closeDrawer}></div>}
-            <Drawer isOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />
+            
         </>
     );
 }
 
-function Drawer({ isOpen, toggleDrawer }) {
-    return (
-        <div className={`drawer ${isOpen ? 'open' : ''}`}>
-            <div className="drawer-header">
-                <h4 className='drawer-heading'>Services</h4>
-                <AiOutlineClose className="close-icon" onClick={toggleDrawer} />
-            </div>
-            <hr />
-            <div className="drawer-content">
-                <ul>
-                    <li><Link to='/services'>Blind Installation</Link></li>
-                    <li><Link to='/services'>Bathroom Remodeling</Link></li>
-                    <li><Link to='/services'>Cabinet Makeover</Link></li>
-                    <li><Link to='/services'>Carpet Installation</Link></li>
-                    <li><Link to='/services'>Closet Installation</Link></li>
-                    <li><Link to='/services'>Door Installation</Link></li>
-                    <li><Link to='/services'>General Installation</Link></li>
-                    <li><Link to='/services'>HVAC Installation</Link></li>
-                    <li><Link to='/services'>Kitchen Design Services</Link></li>
-                    <li><Link to='/services'>Plumbing Repair</Link></li>
-                    <li><Link to='/services'>Water Heater Installation</Link></li>
-                </ul>
-            </div>
-        </div>
-    );
-}

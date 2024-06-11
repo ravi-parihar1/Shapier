@@ -37,7 +37,7 @@ const OrderSummary = ({ total_price_product }) => (
         <span>Total:</span>
         <span>Rs. {total_price_product + 5 + 10}</span>
       </div>
-      <Link to='/Billing'>
+      <Link to={`/Billing/${total_price_product}`}>
         <button className="checkout-button-checkoutPage">Proceed to Checkout</button>
       </Link>
     </div>
@@ -64,7 +64,6 @@ export default function Checkout() {
           Authorization: `Bearer ${token}`
         }
       });
-
       if (response.headers['content-type'].includes('application/json')) {
         const arrayOfCart = response.data.data;
         setCart(arrayOfCart.map((fetchedCart) => ({

@@ -1,0 +1,134 @@
+/* AdminLoginPage.css */
+
+  .AdminPanelLogin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f4f4f4 25%, #007bff 100%);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+
+  .admin-login-heading{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .admin-login-heading img{
+    width: 3rem;
+  }
+
+  .AdminPanelLogin-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .AdminPanelLogin-form:hover {
+    transform: scale(1.05);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .AdminPanelLogin-form h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+  }
+  
+  .AdminPanelLogin-form .AdminPanelLogin-form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .AdminPanelLogin-form .AdminPanelLogin-form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .AdminPanelLogin-form .AdminPanelLogin-form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .AdminPanelLogin-form .AdminPanelLogin-form-group input:focus {
+    border-color: #007bff;
+    background: white;
+  }
+  
+  .AdminPanelLogin-form .AdminPanelLogin-form-group button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    font-family: 'Roboto', sans-serif;
+    animation: bounce 1s infinite;
+  }
+  
+  .AdminPanelLogin-form .AdminPanelLogin-form-group button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+    transform: scale(1.05);
+    animation: none; /* Disables the bouncing animation on hover */
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .AdminPanelLogin-form {
+      padding: 1.5rem;
+    }
+  
+    .AdminPanelLogin-form h2 {
+      font-size: 1.5rem;
+    }
+  
+    .AdminPanelLogin-form .AdminPanelLogin-form-group input,
+    .AdminPanelLogin-form .AdminPanelLogin-form-group button {
+      font-size: 0.875rem;
+    }
+  }
+  

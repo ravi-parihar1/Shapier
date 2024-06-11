@@ -43,7 +43,6 @@ export default function Phase7({ filepath, heading }) {
                   <p className="trending-product-name">{product.product_name}</p>
                   <p className="trending-product-price">Rs. {product.product_price}</p>
                 </div>
-
                 <div className="product-wish-addtocart">
                   <div className="add-wish-btn">
                     {/* <img className="wish-btn-img" src="https://tech.mjassociate.co.in/images/svgs/like_red_outerline.svg" alt="Like" /> */}

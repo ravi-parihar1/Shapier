@@ -1,115 +1,115 @@
 [
     { 
         "product_name": "Beast Fly", 
-        "product_price": "$59.99",
+        "product_price": "Rs.59",
         "category_name": "Faucets & showers",
-        "product_image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=643&q=80",
+        "product_image": "https://cdn.shopify.com/s/files/1/0591/8549/6236/products/akp-chr-35711ps_large.jpg?v=1629395873",
         "product_link": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=643&q=80"
       },
       {
         "product_name": "Panda Fly", 
-        "product_price": "$47.69",
+        "product_price": "Rs.47",
         "category_name": "Kitchen",
-        "product_image": "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=675&q=80",
+        "product_image": "https://buildpro.store/cdn/shop/products/k-72275in-4nd-cp.jpg?v=1638777473",
         "product_link": "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=675&q=80"
       },
       {
         "product_name": "Bluey Sports", 
-        "product_price": "$71.98",
+        "product_price": "Rs.71",
         "category_name": "Faucets & showers",
-        "product_image": "https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-        "product_link": "https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+        "product_image": "https://buildpro.store/cdn/shop/files/wellness_300x.png?v=1665550140",
+        "product_link": "https://buildpro.store/cdn/shop/files/wellness_300x.png?v=1665550140"
       },
       {
         "product_name": "Black Leather Panther", 
-        "product_price": "$97.89",
+        "product_price": "Rs.979",
         "category_name": "Plumbing & Sanitary",
-        "product_image": "https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-        "product_link": "https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+        "product_image": "https://cdn.shopify.com/s/files/1/0591/8549/6236/products/FFASS506-000560BA0_large.jpg?v=1684493748",
+        "product_link": "https://cdn.shopify.com/s/files/1/0591/8549/6236/products/FFASS506-000560BA0_large.jpg?v=1684493748"
       },
       {
         "product_name": "Super ShoeWomen", 
-        "product_price": "$52.00",
+        "product_price": "Rs.520",
         "category_name": "Faucets & showers",
-        "product_image": "https://images.unsplash.com/photo-1465453869711-7e174808ace9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80",
-        "product_link": "https://images.unsplash.com/photo-1465453869711-7e174808ace9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80"
+        "product_image": "https://cdn.shopify.com/s/files/1/0591/8549/6236/products/FFASS506-000440BA0_large.jpg?v=1684493746",
+        "product_link": "https://cdn.shopify.com/s/files/1/0591/8549/6236/products/FFASS506-000440BA0_large.jpg?v=1684493746"
       },
       {
         "product_name": "BlueLabel Men Pack", 
-        "product_price": "$189.19",
+        "product_price": "Rs.1819",
         "category_name": "Faucets & showers",
-        "product_image": "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-        "product_link": "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+        "product_image": "https://cdn.shopify.com/s/files/1/0591/8549/6236/products/FFAS9031-000500BC0_large.jpg?v=1684493739",
+        "product_link": "https://cdn.shopify.com/s/files/1/0591/8549/6236/products/FFAS9031-000500BC0_large.jpg?v=1684493739"
       },
       {
         "product_name": "Tigress Cheetah", 
-        "product_price": "$239.19",
+        "product_price": "Rs.2319",
         "category_name": "Wall And Floor Tiles",
-        "product_image": "https://images.unsplash.com/photo-1601924638867-3a6de6b7a500?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-        "product_link": "https://images.unsplash.com/photo-1601924638867-3a6de6b7a500?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+        "product_image": "https://cdn.shopify.com/s/files/1/0591/8549/6236/products/FFAS9140-000500BC0_large.jpg?v=1684491077",
+        "product_link": "https://cdn.shopify.com/s/files/1/0591/8549/6236/products/FFAS9140-000500BC0_large.jpg?v=1684491077"
       },
       {
         "product_name": "Smarty Casual", 
-        "product_price": "$76.77",
+        "product_price": "Rs.777",
         "category_name": "Wall And Floor Tiles",
-        "product_image": "https://images.unsplash.com/photo-1542841791-77f33b752ef1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
-        "product_link": "https://images.unsplash.com/photo-1542841791-77f33b752ef1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80"
+        "product_image": "https://cdn.shopify.com/s/files/1/0591/8549/6236/products/FFASS054-000500BC0_large.jpg?v=1684490838",
+        "product_link": "https://cdn.shopify.com/s/files/1/0591/8549/6236/products/FFASS054-000500BC0_large.jpg?v=1684490838"
       },
       {
         "product_name": "Formal Farmer", 
-        "product_price": "$107.65",
+        "product_price": "Rs.1065",
         "category_name": "Faucets & showers",
-        "product_image": "https://images.unsplash.com/photo-1533867617858-e7b97e060509?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-        "product_link": "https://images.unsplash.com/photo-1533867617858-e7b97e060509?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+        "product_image": "https://cdn.shopify.com/s/files/1/0591/8549/6236/products/FFAS0930-000500BC0_large.jpg?v=1684490829",
+        "product_link": "https://cdn.shopify.com/s/files/1/0591/8549/6236/products/FFAS0930-000500BC0_large.jpg?v=1684490829"
       },
       {
         "product_name": "Black_White Combo", 
-        "product_price": "$79.99",
+        "product_price": "Rs.799",
         "category_name": "Faucets & showers",
-        "product_image": "https://images.unsplash.com/photo-1518894781321-630e638d0742?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1000&q=80",
-        "product_link": "https://images.unsplash.com/photo-1518894781321-630e638d0742?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1000&q=80"
+        "product_image": "https://cdn.shopify.com/s/files/1/0591/8549/6236/products/FFAS0714-604500BA0_large.jpg?v=1684494839",
+        "product_link": "https://cdn.shopify.com/s/files/1/0591/8549/6236/products/FFAS0714-604500BA0_large.jpg?v=1684494839"
       },
       {
         "product_name": "Chimpa Yellow", 
-        "product_price": "$29.09",
+        "product_price": "Rs.209",
         "category_name": "Faucets & showers",
-        "product_image": "https://images.unsplash.com/photo-1549298916-f52d724204b4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1001&q=80",
-        "product_link": "https://images.unsplash.com/photo-1549298916-f52d724204b4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1001&q=80"
+        "product_image": "https://cdn.shopify.com/s/files/1/0591/8549/6236/products/FFAS9407-000040BC0_large.jpg?v=1684493812",
+        "product_link": "https://cdn.shopify.com/s/files/1/0591/8549/6236/products/FFAS9407-000040BC0_large.jpg?v=1684493812"
       },
       {
         "product_name": "Sporty Mens", 
-        "product_price": "$89.99",
+        "product_price": "Rs.899",
         "category_name": "Electrical",
-        "product_image": "https://images.unsplash.com/photo-1529947031331-2e2017443f26?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
-        "product_link": "https://images.unsplash.com/photo-1529947031331-2e2017443f26?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80"
+        "product_image": "https://buildpro.store/cdn/shop/files/shower_300x.png?v=1665550113",
+        "product_link": "https://buildpro.store/cdn/shop/files/shower_300x.png?v=1665550113"
       },
       {
         "product_name": "Yellow Ranger", 
-        "product_price": "$62.09",
+        "product_price": "Rs.609",
         "category_name": "Faucets & showers",
-        "product_image": "https://images.unsplash.com/photo-1581343600527-acef96ef2e84?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1421&q=80",
-        "product_link": "https://images.unsplash.com/photo-1581343600527-acef96ef2e84?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1421&q=80"
+        "product_image": "https://buildpro.store/cdn/shop/files/TMT_Steel_300x.png?v=1665553029",
+        "product_link": "https://buildpro.store/cdn/shop/files/TMT_Steel_300x.png?v=1665553029"
       },
       {
         "product_name": "Nighty White", 
-        "product_price": "$48.99",
+        "product_price": "Rs.499",
         "category_name": "Construction Materials",
-        "product_image": "https://images.unsplash.com/photo-1581327323320-dbded32d5598?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1414&q=800",
-        "product_link": "https://images.unsplash.com/photo-1581327323320-dbded32d5598?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1414&q=80"
+        "product_image": "https://buildpro.store/cdn/shop/files/Titles_300x.png?v=1665552562",
+        "product_link": "https://buildpro.store/cdn/shop/files/Titles_300x.png?v=1665552562"
       },
       {
         "product_name": "Gymmy Grey", 
-        "product_price": "$76.00",
+        "product_price": "Rs.700",
         "category_name": "Construction Materials",
-        "product_image": "https://images.unsplash.com/photo-1539874202413-c1f47b33169f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-        "product_link": "https://images.unsplash.com/photo-1539874202413-c1f47b33169f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+        "product_image": "https://buildpro.store/cdn/shop/files/Sink_300x.png?v=1665552337",
+        "product_link": "https://buildpro.store/cdn/shop/files/Sink_300x.png?v=1665552337"
       },
       {
         "product_name": "Catty Girl", 
-        "product_price": "$87.19",
+        "product_price": "Rs.819",
         "category_name": "Electrical",
-        "product_image": "https://images.unsplash.com/photo-1494955464529-790512c65305?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
-        "product_link": "https://images.unsplash.com/photo-1494955464529-790512c65305?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
+        "product_image": "https://buildpro.store/cdn/shop/files/Wash_Basin_300x.png?v=1665552049",
+        "product_link": "https://buildpro.store/cdn/shop/files/Wash_Basin_300x.png?v=1665552049"
       }
     
   ]

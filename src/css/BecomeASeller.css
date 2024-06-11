@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+
+.BecomeASeller-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.BecomeASeller-info-section {
+  flex: 1 1 45%;
+  min-width: 300px;
+  background: linear-gradient(135deg, #094fa9, #2795d9);
+  color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.BecomeASeller-info-section:hover {
+  transform: translateY(-5px);
+}
+
+.BecomeASeller-heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.BecomeASeller-paragraph {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.BecomeASeller-list {
+  padding-left: 20px;
+  list-style: none;
+}
+
+.BecomeASeller-list-item {
+  margin-bottom: 10px;
+  font-size: 16px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.BecomeASeller-list-item::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #fff;
+  font-weight: 700;
+}
+
+.BecomeASeller-form-section {
+  flex: 1 1 45%;
+  min-width: 300px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.BecomeASeller-form-section:hover {
+  transform: translateY(-5px);
+}
+
+.BecomeASeller-form-group {
+  margin-bottom: 20px;
+}
+
+.BecomeASeller-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+}
+
+.BecomeASeller-input,
+.BecomeASeller-select,
+.BecomeASeller-textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.BecomeASeller-input:focus,
+.BecomeASeller-select:focus,
+.BecomeASeller-textarea:focus {
+  border-color: #6e8efb;
+  outline: none;
+}
+
+.BecomeASeller-textarea {
+  resize: vertical;
+}
+
+.BecomeASeller-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #094fa9, #2795d9);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.BecomeASeller-button:hover {
+  background: linear-gradient(135deg, #5a73d8, #00162c);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .BecomeASeller-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .BecomeASeller-info-section,
+  .BecomeASeller-form-section {
+    min-width: 100%;
+    margin: 10px 0;
+    padding: 20px;
+  }
+
+  .BecomeASeller-heading {
+    font-size: 24px;
+  }
+
+  .BecomeASeller-paragraph,
+  .BecomeASeller-list-item {
+    font-size: 16px;
+  }
+
+  .BecomeASeller-button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}

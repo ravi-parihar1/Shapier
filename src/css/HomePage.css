@@ -163,6 +163,9 @@ h6 {
   display: flex; /* Use flexbox to ensure image is aligned correctly */
   justify-content: flex-end; /* Align the image to the right */
   margin-left: 10px;
+  @media (max-width:767px) {
+    display: none;
+  }
 }
 
 .image-container img {
@@ -265,12 +268,27 @@ h6 {
   }
 }
 
+@media screen and (max-width:992px) {
+  .container-card {
+    margin-right: 1px;
+    margin-left: 0px;
+  }
+
+  .container-card img {
+    width: 80px;
+  }
+}
+
 @media screen and (min-width: 992px) {
   /* Target desktop-sized screens */
   .container-card {
     margin-right: 10px;
   }
 }
+
+
+
+
 
 @media screen and (max-width: 769px) {
   /* Target Tablet-sized screens */
@@ -323,7 +341,7 @@ h6 {
   }
 }
 
-@media screen and (max-width: 431px) {
+@media screen and (max-width: 432px) {
   
   .inner-container {
     padding-top: 5px;
@@ -339,7 +357,7 @@ h6 {
   .content {
     width: 45%;
     /* Set width to 80% of the viewport */
-    height: 400px;
+    height: 420px;
     padding: 1rem;
     /* Apply default padding (adjust as needed) */
     margin-top: 25px;
@@ -365,7 +383,7 @@ h6 {
 
   .container-card {
     margin-bottom: 60px;
-    margin-left: 0.3rem;
+    margin-left: 0.1rem;
     /* padding-left: 20px; */
     height: 70px;
     width: 110px;
@@ -429,7 +447,7 @@ h6 {
 
 @media screen and (max-width: 396px) {
   .container-card {
-    margin-left: 0.1rem;
+    margin-left: 0rem;
     /* padding-left: 20px; */   
   }
 
@@ -437,7 +455,7 @@ h6 {
 
 @media screen and (max-width: 392px) {
   .container-card {
-    margin-left: 0rem;
+    margin-right: 0rem;
     /* padding-left: 20px; */   
   }
 

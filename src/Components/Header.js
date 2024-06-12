@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Await, Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../css/Header.css";
 import { IoSearch } from "react-icons/io5";
 import { RiShoppingBag3Line } from "react-icons/ri";
@@ -17,11 +17,11 @@ const Header = () => {
     const [isOpenCategory, setIsOpenCategory] = useState(false);
     const [categoryName, setCategoryName] = useState("");
     const [categories, setCategories] = useState([]);
-    //Handel query for search 
     const [searchQuery, setSearchQuery] = useState("");
     const [searchResults, setSearchResults] = useState([]);
-
-
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
 
     const handleMouseEnter = () => {
         setIsOpenCategory(true);
@@ -31,24 +31,38 @@ const Header = () => {
         setIsOpenCategory(false);
     };
 
+    const cartSection = () => {
+        navigate('/Checkout')
+    }
+    const handleSearchChange = async (event) => {
+        const query = event.target.value;
+        setSearchQuery(query);
+        if (!query.trim()) {
+            setSearchResults([]);
+            setIsSearchOpen(false);
+            return;
+        }
 
-    const handleSearchSubmit = async (event) => {
-        event.preventDefault();
+        setIsLoading(true);
+        setError(null);
         try {
-            const { data } = await axios.get(`https://free.shapier.in/api/v1/products/search`, {
-                params: { query: searchQuery }
-            });
-            setSearchResults(data.data); // Assuming your backend returns results in `data.data`
-            navigate('/search-results', { state: { results: data.data } }); // Navigate to search results page
+            const { data } = await axios.get(`https://free.shapier.in/api/v1/search?q=${query}`);
+            setSearchResults(data.data);
+            setIsSearchOpen(true);
         } catch (error) {
+            setError("Error searching products. Please try again.");
             console.error("Error searching products: ", error);
+        } finally {
+            setIsLoading(false);
         }
     };
 
+    const handleCategoryClick = (category) => {
+        setCategoryName(category);
+        setIsOpenCategory(false);
+        navigate(`/categories/${category}`);
+    };
 
-
-
-    //function to fetch categories from backend 
     const fetchAllCategories = async () => {
         try {
             const { data } = await axios.get(`https://free.shapier.in/api/v1/product_categories`);
@@ -59,36 +73,15 @@ const Header = () => {
                     product_category_name: category.product_category_name,
                     product_category_image: category.product_category_image
                 }))
-            )
+            );
         } catch (error) {
             console.log(error);
         }
-    }
-
+    };
 
     useEffect(() => {
         fetchAllCategories();
-    }, []); // Add empty dependency array to run effect only once
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    const handleCategoryClick = (category) => {
-        setCategoryName(category);
-        setIsOpenCategory(false);
-        navigate(`/categories/${category}`)
-        // Close the dropdown after selecting a category
-    };
+    }, []);
 
     const fetchUser = async () => {
         try {
@@ -117,7 +110,6 @@ const Header = () => {
 
     useEffect(() => {
         fetchUser();
-
     }, []);
 
     const handleSignOut = () => {
@@ -135,6 +127,12 @@ const Header = () => {
         setMenuActive(false);
     };
 
+    const closeSearch = () => {
+        setSearchQuery("");
+        setSearchResults([]);
+        setIsSearchOpen(false);
+    };
+
     return (
         <header className="Headofheader" id="header">
             <nav className="Headofnavbar Headofcontainer">
@@ -145,24 +143,23 @@ const Header = () => {
 
                 <div className={`Headofmenu ${menuActive ? "is-active" : ""}`} id="menu">
                     <ul className="Headofmenu-inner">
-                        <li className="Headofmenu-item"  ><Link to="/" className="Headofmenu-link" >Home</Link></li>
-                        <li className="Headofmenu-item"><Link to="/store" className="Headofmenu-link" >Shop</Link></li>
+                        <li className="Headofmenu-item"><Link to="/" className="Headofmenu-link">Home</Link></li>
+                        <li className="Headofmenu-item"><Link to="/store" className="Headofmenu-link">Shop</Link></li>
                         <li className="Headofmenu-item dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                             <a href="#" className="Headofmenu-link">Categories</a>
                             {isOpenCategory && (
                                 <div className="premdropdown-content">
                                     {categories.map((category) => (
-                                        <div className="categories_nameitems">
+                                        <div className="categories_nameitems" key={category.category_id}>
                                             <ul className="premdropdown-list">
                                                 <li className="cat-list-item" onClick={() => handleCategoryClick(category.product_category_name)}>{category.product_category_name}</li>
-                                                
                                             </ul>
                                         </div>
                                     ))}
                                 </div>
                             )}
                         </li>
-                        <li className="Headofmenu-item"><Link to="/contact"  className="Headofmenu-link" onClick={closeMenu}>Support</Link></li>
+                        <li className="Headofmenu-item"><Link to="/contact" className="Headofmenu-link" onClick={closeMenu}>Support</Link></li>
                         {username ? (
                             <li className="Headofmenu-item"><a className="Headofmenu-link">{username.split(" ")[0]}</a></li>
                         ) : (
@@ -172,26 +169,51 @@ const Header = () => {
                 </div>
 
                 <div className="Headofsearch">
-                    <form className="Headofsearch-form" onSubmit={handleSearchSubmit}>
+                    <form className="Headofsearch-form" onSubmit={(e) => e.preventDefault()}>
                         <input
                             type="text"
                             name="search"
                             className="Headofsearch-input"
                             placeholder="Search"
                             value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
+                            onChange={handleSearchChange}
                         />
                         <button type="submit" className="Headofsearch-submit">
                             <IoSearch />
                         </button>
+                        {isSearchOpen && (
+                            <div className="search-dropdown">
+                                {isLoading ? (
+                                    <div>Loading...</div>
+                                ) : error ? (
+                                    <div>{error}</div>
+                                ) : (
+                                    searchResults.map((result) => (
+                                        <div key={result.id} className="search-result-item">
+                                            {/* <img src={result.product_image} alt={'no image'} /> */}
+                                            <Link to={`/details/${result.id}`} onClick={closeSearch}>
+
+                                                <div className="search-result-small">
+
+                                                    {result.product}
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    ))
+                                )}
+                                <button className="close-search" onClick={closeSearch}><AiOutlineClose /></button>
+                            </div>
+                        )}
                     </form>
 
+                    <Link to='/Checkout'>
                     <div className="partsecond">
-                        <Link to='/Checkout'><div className="cart-icon custom-cart-icon">
+                        <div className="cart-icon custom-cart-icon">
                             <RiShoppingBag3Line />
-                        </div></Link>
-                        Cart
+                        </div>
+                        <h6 className="partsecond-cart-text">Cart</h6>
                     </div>
+                    </Link>
                 </div>
 
                 <div className="toper-right">

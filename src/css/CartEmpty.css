@@ -1,0 +1,41 @@
+.CartEmpty-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  .CartEmpty-icon {
+    font-size: 5rem;
+    color: #adb5bd;
+    margin-bottom: 20px;
+  }
+  
+  .CartEmpty-title {
+    font-size: 2rem;
+    margin: 10px 0;
+    color: #212529;
+  }
+  
+  .CartEmpty-message {
+    font-size: 1.2rem;
+    color: #6c757d;
+    text-align: center;
+  }
+  
+  @media (max-width: 600px) {
+    .CartEmpty-title {
+      font-size: 1.5rem;
+    }
+    
+    .CartEmpty-message {
+      font-size: 1rem;
+    }
+    
+    .CartEmpty-icon {
+      font-size: 4rem;
+    }
+  }
+  

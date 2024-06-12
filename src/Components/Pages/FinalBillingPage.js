@@ -6,6 +6,7 @@ import Footer from '../Footer';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import logo from '../../assets/shapelogo.png';
+import { event } from 'jquery';
 
 const CouponInput = () => (
     <div className="coupon-input-checkoutPage">
@@ -31,7 +32,25 @@ const OrderSummary = () => {
                 description: "Your final step",
                 image: logo,
                 order_id: order.id,
-                callback_url: "https://free.shapier.in/api/v1/paymentverification",
+                handler: async function (response) {
+
+                    const body = { ...response,}
+
+                    const validateResponse = await fetch('https://free.shapier.in/api/v1/paymentverification', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(body)
+
+                    })
+                   
+                    const jsonResponse = await validateResponse.json();
+
+                    console.log('jsonResponse', jsonResponse);
+
+                },
+
                 prefill: {
                     name: "Shapier",
                     email: "example.kumar@example.com",
@@ -46,7 +65,17 @@ const OrderSummary = () => {
             };
 
             const razor = new window.Razorpay(options);
+            razor.on("payment.failed", function (response) {
+                alert(response.error.code);
+                alert(response.error.description)
+                alert(response.error.source)
+                alert(response.error.step)
+                alert(response.error.reason)
+                alert(response.error.metadata.order_id)
+                alert(response.error.metadata.payment_id)
+            })
             razor.open();
+            event.preventDefault();
         } catch (error) {
             console.error('Error during checkout:', error);
         }

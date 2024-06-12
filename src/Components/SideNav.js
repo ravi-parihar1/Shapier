@@ -26,7 +26,7 @@ export default function SideNav() {
                 <hr />
             </div>
             <div className="AdminNav-nav-content">
-                <Link to='/admin'><div className="AdminNav-nav-button">
+                <Link to='/admin-panel'><div className="AdminNav-nav-button">
                     <CiShoppingCart className="fas AdminNav-nav-button-icon" />
                     <span>Product</span>
                 </div></Link>

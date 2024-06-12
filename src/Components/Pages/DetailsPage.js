@@ -140,7 +140,7 @@ export default function DetailsPage() {
                     <div className="container mt-4 pt-5">
                         <h2>Similar Product</h2>
 
-                        <CategoriesPageProductDivision category_names='cement' />
+                        <CategoriesPageProductDivision category_names={'cement'} />
                     </div>
 
 

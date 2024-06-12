@@ -28,6 +28,123 @@
 }
 
 
+.Headofsearch {
+    position: relative;
+    width: 300px; /* Adjust as needed */
+}
+
+.Headofsearch a{
+  text-decoration: none;/* Adjust as needed */
+  color: inherit;
+}
+
+.Headofsearch-form {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.Headofsearch-input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+.Headofsearch-submit {
+    background: #007bff;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.Headofsearch-submit:hover {
+    background: #0056b3;
+}
+
+.search-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background-color: #f9f9f9;
+}
+
+.search-result-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.search-result-item a {
+    text-decoration: none;
+    color: #333;
+    flex: 1;
+    font-size: 14px;
+}
+
+.close-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.close-search svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Hide scrollbar */
+.search-dropdown::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.search-dropdown {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+
 .premdropdown-content {
   display: none;
   width: 40rem;
@@ -295,9 +412,17 @@
 }
 
 .partsecond {
+  text-decoration: none;
+  color: inherit;
   display: flex;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 0.4rem;
 }
+
+/* .partsecond-cart-text {
+  text-decoration: none;
+  color: black;
+} */
 
 .Headofheader {
   position: fixed;
@@ -467,6 +592,7 @@
 }
 
 .Headofmenu.is-active {
+  z-index: 9;
   top: 0;
   width: 100%;
   height: inherit;

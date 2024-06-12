@@ -23,7 +23,7 @@ import CategoriesPage from './Components/Pages/CategoriesPage';
 import ExplorePage from './Components/Pages/ExplorePage';
 // import Admin from './Components/Admin';
 import DetailsPage from './Components/Pages/DetailsPage';
-import SearchResults from './Components/SearchResults';
+
 import AdminPanel from './Components/AdminPanel';
 import AdminPanelCategories from './Components/AdminPanelCategories';
 import AdminPanelSubCategories from './Components/AdminPanelSubCategories';
@@ -36,6 +36,9 @@ import RequestAquote from './Components/RequestAquote';
 import AdminServiceEnquiry from './Components/AdminServiceEnquiry';
 import ShapeSection from './Components/ShapeSection';
 import AdminLoginPage from './Components/AdminLoginPage';
+import AdminUserInfo from './Components/AdminUserInfo';
+import ThankyouPage from './Components/ThankyouPage';
+import CartEmpty from './Components/CartEmpty';
  // or wherever your global styles are
 
 
@@ -59,6 +62,7 @@ function App() {
         <Route path='/explore' element={<ExplorePage />} />
         {/* <Route path='/admin' element={<Admin />} /> */}
         <Route path='/admin' element={<AdminLoginPage />} />
+        <Route path='/admin/Users' element={<AdminUserInfo />} />
         <Route path='/admin-panel' element={<AdminPanel />} />
         <Route path='/admin/categories' element={<AdminPanelCategories />} />
         <Route path='/admin/subcategories' element={<AdminPanelSubCategories />} />
@@ -68,11 +72,13 @@ function App() {
         <Route path='/admin/Banners' element={<AdminBanners />} />
         <Route path='/details/:subcategory_id' element={<DetailsPage />} />
         <Route path='/BrandPage' element={<BrandPage />} />
-        <Route path='/search-results' element={<SearchResults />} />
+        {/* <Route path='/search-results' element={<SearchResults />} /> */}
         <Route path='/seller' element={<BecomeASeller />} />
         <Route path='/shape-section' element={<ShapeSection />} />
         <Route path='/request-quotation' element={<RequestAquote />} />
         <Route path='/admin/service-enquiry' element={<AdminServiceEnquiry />} />
+        <Route path='/thankyou' element={<ThankyouPage />} />
+        <Route path='/empty-cart' element={<CartEmpty />} />
 
 
         {/* <Route path='/allbrand' element={<BrandPage />} /> */}

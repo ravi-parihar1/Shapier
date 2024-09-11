@@ -39,51 +39,51 @@ import AdminLoginPage from './Components/AdminLoginPage';
 import AdminUserInfo from './Components/AdminUserInfo';
 import ThankyouPage from './Components/ThankyouPage';
 import CartEmpty from './Components/CartEmpty';
- // or wherever your global styles are
-
-
+import BookNowPage from './Components/Pages/BookNowPage';
+import AdminOrders from './Components/AdminOrders';
+import AdminSellerDetails from './Components/AdminSellerDetails';
+import AdminAllProduct from './Components/AdminAllProduct';
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<HomePage />} active />
-        <Route path='/contact' element={<ContactPage />} />
-        <Route path='/services' element={<ServicesPage />} />
-        <Route path='/service/:link' element={<ServicesPage/>} />
-        <Route path='/shape' element={<Shape />} />
-        <Route path='/store' element={<Store />} />
-        <Route path='/product-details/:id' element={<ProductDetails />} />
-        
-        <Route path='/Checkout' element={<Checkout />} />
-        <Route path='/login' element={<LoginPage />} />
-        <Route path='/Billing/:total_amount' element={<FinalBillingPage />} />
-        <Route path='/categories/:category_name' element={<CategoriesPage />} />
-        <Route path='/explore' element={<ExplorePage />} />
-        {/* <Route path='/admin' element={<Admin />} /> */}
-        <Route path='/admin' element={<AdminLoginPage />} />
-        <Route path='/admin/Users' element={<AdminUserInfo />} />
-        <Route path='/admin-panel' element={<AdminPanel />} />
-        <Route path='/admin/categories' element={<AdminPanelCategories />} />
-        <Route path='/admin/subcategories' element={<AdminPanelSubCategories />} />
-        <Route path='/admin/enquiry' element={<UsersPage />} />
-        <Route path='/admin/Brands' element={<AdminPanelBrands />} />
-        <Route path='/admin/services' element={<AdminServiceUpdate />} />
-        <Route path='/admin/Banners' element={<AdminBanners />} />
-        <Route path='/details/:subcategory_id' element={<DetailsPage />} />
-        <Route path='/BrandPage' element={<BrandPage />} />
-        {/* <Route path='/search-results' element={<SearchResults />} /> */}
-        <Route path='/seller' element={<BecomeASeller />} />
-        <Route path='/shape-section' element={<ShapeSection />} />
-        <Route path='/request-quotation' element={<RequestAquote />} />
-        <Route path='/admin/service-enquiry' element={<AdminServiceEnquiry />} />
-        <Route path='/thankyou' element={<ThankyouPage />} />
-        <Route path='/empty-cart' element={<CartEmpty />} />
-
-
-        {/* <Route path='/allbrand' element={<BrandPage />} /> */}
-      </Routes>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/contact' element={<ContactPage />} />
+          <Route path='/services' element={<ServicesPage />} />
+          <Route path='/service/:link' element={<ServicesPage />} />
+          <Route path='/shape' element={<Shape />} />
+          <Route path='/store' element={<Store />} />
+          <Route path='/product-details/:id' element={<ProductDetails />} />       
+          <Route path='/Checkout' element={<Checkout />} />
+          <Route path='/login' element={<LoginPage />} />
+          <Route path='/Billing/:total_amount' element={<FinalBillingPage />} />
+          <Route path='/categories/:category_name' element={<CategoriesPage />} />
+          <Route path='/explore' element={<ExplorePage />} />
+          <Route path='/admin' element={<AdminLoginPage />} />
+          <Route path='/admin/Users' element={<AdminUserInfo />} />
+          <Route path='/admin-panel' element={<AdminPanel />} />
+          <Route path='/admin/categories' element={<AdminPanelCategories />} />
+          <Route path='/admin/subcategories' element={<AdminPanelSubCategories />} />
+          <Route path='/admin/enquiry' element={<UsersPage />} />
+          <Route path='/admin/Brands' element={<AdminPanelBrands />} />
+          <Route path='/admin/services' element={<AdminServiceUpdate />} />
+          <Route path='/admin/Banners' element={<AdminBanners />} />
+          <Route path='/details/:subcategory_id' element={<DetailsPage />} />
+          <Route path='/BrandPage' element={<BrandPage />} />
+          <Route path='/seller' element={<BecomeASeller />} />
+          <Route path='/shape-section' element={<ShapeSection />} />
+          <Route path='/request-quotation' element={<RequestAquote />} />
+          <Route path='/admin/service-enquiry' element={<AdminServiceEnquiry />} />
+          <Route path='/thankyou' element={<ThankyouPage />} />
+          <Route path='/empty-cart' element={<CartEmpty />} />
+          <Route path='/buy/:id/:quantityOfProduct' element={<BookNowPage />} />
+          <Route path='/admin/orders' element={<AdminOrders />} />
+          <Route path='/admin/all_product' element={<AdminAllProduct />} />
+          <Route path='/admin/seller_details' element={<AdminSellerDetails />} />
+        </Routes>
     </BrowserRouter>
   );
 }
+
 export default App;

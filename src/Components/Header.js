@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../css/Header.css";
+import '../css/SearchBar.css'
 import { IoSearch } from "react-icons/io5";
 import { RiShoppingBag3Line } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
@@ -10,12 +11,10 @@ import axios from "axios";
 const Header = () => {
     const navigate = useNavigate();
     const [userData, setUserData] = useState(null);
-    const [username, setUsername] = useState(null);
     const [isAuthorize, setIsAuthorize] = useState(false);
     const [menuActive, setMenuActive] = useState(false);
     const localData = JSON.parse(localStorage.getItem("data"));
     const [isOpenCategory, setIsOpenCategory] = useState(false);
-    const [categoryName, setCategoryName] = useState("");
     const [categories, setCategories] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
     const [searchResults, setSearchResults] = useState([]);
@@ -23,17 +22,13 @@ const Header = () => {
     const [error, setError] = useState(null);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-    const handleMouseEnter = () => {
-        setIsOpenCategory(true);
-    };
+    const handleMouseEnter = () => setIsOpenCategory(true);
+    const handleMouseLeave = () => setIsOpenCategory(false);
+    const toggleMenu = () => setMenuActive(!menuActive);
+    const closeMenu = () => setMenuActive(false);
 
-    const handleMouseLeave = () => {
-        setIsOpenCategory(false);
-    };
-
-    const cartSection = () => {
-        navigate('/Checkout')
-    }
+    const cartSection = () => navigate('/Checkout');
+    
     const handleSearchChange = async (event) => {
         const query = event.target.value;
         setSearchQuery(query);
@@ -58,7 +53,6 @@ const Header = () => {
     };
 
     const handleCategoryClick = (category) => {
-        setCategoryName(category);
         setIsOpenCategory(false);
         navigate(`/categories/${category}`);
     };
@@ -66,65 +60,35 @@ const Header = () => {
     const fetchAllCategories = async () => {
         try {
             const { data } = await axios.get(`https://free.shapier.in/api/v1/product_categories`);
-            const arrayOfCategories = data.data;
-            setCategories(
-                arrayOfCategories.map((category) => ({
-                    category_id: category.id,
-                    product_category_name: category.product_category_name,
-                    product_category_image: category.product_category_image
-                }))
-            );
+            setCategories(data.data);
         } catch (error) {
-            console.log(error);
+            console.log("Error fetching categories: ", error);
         }
     };
-
-    useEffect(() => {
-        fetchAllCategories();
-    }, []);
 
     const fetchUser = async () => {
+        if (!localData) return setIsAuthorize(false);
+        const { token, userId } = localData;
         try {
-            if (localData) {
-                const { token, userId } = localData;
-                const response = await axios.get(`https://free.shapier.in/api/v1/user/${userId}`, {
-                    headers: {
-                        "Authorization": `Bearer ${token}`,
-                    }
-                });
-                setUserData(response.data);
-                setUsername(response.data.data.username);
-                setIsAuthorize(true);
-            } else {
-                setIsAuthorize(false);
-            }
+            const response = await axios.get(`https://free.shapier.in/api/v1/user/${userId}`, {
+                headers: { "Authorization": `Bearer ${token}` },
+            });
+            setUserData(response.data);
+            setIsAuthorize(true);
         } catch (error) {
-            if (error.response && error.response.data && error.response.data.code === 401) {
-                setUserData(null);
-                setUsername(null);
-                setIsAuthorize(false);
+            setUserData(null);
+            setIsAuthorize(false);
+            if (error.response && error.response.data.code === 401) {
+                console.error("Unauthorized access", error);
             }
-            console.error("Error in fetching user data: ", error);
         }
     };
 
-    useEffect(() => {
-        fetchUser();
-    }, []);
-
     const handleSignOut = () => {
-        navigate("/Login");
+        localStorage.removeItem("data");
         setUserData(null);
-        setUsername(null);
         setIsAuthorize(false);
-    };
-
-    const toggleMenu = () => {
-        setMenuActive(!menuActive);
-    };
-
-    const closeMenu = () => {
-        setMenuActive(false);
+        navigate("/Login");
     };
 
     const closeSearch = () => {
@@ -133,6 +97,11 @@ const Header = () => {
         setIsSearchOpen(false);
     };
 
+    useEffect(() => {
+        fetchAllCategories();
+        fetchUser();
+    }, []);
+
     return (
         <header className="Headofheader" id="header">
             <nav className="Headofnavbar Headofcontainer">
@@ -140,7 +109,6 @@ const Header = () => {
                     <img src={logo} alt="Shapier Logo" />
                     <Link to="/" className="Headofbrand">SHAPIER</Link>
                 </div>
-
                 <div className={`Headofmenu ${menuActive ? "is-active" : ""}`} id="menu">
                     <ul className="Headofmenu-inner">
                         <li className="Headofmenu-item"><Link to="/" className="Headofmenu-link">Home</Link></li>
@@ -150,9 +118,11 @@ const Header = () => {
                             {isOpenCategory && (
                                 <div className="premdropdown-content">
                                     {categories.map((category) => (
-                                        <div className="categories_nameitems" key={category.category_id}>
+                                        <div className="categories_nameitems" key={category.id}>
                                             <ul className="premdropdown-list">
-                                                <li className="cat-list-item" onClick={() => handleCategoryClick(category.product_category_name)}>{category.product_category_name}</li>
+                                                <li className="cat-list-item" onClick={() => handleCategoryClick(category.product_category_name)}>
+                                                    {category.product_category_name}
+                                                </li>
                                             </ul>
                                         </div>
                                     ))}
@@ -160,8 +130,11 @@ const Header = () => {
                             )}
                         </li>
                         <li className="Headofmenu-item"><Link to="/contact" className="Headofmenu-link" onClick={closeMenu}>Support</Link></li>
-                        {username ? (
-                            <li className="Headofmenu-item"><a className="Headofmenu-link">{username.split(" ")[0]}</a></li>
+                        {isAuthorize ? (
+                            <>
+                                <li className="Headofmenu-item"><a className="Headofmenu-link">{userData?.data?.username?.split(" ")[0]}</a></li>
+                                {/* <li className="Headofmenu-item"><button className="Headofmenu-link" onClick={handleSignOut}>Sign Out</button></li> */}
+                            </>
                         ) : (
                             <li className="Headofmenu-item"><Link to="/login" className="Headofmenu-link" onClick={closeMenu}>Login</Link></li>
                         )}
@@ -190,11 +163,9 @@ const Header = () => {
                                 ) : (
                                     searchResults.map((result) => (
                                         <div key={result.id} className="search-result-item">
-                                            {/* <img src={result.product_image} alt={'no image'} /> */}
                                             <Link to={`/details/${result.id}`} onClick={closeSearch}>
-
                                                 <div className="search-result-small">
-
+                                                    <img src={`https://free.shapier.in/images/`+result.product_image}/>
                                                     {result.product}
                                                 </div>
                                             </Link>
@@ -205,22 +176,21 @@ const Header = () => {
                             </div>
                         )}
                     </form>
-
                     <Link to='/Checkout'>
-                    <div className="partsecond">
+                        <div className="partsecond">
+                            <div className="cart-icon custom-cart-icon">
+                                <RiShoppingBag3Line />
+                            </div>
+                            <h6 className="partsecond-cart-text">Cart</h6>
+                        </div>
+                    </Link>
+                </div>
+                <div className="toper-right">
+                    <Link to='/Checkout'>
                         <div className="cart-icon custom-cart-icon">
                             <RiShoppingBag3Line />
                         </div>
-                        <h6 className="partsecond-cart-text">Cart</h6>
-                    </div>
                     </Link>
-                </div>
-
-                <div className="toper-right">
-                    <Link to='/Checkout'><div className="cart-icon custom-cart-icon">
-                        <RiShoppingBag3Line />
-                    </div></Link>
-
                     <div className={`Headofburger ${menuActive ? "is-active" : ""}`} id="burger" onClick={toggleMenu}>
                         <span className="Headofburger-line"></span>
                         <span className="Headofburger-line"></span>

@@ -1,14 +1,8 @@
-// ImageCarousel.js
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
-const images = [
-  'https://cdn-media.buildersmart.in/media/bannerslider/bannerslider/cement_tmt_price_drop...jpg',
-  'https://cdn-media.buildersmart.in/media/bannerslider/bannerslider/CE-sell-online.jpg',
-  'https://cdn-media.buildersmart.in/media/bannerslider/bannerslider/Lowest_Prices_web.jpg',
-];
+import axios from 'axios';
 
 const NextArrow = (props) => {
   const { className, style, onClick } = props;
@@ -36,9 +30,24 @@ const PrevArrow = (props) => {
   );
 };
 
+const ImageCarousel = ({ category_name }) => {
+  const [images, setImages] = useState([]);
+  
+  useEffect(() => {
+    const fetchBanner = async () => {
+      try {
+        const { data } = await axios.get(`https://free.shapier.in/api/v1/banner/${category_name}`);
+        const arrayOfBanner = data.data;
+        console.log('Fetched banners:', arrayOfBanner);  // Log the fetched data
+        setImages(arrayOfBanner.map((banner) => banner.banner_image));
+      } catch (error) {
+        console.error('Error fetching banners:', error);
+      }
+    };
 
+    fetchBanner();
+  }, [category_name]);
 
-const ImageCarousel = () => {
   const settings = {
     infinite: true,
     speed: 500,
@@ -49,12 +58,13 @@ const ImageCarousel = () => {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
+
   return (
     <div className="CategoriesSlider-container">
       <Slider {...settings}>
         {images.map((url, index) => (
           <div key={index}>
-            <img className="CategoriesSlider-image" src={url} alt={`Slide ${index + 1}`} />
+            <img className="CategoriesSlider-image" src={`https://free.shapier.in/images/${url}`} alt={`Slide ${index + 1}`} onError={(e) => { e.target.onerror = null; e.target.src="defaultImage.png"; }}/>
           </div>
         ))}
       </Slider>
@@ -63,3 +73,4 @@ const ImageCarousel = () => {
 };
 
 export default ImageCarousel;
+  

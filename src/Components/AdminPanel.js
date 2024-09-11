@@ -12,11 +12,11 @@ export default function AdminPanel() {
         product_description: '',
         product_price: '',
         stock: '',
-        vandor_name: '',
+        vendor_name: '', // Updated to hold vendor name
         discount: '',
         subcategory_id: '',
         per_base: '',
-        minimum_quantity: '' // Corrected spelling here
+        minimum_quantity: ''
     });
 
     const [category, setCategory] = useState({
@@ -32,8 +32,9 @@ export default function AdminPanel() {
     const [showAlert, setShowAlert] = useState(false);
     const [message, setMessage] = useState('');
     const [subcategory, setSubcategory] = useState([]);
-    const [view, setView] = useState('products'); // State to manage current view
+    const [view, setView] = useState('products');
     const [categories, setCategories] = useState([]);
+    const [vandorNames, setVandorNames] = useState([]); // Updated state name
 
     const fetchSubcategories = async () => {
         try {
@@ -62,9 +63,24 @@ export default function AdminPanel() {
         }
     };
 
+    const fetchAllVandorNames = async () => {
+        try {
+            const { data } = await axios.get('https://free.shapier.in/api/v1/seller');
+            const arrayOfVandorNames = data.data;
+            setVandorNames(arrayOfVandorNames.map((vandor) => ({
+                vandor_id: vandor.id,
+                vandor_name: vandor.contact_name,
+                company_name: vandor.company_name
+            })));
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
     useEffect(() => {
         fetchAllCategories();
         fetchSubcategories();
+        fetchAllVandorNames(); // Fetch vendor names on mount
     }, []);
 
     const handleChange = (e) => {
@@ -96,19 +112,19 @@ export default function AdminPanel() {
             formData.append('product_description', product.product_description);
             formData.append('product_price', product.product_price);
             formData.append('stock', product.stock);
-            formData.append('vandor_name', product.vandor_name);
+            formData.append('vandor_name', product.vandor_name); // Updated to send vendor name
             formData.append('discount', product.discount);
             formData.append('subcategory_id', product.subcategory_id);
             formData.append('per_base', product.per_base);
             formData.append('minimum_quantity', product.minimum_quantity);
 
-            await axios.post('https://free.shapier.in/api/v1/product', formData, {
+            const response = await axios.post('https://free.shapier.in/api/v1/product', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             });
-
-            setMessage('Product Has uploaded successfully!');
+            console.log(response)
+            setMessage('Product has been uploaded successfully!');
             setShowAlert(true);
 
             setProduct({
@@ -117,11 +133,11 @@ export default function AdminPanel() {
                 product_description: '',
                 product_price: '',
                 stock: '',
-                vandor_name: '',
+                vendor_name: '', // Updated to clear vendor name
                 discount: '',
                 subcategory_id: '',
                 per_base: '',
-                minimum_quantity: '' // Corrected spelling here
+                minimum_quantity: ''
             })
 
         } catch (error) {
@@ -151,151 +167,150 @@ export default function AdminPanel() {
         }
     };
 
-
-
-
     return (
-        <>
-
-            <div className="admin-panel-container">
-                <SideNav />
-                <div className="form-container">
-                    {showAlert && (
-                        <div className="alert">
-                            <span className="closebtn" onClick={() => setShowAlert(false)}>&times;</span>
-                            {message}
-                        </div>
-                    )}
-                    <form onSubmit={handleProductSubmit} className="AD-admin-form">
-                        <div className="AD-form-group">
-                            <label>Product Name</label>
-                            <input
-                                type="text"
-                                name="product"
-                                value={product.product}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div className="AD-form-group">
-                            <label>Product Image</label>
-                            <input
-                                type="file"
-                                name="product_image"
-                                onChange={handleFileChange}
-                                required
-                            />
-                        </div>
-                        <div className="AD-form-group">
-                            <label>Product Description</label>
-                            <textarea
-                                name="product_description"
-                                value={product.product_description}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div className="AD-form-group">
-                            <label>Product Price</label>
-                            <input
-                                type="number"
-                                name="product_price"
-                                value={product.product_price}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-
-                        <div className="AD-form-group">
-                            <label>Brand Name</label>
-                            <input
-                                type="text"
-                                name="vandor_name" // Consider changing "vandor_name" to "vendor_name" for consistency
-                                value={product.brand_id}
-                                onChange={handleChange}
-                            />
-                        </div>
-
-                        <div className="AD-form-group">
-                            <label>Stock</label>
-                            <input
-                                type="number"
-                                name="stock"
-                                value={product.stock}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div className="AD-form-group">
-                            <label>Vendor Name</label>
-                            <input
-                                type="text"
-                                name="vandor_name" // Consider changing "vandor_name" to "vendor_name" for consistency
-                                value={product.vandor_name}
-                                onChange={handleChange}
-                            />
-                        </div>
-                        <div className="AD-form-group">
-                            <label>Discount</label>
-                            <input
-                                type="number"
-                                name="discount"
-                                value={product.discount}
-                                onChange={handleChange}
-                            />
-                        </div>
-                        <div className="AD-form-group">
-                            <label>Subcategory</label>
-                            <select
-                                name="subcategory_id"
-                                value={product.subcategory_id}
-                                onChange={handleChange}
-                                required
-                            >
-                                <option value="">Select Subcategory</option>
-                                {subcategory.map((sub) => (
-                                    <option key={sub.subcategory_id} value={sub.subcategory_id}>
-                                        {sub.subcategory_name}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
-                        <div className="AD-form-group">
-                            <label>Product Base</label>
-                            <select
-                                name="per_base"
-                                value={product.per_base}
-                                onChange={handleChange}
-                                required
-                            >
-                                <option value="">Select Product Base</option>
-                                <option value="Per Kg">Per Kg</option>
-                                <option value="Per Bag">Per Bag</option>
-                                <option value="Per Piece">Per Piece</option>
-                                <option value="Per NOS">Per NOS</option>
-                                <option value="Per Sft">Per Sft</option>
-                                <option value="Per Ton">Per Ton</option>
-                                <option value="Per Coil">Per Coil</option>
-                                <option value="Per Meter">Per Meter</option>
-                                <option value="Per Bundle">Per Bundle</option>
-                            </select>
-                        </div>
-                        <div className="AD-form-group">
-                            <label>Minimum Quantity</label>
-                            <input
-                                type="number"
-                                name="minimum_quantity"
-                                value={product.minimum_quantity}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <button type="submit" className="AD-submit-button">Upload Product</button>
-                    </form>
-                </div>
+        <div className="admin-panel-container">
+            <SideNav />
+            <div className="form-container">
+                {showAlert && (
+                    <div className="alert">
+                        <span className="closebtn" onClick={() => setShowAlert(false)}>&times;</span>
+                        {message}
+                    </div>
+                )}
+                <form onSubmit={handleProductSubmit} className="AD-admin-form">
+                    <div className="AD-form-group">
+                        <label>Product Name</label>
+                        <input
+                            type="text"
+                            name="product"
+                            value={product.product}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="AD-form-group">
+                        <label>Product Image</label>
+                        <input
+                            type="file"
+                            name="product_image"
+                            onChange={handleFileChange}
+                            required
+                        />
+                    </div>
+                    <div className="AD-form-group">
+                        <label>Product Description</label>
+                        <textarea
+                            name="product_description"
+                            value={product.product_description}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="AD-form-group">
+                        <label>Product Price</label>
+                        <input
+                            type="number"
+                            name="product_price"
+                            value={product.product_price}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="AD-form-group">
+                        <label>Brand Name</label>
+                        <input
+                            type="text"
+                            name="brand_name" // Corrected name to avoid confusion
+                            value={product.brand_name}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="AD-form-group">
+                        <label>Stock</label>
+                        <input
+                            type="number"
+                            name="stock"
+                            value={product.stock}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="AD-form-group">
+                        <label>Vendor Name</label>
+                        <select
+                            name="vandor_name" // Corrected name to store vendor name
+                            value={product.vandor_name}
+                            onChange={handleChange}
+                            required
+                        >
+                            <option value="">Select Vendor</option>
+                            {vandorNames.map((vandor) => ( 
+                                <option key={vandor.vandor_id} value={vandor.vandor_name}>
+                                    {vandor.company_name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className="AD-form-group">
+                        <label>Discount</label>
+                        <input
+                            type="number"
+                            name="discount"
+                            value={product.discount}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="AD-form-group">
+                        <label>Subcategory</label>
+                        <select
+                            name="subcategory_id"
+                            value={product.subcategory_id}
+                            onChange={handleChange}
+                            required
+                        >
+                            <option value="">Select Subcategory</option>
+                            {subcategory.map((sub) => (
+                                <option key={sub.subcategory_id} value={sub.subcategory_id}>
+                                    {sub.subcategory_name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className="AD-form-group">
+                        <label>Product Base</label>
+                        <select
+                            name="per_base"
+                            value={product.per_base}
+                            onChange={handleChange}
+                            required
+                        >
+                            <option value="">Select Product Base</option>
+                            <option value="Per Kg">Per Kg</option>
+                            <option value="Per gm">Per gm</option>
+                            <option value="Per ltr">Per Ltr</option>
+                            <option value="Per Bag">Per Bag</option>
+                            <option value="Per Piece">Per Piece</option>
+                            <option value="Per NOS">Per NOS</option>
+                            <option value="Per Sft">Per Sft</option>
+                            <option value="Per Ton">Per Ton</option>
+                            <option value="Per Coil">Per Coil</option>
+                            <option value="Per Meter">Per Meter</option>
+                            <option value="Per Bundle">Per Bundle</option>
+                        </select>
+                    </div>
+                    <div className="AD-form-group">
+                        <label>Minimum Quantity</label>
+                        <input
+                            type="number"
+                            name="minimum_quantity"
+                            value={product.minimum_quantity}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <button type="submit" className="AD-submit-button">Upload Product</button>
+                </form>
             </div>
-
-
-        </>
-    )
+        </div>
+    );
 }

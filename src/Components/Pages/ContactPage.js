@@ -89,7 +89,7 @@ export default function ContactPage() {
                 
 
                 <h1 className="contact-heading">Contact us</h1>
-                <p className="contact-description">Planning to visit Indonesia soon? Get insider tips on where to go, things to do and find best deals for your next adventure.</p>
+                <p className="contact-description">We’re here to help! Whether you have questions, feedback, or need assistance, our team at Shapier is dedicated to providing you with the support you need. Reach out to us through any of the methods below, and we'll get back to you as soon as possible.</p>
 
                 <form id="contact-form" className="contact-form" method="post">
                     <label htmlFor="name" className="contact-label">Full name</label>

@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../../css/ExplorePage.css';
 import Header from '../Header';
 import BottomBar from '../BottomBar';
+import Footer from '../Footer';
 import { Link } from 'react-router-dom';
 import { data } from 'jquery';
 
@@ -41,36 +42,36 @@ const ExplorePage = () => {
               <button>Post Your Requirements</button>
             </div> */}
             <Link to={'/services'}>
-            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cdn-media.buildersmart.in/media/serviceproviders/structural-engineering.jpg)',backgroundSize:'cover' }}>
+            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://www.engeny.com.au/wp-content/uploads/Structural-home-page-image_Canva-1.png)',backgroundSize:'cover' }}>
               <div>Structural Engineering</div>
             </div>
             </Link>
             <Link to={'/services'}>
-            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cdn-media.buildersmart.in/media/serviceproviders/architectural.jpg)',backgroundSize:'cover' }}>
+            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://acdn.architizer.com/thumbnails-PRODUCTION/f9/61/f961e0edb81914959aaa5a8cbd228525.jpg)',backgroundSize:'cover' }}>
               <div>Architectural Services</div>
             </div>
             </Link>
 
             <Link to={'/services'}>
-            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cdn-media.buildersmart.in/media/serviceproviders/mep-services.jpg)' ,backgroundSize:'cover' }}>
+            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://skvindia.com/wp-content/uploads/2019/11/MEP-800x533.jpg)' ,backgroundSize:'cover' }}>
               <div>MEP Consultants</div>
             </div>
             </Link>
             
             <Link to={'/services'}>
-            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cdn-media.buildersmart.in/media/serviceproviders/hvac-services.jpg)',backgroundSize:'cover' }}>
+            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://www.hvacschool.org/wp-content/uploads/2017/05/hvac-installation.jpg?x76633)',backgroundSize:'cover' }}>
               <div>HVAC Services</div>
             </div>
             </Link>
 
             <Link to={'/services'}>
-            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cdn-media.buildersmart.in/media/serviceproviders/interior-designs.jpg)',backgroundSize:'cover' }}>
+            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cityfurnish.com/blog/wp-content/uploads/2023/07/modern-apartment-with-bold-bright-walls-perfect-showcasing-your-art-collection-min.jpg)',backgroundSize:'cover' }}>
               <div>Interior Designing</div>
             </div>
             </Link>
 
             <Link to={'/services'}>
-            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cdn-media.buildersmart.in/media/serviceproviders/lighting-consultants.jpg)',backgroundSize:'cover' }}>
+            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://media.architecturaldigest.com/photos/5ce6c1bb04c41e9d089a8a75/16:9/w_2560%2Cc_limit/AD060119_ADELMAN_01.jpg)',backgroundSize:'cover' }}>
               <div>Lighting Consultants</div>
             </div>
             </Link>
@@ -87,31 +88,31 @@ const ExplorePage = () => {
           <div className="Explore-services-grid">
             {/* Add BuildersMart Services content here */}
             <Link to={'/services'}>
-            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cdn-skin.buildersmart.in/skin/frontend/pt_allurestore/default/images/independent-house.jpg)',backgroundSize:'cover' }}>
+            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://www.tssconstructions.com/wp-content/uploads/2021/11/Plot-166-view-01-1-scaled.jpg)',backgroundSize:'cover' }}>
               <div>Independent House</div>
             </div>
             </Link>
 
             <Link to={'/services'}>
-            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cdn-skin.buildersmart.in/skin/frontend/pt_allurestore/default/images/group-housing.jpg)',backgroundSize:'cover' }}>
+            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://3.imimg.com/data3/DR/MW/MY-10384250/group-housing-500x500.jpg)',backgroundSize:'cover' }}>
               <div>Group Housing</div>
             </div>
             </Link>
 
             <Link to={'/services'}>
-            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cdn-skin.buildersmart.in/skin/frontend/pt_allurestore/default/images/home-improvements-upgrades.jpg)',backgroundSize:'cover' }}>
+            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://d32ijn7u0aqfv4.cloudfront.net/wp/wp-content/uploads/20181025100128/house-frontyard-remodel_PL18148_The-Best-Home-Improvements-to-Increase-Your-Homes-Value_872846178_is.jpg)',backgroundSize:'cover' }}>
               <div>Home Improvement and Upgrade</div>
             </div>
             </Link>
 
             <Link to={'/services'}>
-            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cdn-skin.buildersmart.in/skin/frontend/pt_allurestore/default/images/comercial-complexes.jpg)',backgroundSize:'cover' }}>
+            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://5.imimg.com/data5/WF/PS/MY-8064807/commercial-complex.jpg)',backgroundSize:'cover' }}>
               <div>Commercial Complexes</div>
             </div>
             </Link>
 
             <Link to={'/services'}>
-            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cdn-skin.buildersmart.in/skin/frontend/pt_allurestore/default/images/hospitals.jpg)',backgroundSize:'cover' }}>
+            <div className="Explore-service-card" style={{ backgroundImage: 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Hospital-de-Bellvitge.jpg/800px-Hospital-de-Bellvitge.jpg)',backgroundSize:'cover' }}>
               <div>Hospitals</div>
             </div>
             </Link>
@@ -123,37 +124,37 @@ const ExplorePage = () => {
           <div className="Explore-services-grid">
             {/* Add Contracting Services content here */}
             <Link to={'/services'}>
-              <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cdn-media.buildersmart.in/media/serviceproviders/tiles-contractor.jpg)',backgroundSize:'cover' }}>
+              <div className="Explore-service-card" style={{ backgroundImage: 'url(https://d2bnvhcdayi5wl.cloudfront.net/uploads/editor/2022/10/25/adobestock_409422339.jpeg)',backgroundSize:'cover' }}>
                 <div>Tile Contractors</div>
               </div>
             </Link>
             <Link to={'/services'}>
-              <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cdn-media.buildersmart.in/media/serviceproviders/CivilContractorsN.jpg)',backgroundSize:'cover' }}>
+              <div className="Explore-service-card" style={{ backgroundImage: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQGW_a-tF44yoq3vUyyBZ055wgCgWzyG7F8KV-zN_-vlAN2Muiy_T8anKJS4rgs_iS9gI&usqp=CAU)',backgroundSize:'cover' }}>
                 <div>Civil Contractors</div>
               </div>
             </Link>
             <Link to={'/services'}>
-              <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cdn-media.buildersmart.in/media/serviceproviders/ElectricalWorks1.jpg)',backgroundSize:'cover' }}>
+              <div className="Explore-service-card" style={{ backgroundImage: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfdjEVgUVJaTochW268kItgDVEPSr-fv93DA&s)',backgroundSize:'cover' }}>
                 <div>Electrical works</div>
               </div>
             </Link>
             <Link to={'/services'}>
-              <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cdn-media.buildersmart.in/media/serviceproviders/PaintingWorks1.png)',backgroundSize:'cover' }}>
+              <div className="Explore-service-card" style={{ backgroundImage: 'url(https://www.facilitiesnet.com/resources/editorial/2018/FMD0518-Painting.jpg)',backgroundSize:'cover' }}>
                 <div>Painting Works</div>
               </div>
             </Link>
             <Link to={'/services'}>
-              <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cdn-media.buildersmart.in/media/serviceproviders/PlumbingWorks1.jpg)',backgroundSize:'cover' }}>
+              <div className="Explore-service-card" style={{ backgroundImage: 'url(https://wentworthplumbing.ca/wp-content/uploads/2019/02/industrialplumbingpipes.jpg)',backgroundSize:'cover' }}>
                 <div>Plumbing Works</div>
               </div>
             </Link>
             <Link to={'/services'}>
-              <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cdn-media.buildersmart.in/media/serviceproviders/Carpenters.jpg)',backgroundSize:'cover' }}>
+              <div className="Explore-service-card" style={{ backgroundImage: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHiEvfQga7ijy0qVmS4CxIjLpAvAyfP8V4xQ&s)',backgroundSize:'cover' }}>
                 <div>Carpenters</div>
               </div>
             </Link>
             <Link to={'/services'}>
-              <div className="Explore-service-card" style={{ backgroundImage: 'url(https://cdn-media.buildersmart.in/media/serviceproviders/Masonry.jpg)',backgroundSize:'cover' }}>
+              <div className="Explore-service-card" style={{ backgroundImage: 'url(https://i0.wp.com/civilblog.org/wp-content/uploads/2016/02/Quality-control-checks-for-brickwork.jpg?fit=640%2C426&ssl=1)',backgroundSize:'cover' }}>
                 <div>Masonry</div>
               </div>
             </Link>
@@ -188,6 +189,7 @@ const ExplorePage = () => {
       </div>
       <div className="blank-container"></div>
       <BottomBar />
+      <Footer/>
     </>
   );
 };

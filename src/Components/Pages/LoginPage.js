@@ -36,7 +36,7 @@ export default function LoginPage() {
         navigate("/");
       }
     } catch (error) {
-      console.log(error);
+      console.log("error",error.response);
     }
   }
 
@@ -52,7 +52,10 @@ export default function LoginPage() {
       axios.defaults.headers.common["Authorization"] = "Bearer " + token;
       navigate("/");
     } catch (error) {
-      console.log(error);
+      if(error.response.data.message === 'Password is invalid'){
+        alert('Invalid Password');
+      }
+      console.log("error",error.response.data.message);
     }
   };
 

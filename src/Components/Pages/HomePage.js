@@ -101,7 +101,7 @@ export default function HomePage() {
             <BottomBar />
             <div className='container mt-4'>
                 <div className='container-fluid'>
-                    <h1 className='first-heading'>Streamline construction<br />projects</h1>
+                    <h1 className='first-heading'>Home services at your<br/> doorstep</h1>
                     <div className='inner-container'>
                         <div className='content'>
                             <h5 className='header_of_what_are_you_looking'>What are you looking for ?</h5>

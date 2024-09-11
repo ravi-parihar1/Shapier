@@ -5,7 +5,6 @@ import Header from '../Header';
 import ImageCarousel from '../ImageCarousel';
 import PopularBrands from '../PopularBrands';
 import ProductList from '../ProductList';
-
 import CategoriesPageProductDivision from '../CategoriesPageProductDivision';
 
 export default function CategoriesPage() {
@@ -13,14 +12,12 @@ export default function CategoriesPage() {
   return (
     <>
       <div className="blank-container"></div>
-      <ImageCarousel />
+      <ImageCarousel category_name={category_name} /> {/* Corrected prop passing */}
       <div className="container mt-4">
         <Header />
-
         <PopularBrands />
         {/* <ProductList/> */}
-        <CategoriesPageProductDivision category_names={category_name}/>
-
+        <CategoriesPageProductDivision category_names={category_name} />
       </div>
     </>
   );

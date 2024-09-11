@@ -14,8 +14,14 @@ export default function ServicePage() {
   const [zipCodeValid, setZipCodeValid] = useState(true);
   const [formSubmitted, setFormSubmitted] = useState(false); // New state for submission status
   const { link } = useParams();
-  console.log("link", link);
-
+  
+  const getServiceByName = async () => {
+    const {data} = await axios.get(`https://free.shapier.in/api/v1/service/service_name/${link}`);
+    console.log(data);
+  }
+  useEffect(()=>{
+    getServiceByName();
+  })
   const handleCheckedAvaibility = async (zip) => {
     try {
       const { data } = await axios.get(`https://free.shapier.in/api/v1/zip-check/${zip}`);
@@ -149,7 +155,7 @@ export default function ServicePage() {
                     className="BookingPage-w-full BookingPage-p-2 BookingPage-border BookingPage-border-zinc-300 BookingPage-rounded BookingPage-mt-2"
                   >
                     {link ? (
-                      <option value={link}>{link}</option>
+                      <option value={`${link}`} >{link}</option>
                     ) : (
                       <>
                         <option value="" disabled selected>Select a service</option>

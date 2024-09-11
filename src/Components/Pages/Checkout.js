@@ -4,8 +4,9 @@ import BottomBar from '../BottomBar';
 import '../../css/CheckOut.css';
 import Footer from '../Footer';
 import CartItem from '../CartItem';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import CartEmpty from '../CartEmpty';
 
 const CouponInput = () => (
   <div className="coupon-input-checkoutPage">
@@ -45,6 +46,7 @@ const OrderSummary = ({ total_price_product }) => (
 );
 
 export default function Checkout() {
+  const navigation = useNavigate()
   const storedData = JSON.parse(localStorage.getItem("data"));
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -83,11 +85,16 @@ export default function Checkout() {
           0
         );
         setTotalPrice(total);
+
+        // Store product IDs in localStorage
+        const productIds = arrayOfCart.map(item => item.product_id);
+        localStorage.setItem('productIds', JSON.stringify(productIds));
       } else {
         setError('Unexpected response type');
       }
     } catch (error) {
       setError('Error fetching cart data. Please try again later.');
+      return navigation('/login')
     } finally {
       setIsLoading(false);
     }
@@ -96,6 +103,20 @@ export default function Checkout() {
   useEffect(() => {
     fetchCart();
   }, []);
+
+  const handleDeleteCartItem = async (id) => {
+    try {
+      await axios.delete(`https://free.shapier.in/api/v1/cart/${id}`, {
+        headers: {
+          Authorization: `Bearer ${storedData.token}`,
+        },
+      });
+      setCart(cart.filter(item => item.cart_id !== id));
+      setTotalPrice(cart.reduce((acc, item) => item.cart_id !== id ? acc + item.product_price * item.quantity : acc, 0));
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -109,27 +130,27 @@ export default function Checkout() {
     <>
       <Header />
       <div className="blank-container"></div>
-      <div className="shopping-cart-checkout">
-        <div className="grid-container-checkout">
-          <div className="checkout-product-items">
-            <h2 className="cart-item-title-checkout">Cart Items</h2>
-            {cart.length > 0 ? (
-              cart.map((item) => (
+      {cart.length > 0 ? (
+        <div className="shopping-cart-checkout">
+          <div className="grid-container-checkout">
+            <div className="checkout-product-items">
+              <h2 className="cart-item-title-checkout">Cart Items</h2>
+              {cart.map((item) => (
                 <CartItem
                   key={item.cart_id}
+                  id={item.cart_id}
                   image={item.product_image}
                   title={item.product_name}
                   price={item.product_price}
                   quantity={item.quantity}
+                  onDelete={() => handleDeleteCartItem(item.cart_id)}
                 />
-              ))
-            ) : (
-              <div>No items in the cart.</div>
-            )}
+              ))}
+            </div>
+            <OrderSummary total_price_product={totalPrice} />
           </div>
-          <OrderSummary total_price_product={totalPrice} />
         </div>
-      </div>
+      ) : (<div><CartEmpty /></div>)}
       <BottomBar />
       <Footer />
     </>

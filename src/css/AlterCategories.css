@@ -111,18 +111,18 @@
 }
 
 
-
+.containerAlter .cardAlter .circleAlter,
+.containerAlter .cardAlter .contentAlter .buttonAlter {
+    background: #1069a4;
+    transition: 0.5s;
+}
 
 /* color of cards */
 
 /* .containerAlter .cardAlter:nth-child(1) .circleAlter,
 
 
-.containerAlter .cardAlter:nth-child(2) .circleAlter,
-.containerAlter .cardAlter:nth-child(2) .contentAlter .buttonAlter {
-    background: #ee5253;
-    transition: 0.5s;
-}
+
 
 .containerAlter .cardAlter:nth-child(3) .circleAlter,
 .containerAlter .cardAlter:nth-child(3) .contentAlter .buttonAlter {

@@ -25,7 +25,7 @@ function AdminLoginPage() {
         <div className="AdminPanelLogin-container">
             <form className="AdminPanelLogin-form" onSubmit={handleSubmit}>
                 <div className="admin-login-heading">
-                    <img src={logo} alt="Brand Logo" />
+                    {/* <img src={logo} alt="Brand Logo" /> */}
                     <h2>Admin Login</h2>
                 </div>
                 <div className="AdminPanelLogin-form-group">

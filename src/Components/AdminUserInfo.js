@@ -7,11 +7,11 @@ export default function AdminUserInfo() {
 
   const fetchAllUser = async () => {
     try {
-      const { data } = await axios.get('https://free.shapier.in/api/v1/request_service');
+      const { data } = await axios.get('https://free.shapier.in/api/v1/user');
       const arrayOfCategories = data.data;
       setUsers(arrayOfCategories.map((Info) => ({
         id: 4,
-        username: Info.id,
+        username: Info.username,
         email: Info.email,
         mobile: Info.mobile,
         password: Info.password,
@@ -34,7 +34,7 @@ export default function AdminUserInfo() {
       <div className="admin-panel-container">
         <SideNav />
         <div className="content-container">
-        <h1 className="page-title">Service Enquiries</h1>
+        <h1 className="page-title">Users</h1>
                     <div className="table-container">
                         <table className="user-table">
                             <thead>

@@ -1,0 +1,143 @@
+.admin-panel-container {
+  display: flex;
+}
+
+.content-container {
+  flex: 1;
+  padding: 20px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th,
+.user-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filter-container input,
+.filter-container select {
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.edit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.e-bt{
+  color: white;
+  background-color: rgb(12, 96, 206);
+  border: none;
+  margin-right: 10px;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.d-bt{
+  color: white;
+  background-color: #c82333;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 10px
+  ;
+}
+
+.edit-modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 500px;
+}
+
+.edit-modal-content h2 {
+  margin-top: 0;
+}
+
+.edit-modal-content label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.edit-modal-content input,
+.edit-modal-content textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.edit-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-modal-buttons button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-modal-buttons button[type="button"] {
+  background: #6c757d;
+}
+
+/* Enhanced button styles */
+.button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.button.edit {
+  background-color: #28a745;
+}
+
+.button.edit:hover {
+  background-color: #218838;
+}
+
+.button.delete {
+  background-color: #dc3545;
+}
+
+.button.delete:hover {
+  background-color: #c82333;
+}
+
+.button-icon {
+  margin-right: 5px;
+}

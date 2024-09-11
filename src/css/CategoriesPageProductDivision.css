@@ -73,7 +73,7 @@
 }
 
 .discount-percent {
-    background-color: rgb(35, 140, 52);
+    background-color: rgb(26 119 196);
     color: white;
     display: flex;
     justify-content: center;
@@ -127,6 +127,7 @@
     @media (max-width: 432px) {
         height: 8rem;
         width: 8rem;
+        margin-left: 1rem;
     }
 }
 
